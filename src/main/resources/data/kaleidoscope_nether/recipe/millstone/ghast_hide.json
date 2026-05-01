@@ -1,0 +1,10 @@
+{
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "kaleidoscope_nether:ghast_hide"
+  },
+  "result": {
+    "count": 4,
+    "id": "minecraft:leather"
+  }
+}

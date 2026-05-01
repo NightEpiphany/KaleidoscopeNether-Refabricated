@@ -1,0 +1,35 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "kaleidoscope_cookery:raw_meatball"
+    },
+    {
+      "item": "kaleidoscope_cookery:raw_meatball"
+    },
+    {
+      "item": "kaleidoscope_cookery:raw_meatball"
+    },
+    {
+      "item": "kaleidoscope_cookery:raw_meatball"
+    },
+    {
+      "tag": "c:vegetables/chilipepper"
+    },
+    {
+      "tag": "c:vegetables/chilipepper"
+    },
+    {
+      "tag": "c:vegetables/chilipepper"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:braised_lion_head"
+  },
+  "stir_fry_count": 4,
+  "time": 300
+}

@@ -1,0 +1,32 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:stick"
+  },
+  "ingredients": [
+    {
+      "tag": "c:warped_fruits"
+    },
+    {
+      "tag": "c:warped_fruits"
+    },
+    {
+      "tag": "c:warped_fruits"
+    },
+    {
+      "item": "minecraft:warped_fungus"
+    },
+    {
+      "item": "minecraft:warped_fungus"
+    },
+    {
+      "item": "minecraft:warped_fungus"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "kaleidoscope_nether:warped_kabob"
+  },
+  "stir_fry_count": 3,
+  "time": 300
+}

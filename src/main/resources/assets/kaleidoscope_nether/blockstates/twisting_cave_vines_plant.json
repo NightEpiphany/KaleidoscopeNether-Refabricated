@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "berries=false": {
+      "model": "kaleidoscope_nether:block/twisting_cave_vines_plant"
+    },
+    "berries=true": {
+      "model": "kaleidoscope_nether:block/twisting_cave_vines_plant_berries"
+    }
+  }
+}

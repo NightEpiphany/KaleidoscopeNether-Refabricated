@@ -1,0 +1,50 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:raw_meats"
+    },
+    {
+      "tag": "c:raw_meats"
+    },
+    [
+      {
+        "tag": "c:vegetables/carrot"
+      },
+      {
+        "tag": "c:vegetables/potato"
+      },
+      {
+        "item": "minecraft:beetroot"
+      }
+    ],
+    {
+      "tag": "c:vegetables/lettuce"
+    },
+    [
+      {
+        "tag": "c:vegetables/pepper"
+      },
+      {
+        "tag": "c:hot_spices"
+      }
+    ],
+    [
+      {
+        "tag": "c:vegetables/pepper"
+      },
+      {
+        "tag": "c:hot_spices"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:spicy_pot"
+  },
+  "stir_fry_count": 5,
+  "time": 300
+}

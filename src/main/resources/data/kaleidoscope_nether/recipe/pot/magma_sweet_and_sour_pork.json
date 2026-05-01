@@ -1,0 +1,35 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_pork"
+    },
+    {
+      "tag": "c:foods/raw_pork"
+    },
+    {
+      "item": "kaleidoscope_nether:warped_fruit"
+    },
+    {
+      "item": "kaleidoscope_nether:warped_fruit"
+    },
+    {
+      "item": "kaleidoscope_nether:crimson_fruit"
+    },
+    {
+      "item": "kaleidoscope_nether:crimson_fruit"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:magma_sweet_and_sour_pork"
+  },
+  "stir_fry_count": 4,
+  "time": 300
+}

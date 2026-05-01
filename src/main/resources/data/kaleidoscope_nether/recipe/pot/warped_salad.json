@@ -1,0 +1,42 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:warped_fruits"
+    },
+    {
+      "tag": "c:warped_fruits"
+    },
+    {
+      "item": "minecraft:warped_fungus"
+    },
+    {
+      "item": "minecraft:warped_fungus"
+    },
+    [
+      {
+        "item": "minecraft:warped_roots"
+      },
+      {
+        "item": "minecraft:twisting_vines"
+      }
+    ],
+    [
+      {
+        "item": "minecraft:warped_roots"
+      },
+      {
+        "item": "minecraft:twisting_vines"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:warped_salad"
+  },
+  "stir_fry_count": 3,
+  "time": 300
+}

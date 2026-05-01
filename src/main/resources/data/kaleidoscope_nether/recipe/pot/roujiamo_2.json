@@ -1,0 +1,29 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "tag": "c:dough"
+    },
+    {
+      "tag": "c:dough"
+    },
+    {
+      "tag": "c:raw_meats"
+    },
+    {
+      "tag": "c:raw_meats"
+    },
+    {
+      "tag": "c:dough"
+    },
+    {
+      "tag": "c:dough"
+    }
+  ],
+  "result": {
+    "count": 2,
+    "id": "kaleidoscope_nether:roujiamo"
+  },
+  "stir_fry_count": 5,
+  "time": 400
+}

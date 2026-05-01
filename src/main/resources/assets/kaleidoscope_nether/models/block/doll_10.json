@@ -1,0 +1,10 @@
+{
+  "parent": "kaleidoscope_nether:custom/doll_10",
+  "textures": {
+    "all": "kaleidoscope_nether:custom/doll_10",
+    "particle": "block/white_wool",
+    "0": "kaleidoscope_nether:block/doll_10",
+    "missing": "kaleidoscope_nether:block/doll_10"
+  },
+  "render_type": "cutout_mipped"
+}

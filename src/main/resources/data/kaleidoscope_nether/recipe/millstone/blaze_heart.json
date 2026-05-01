@@ -1,0 +1,10 @@
+{
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "kaleidoscope_nether:blaze_heart"
+  },
+  "result": {
+    "count": 4,
+    "id": "minecraft:blaze_powder"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    {
+      "item": "minecraft:rotten_flesh"
+    },
+    [
+      {
+        "tag": "c:warped_fruits"
+      },
+      {
+        "item": "minecraft:warped_fungus"
+      }
+    ],
+    [
+      {
+        "tag": "c:warped_fruits"
+      },
+      {
+        "item": "minecraft:warped_fungus"
+      }
+    ],
+    [
+      {
+        "tag": "c:warped_fruits"
+      },
+      {
+        "item": "minecraft:warped_fungus"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:warped_hoglin_tenderloin_stew"
+  },
+  "stir_fry_count": 5,
+  "time": 300
+}

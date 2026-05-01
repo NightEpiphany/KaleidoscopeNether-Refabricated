@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "berries=false": {
+      "model": "kaleidoscope_nether:block/weeping_cave_vines"
+    },
+    "berries=true": {
+      "model": "kaleidoscope_nether:block/weeping_cave_vines_berries"
+    }
+  }
+}

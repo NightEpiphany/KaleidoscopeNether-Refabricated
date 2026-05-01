@@ -1,0 +1,32 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:crimson_fruits"
+    },
+    {
+      "tag": "c:crimson_fruits"
+    },
+    {
+      "tag": "c:warped_fruits"
+    },
+    {
+      "tag": "c:warped_fruits"
+    },
+    {
+      "tag": "c:poisonous_fruits"
+    },
+    {
+      "tag": "c:poisonous_fruits"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:fruit_platter"
+  },
+  "stir_fry_count": 3,
+  "time": 300
+}

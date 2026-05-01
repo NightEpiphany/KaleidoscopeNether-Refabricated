@@ -1,0 +1,35 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "kaleidoscope_cookery:raw_cow_offal"
+    },
+    {
+      "item": "kaleidoscope_cookery:raw_cow_offal"
+    },
+    {
+      "item": "kaleidoscope_cookery:raw_cow_offal"
+    },
+    {
+      "tag": "c:vegetables/chilipepper"
+    },
+    {
+      "tag": "c:vegetables/chilipepper"
+    },
+    {
+      "item": "minecraft:beetroot"
+    },
+    {
+      "item": "minecraft:beetroot"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:couples_lung_slice"
+  },
+  "stir_fry_count": 4,
+  "time": 300
+}

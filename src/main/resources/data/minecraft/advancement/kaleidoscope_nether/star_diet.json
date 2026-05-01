@@ -1,0 +1,65 @@
+{
+  "parent": "minecraft:kaleidoscope_nether/star_blessing_buff",
+  "criteria": {
+    "soul_return_rice": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:soul_return_rice"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "star_ghast_pasta": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:star_ghast_pasta"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "star_stew": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:star_stew"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "star_stew_meat": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:star_stew_meat"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_nether.star_diet.description"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_nether:star_stew_meat"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_nether.star_diet.title"
+    }
+  },
+  "requirements": [
+    [
+      "soul_return_rice"
+    ],
+    [
+      "star_stew"
+    ],
+    [
+      "star_ghast_pasta"
+    ],
+    [
+      "star_stew_meat"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

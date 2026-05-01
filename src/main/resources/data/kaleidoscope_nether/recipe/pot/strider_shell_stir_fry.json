@@ -1,0 +1,32 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "kaleidoscope_nether:strider_rock_shell"
+    },
+    {
+      "tag": "c:foods/raw_strider"
+    },
+    {
+      "tag": "c:foods/raw_strider"
+    },
+    {
+      "tag": "c:foods/raw_strider"
+    },
+    {
+      "tag": "c:vegetables/pepper"
+    },
+    {
+      "tag": "c:vegetables/pepper"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:strider_shell_stir_fry"
+  },
+  "stir_fry_count": 5,
+  "time": 550
+}

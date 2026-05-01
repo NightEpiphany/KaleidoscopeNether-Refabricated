@@ -1,0 +1,7 @@
+{
+  "type": "kaleidoscope_cookery:addition",
+  "conditions": [],
+  "loot_table_add": "kaleidoscope_nether:blocks/nether_wart",
+  "loot_table_id": "minecraft:blocks/nether_wart",
+  "loot_table_type": "minecraft:block"
+}

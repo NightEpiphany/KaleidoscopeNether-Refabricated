@@ -1,0 +1,32 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    },
+    {
+      "item": "minecraft:magma_cream"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:magma_cream_stir_fry"
+  },
+  "stir_fry_count": 5,
+  "time": 300
+}

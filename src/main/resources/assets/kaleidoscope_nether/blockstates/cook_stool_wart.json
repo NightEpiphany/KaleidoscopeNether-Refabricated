@@ -1,0 +1,34 @@
+{
+  "variants": {
+    "facing=east,waterlogged=false": {
+      "model": "kaleidoscope_nether:block/cook_stool/wart",
+      "y": 90
+    },
+    "facing=east,waterlogged=true": {
+      "model": "kaleidoscope_nether:block/cook_stool/wart",
+      "y": 90
+    },
+    "facing=north,waterlogged=false": {
+      "model": "kaleidoscope_nether:block/cook_stool/wart"
+    },
+    "facing=north,waterlogged=true": {
+      "model": "kaleidoscope_nether:block/cook_stool/wart"
+    },
+    "facing=south,waterlogged=false": {
+      "model": "kaleidoscope_nether:block/cook_stool/wart",
+      "y": 180
+    },
+    "facing=south,waterlogged=true": {
+      "model": "kaleidoscope_nether:block/cook_stool/wart",
+      "y": 180
+    },
+    "facing=west,waterlogged=false": {
+      "model": "kaleidoscope_nether:block/cook_stool/wart",
+      "y": 270
+    },
+    "facing=west,waterlogged=true": {
+      "model": "kaleidoscope_nether:block/cook_stool/wart",
+      "y": 270
+    }
+  }
+}

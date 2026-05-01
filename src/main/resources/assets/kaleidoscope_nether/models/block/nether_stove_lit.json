@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "kaleidoscope_nether:block/nether_stove_top_lit",
+    "east": "kaleidoscope_nether:block/nether_stove_side",
+    "north": "kaleidoscope_nether:block/nether_stove_front_lit",
+    "particle": "kaleidoscope_nether:block/nether_stove_side",
+    "south": "kaleidoscope_nether:block/nether_stove_side",
+    "up": "kaleidoscope_nether:block/nether_stove_top_lit",
+    "west": "kaleidoscope_nether:block/nether_stove_side"
+  }
+}

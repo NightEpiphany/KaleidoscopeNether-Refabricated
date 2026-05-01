@@ -1,0 +1,20 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "kaleidoscope_nether:item/seed_bag"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "kaleidoscope_nether:has_items": 0.0
+      },
+      "model": "kaleidoscope_nether:item/seed_bag"
+    },
+    {
+      "predicate": {
+        "kaleidoscope_nether:has_items": 1.0
+      },
+      "model": "kaleidoscope_nether:item/seed_bag_has_items"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+﻿{
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "mynethersdelight:hoglin_hide"
+    },
+    {
+      "item": "mynethersdelight:hoglin_hide"
+    }
+  ],
+  "result": {
+    "count": 8,
+    "id": "kaleidoscope_cookery:oil"
+  },
+  "stir_fry_count": 5,
+  "time": 200
+}

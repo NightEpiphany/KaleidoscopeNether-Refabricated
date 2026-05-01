@@ -1,0 +1,34 @@
+﻿{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "regions_unexplored"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:stick"
+  },
+  "ingredients": [
+    [
+      {
+        "item": "regions_unexplored:mycotoxic_mushrooms"
+      },
+      {
+        "item": "regions_unexplored:mycotoxic_daisy"
+      },
+      {
+        "item": "regions_unexplored:mycotoxic_grass"
+      }
+    ],
+    {
+      "item": "regions_unexplored:yellow_bioshroom"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:glowing_kabob"
+  },
+  "stir_fry_count": 3,
+  "time": 300
+}

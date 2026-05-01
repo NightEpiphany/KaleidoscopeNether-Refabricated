@@ -1,0 +1,35 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "tag": "c:vegetables/pepper"
+    },
+    {
+      "tag": "c:vegetables/pepper"
+    },
+    {
+      "tag": "c:vegetables/pepper"
+    },
+    {
+      "item": "kaleidoscope_nether:star_dust"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:star_stew_meat"
+  },
+  "stir_fry_count": 6,
+  "time": 650
+}

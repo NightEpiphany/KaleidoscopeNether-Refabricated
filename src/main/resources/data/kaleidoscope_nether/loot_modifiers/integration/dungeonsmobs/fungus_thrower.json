@@ -1,0 +1,10 @@
+{
+  "type": "neoforge:add_table",
+  "conditions": [
+    {
+      "condition": "neoforge:loot_table_id",
+      "loot_table_id": "dungeonsmobs:entities/fungus_thrower"
+    }
+  ],
+  "table": "kaleidoscope_nether:integration/dungeonsmobs/fungus_thrower"
+}

@@ -1,0 +1,27 @@
+{
+
+  "type":
+ "minecraft:crafting_shapeless",
+
+  "ingredients": [
+
+    { "item": "kaleidoscope_nether:gilded_fragment" },
+
+    { "item": "kaleidoscope_nether:gilded_fragment" },
+
+    { "item": "kaleidoscope_nether:gilded_fragment" },
+
+    { "item": "kaleidoscope_nether:gilded_fragment" }
+
+  ],
+
+  "result":
+ {
+    "id":
+ "minecraft:netherite_scrap",
+
+    "count": 1
+
+  }
+
+}

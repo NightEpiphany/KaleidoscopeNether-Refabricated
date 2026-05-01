@@ -1,0 +1,32 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "tag": "c:hot_spices"
+    },
+    {
+      "tag": "c:hot_spices"
+    },
+    {
+      "item": "minecraft:gold_block"
+    },
+    {
+      "item": "minecraft:gold_block"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:golden_roast"
+  },
+  "stir_fry_count": 5,
+  "time": 550
+}

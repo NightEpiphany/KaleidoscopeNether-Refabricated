@@ -1,0 +1,153 @@
+{
+  "parent": "minecraft:kaleidoscope_nether/root",
+  "criteria": {
+    "chongqing_noodles": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:chongqing_noodles"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "couples_lung_slice": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:couples_lung_slice"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "forgetfulness_soup": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:forgetfulness_soup"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "garlic_oysters": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:garlic_oysters"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "luosifen": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:luosifen"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mapo_tofu": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:mapo_tofu"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "mapo_tofu_rice": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:mapo_tofu_rice"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "pepper_pork_belly_chicken_soup": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:pepper_pork_belly_chicken_soup"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "roujiamo": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:roujiamo"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "sauerkraut_fish": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:sauerkraut_fish"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "spicy_pot": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:spicy_pot"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    },
+    "spicy_pot_rice": {
+      "conditions": {
+        "item": {
+          "items": "kaleidoscope_nether:spicy_pot_rice"
+        }
+      },
+      "trigger": "minecraft:consume_item"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_nether.eight_cuisines.description"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_nether:roujiamo"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_nether.eight_cuisines.title"
+    }
+  },
+  "requirements": [
+    [
+      "spicy_pot"
+    ],
+    [
+      "spicy_pot_rice"
+    ],
+    [
+      "mapo_tofu"
+    ],
+    [
+      "mapo_tofu_rice"
+    ],
+    [
+      "chongqing_noodles"
+    ],
+    [
+      "luosifen"
+    ],
+    [
+      "sauerkraut_fish"
+    ],
+    [
+      "roujiamo"
+    ],
+    [
+      "forgetfulness_soup"
+    ],
+    [
+      "garlic_oysters"
+    ],
+    [
+      "couples_lung_slice"
+    ],
+    [
+      "pepper_pork_belly_chicken_soup"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

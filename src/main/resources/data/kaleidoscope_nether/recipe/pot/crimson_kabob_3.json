@@ -1,0 +1,32 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:stick"
+  },
+  "ingredients": [
+    {
+      "tag": "c:crimson_fruits"
+    },
+    {
+      "tag": "c:crimson_fruits"
+    },
+    {
+      "tag": "c:crimson_fruits"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    },
+    {
+      "item": "minecraft:crimson_fungus"
+    }
+  ],
+  "result": {
+    "count": 3,
+    "id": "kaleidoscope_nether:crimson_kabob"
+  },
+  "stir_fry_count": 3,
+  "time": 300
+}

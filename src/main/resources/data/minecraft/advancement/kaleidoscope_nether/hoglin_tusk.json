@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:kaleidoscope_nether/root",
+  "criteria": {
+    "hoglin_tusk": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_nether:hoglin_tusk"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_nether.hoglin_tusk.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_nether:hoglin_tusk"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_nether.hoglin_tusk.title"
+    }
+  },
+  "requirements": [
+    [
+      "hoglin_tusk"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -1,0 +1,14 @@
+{
+  "lava_roasted_chicken_eat": {
+    "subtitle": "subtitles.kaleidoscope_nether.lava_roasted_chicken_eat",
+    "sounds": [
+      "kaleidoscope_nether:lava_roasted_chicken_eat"
+    ]
+  },
+  "star_dust_repair": {
+    "subtitle": "subtitles.kaleidoscope_nether.star_dust_repair",
+    "sounds": [
+      "kaleidoscope_nether:star_dust_repair"
+    ]
+  }
+}

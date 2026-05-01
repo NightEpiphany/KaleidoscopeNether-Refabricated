@@ -1,0 +1,47 @@
+﻿{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "regions_unexplored"
+    }
+  ],
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "item": "regions_unexplored:yellow_bioshroom"
+    },
+    {
+      "item": "regions_unexplored:yellow_bioshroom"
+    },
+    {
+      "item": "regions_unexplored:mycotoxic_mushrooms"
+    },
+    {
+      "item": "regions_unexplored:mycotoxic_mushrooms"
+    },
+    [
+      {
+        "item": "regions_unexplored:mycotoxic_daisy"
+      },
+      {
+        "item": "regions_unexplored:mycotoxic_grass"
+      }
+    ],
+    [
+      {
+        "item": "regions_unexplored:mycotoxic_daisy"
+      },
+      {
+        "item": "regions_unexplored:mycotoxic_grass"
+      }
+    ]
+  ],
+  "result": {
+    "id": "kaleidoscope_nether:glowing_salad"
+  },
+  "stir_fry_count": 3,
+  "time": 300
+}

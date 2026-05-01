@@ -1,0 +1,35 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:vegetables/soul_pepper"
+    },
+    {
+      "tag": "c:vegetables/soul_pepper"
+    },
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "tag": "c:foods/raw_beef"
+    },
+    {
+      "tag": "c:vegetables/tomato"
+    },
+    {
+      "tag": "c:vegetables/tomato"
+    },
+    {
+      "tag": "c:vegetables/lettuce"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:soul_glazed_roast"
+  },
+  "stir_fry_count": 4,
+  "time": 350
+}

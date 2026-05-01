@@ -1,0 +1,10 @@
+﻿{
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "mynethersdelight:strider_rock"
+  },
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:strider_rock_shell"
+  }
+}

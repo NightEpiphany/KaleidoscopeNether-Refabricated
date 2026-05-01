@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:kaleidoscope_nether/root",
+  "criteria": {
+    "star_dust": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_nether:star_dust"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_nether.star_dust.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_nether:star_dust"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_nether.star_dust.title"
+    }
+  },
+  "requirements": [
+    [
+      "star_dust"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

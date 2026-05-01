@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:kaleidoscope_nether/root",
+  "criteria": {
+    "wither_rib": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_nether:wither_rib"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_nether.wither_rib.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_nether:wither_rib"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_nether.wither_rib.title"
+    }
+  },
+  "requirements": [
+    [
+      "wither_rib"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

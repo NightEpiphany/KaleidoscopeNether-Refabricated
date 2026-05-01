@@ -1,0 +1,72 @@
+{
+  "parent": "minecraft:kaleidoscope_nether/root",
+  "criteria": {
+    "crimson_fruit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_nether:crimson_fruit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "poisonous_fruit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_nether:poisonous_fruit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "soul_pepper": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_nether:soul_pepper"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "warped_fruit": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_nether:warped_fruit"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_nether.nether_agriculturist.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_nether:crimson_fruit"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_nether.nether_agriculturist.title"
+    }
+  },
+  "requirements": [
+    [
+      "crimson_fruit"
+    ],
+    [
+      "warped_fruit"
+    ],
+    [
+      "poisonous_fruit"
+    ],
+    [
+      "soul_pepper"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

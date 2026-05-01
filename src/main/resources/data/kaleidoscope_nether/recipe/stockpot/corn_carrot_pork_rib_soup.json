@@ -1,0 +1,51 @@
+{
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:not",
+      "value": {
+        "type": "neoforge:tag_empty",
+        "tag": "c:crops/corn"
+      }
+    }
+  ],
+  "type": "kaleidoscope_cookery:stockpot",
+  "carrier": {
+    "item": "minecraft:flower_pot"
+  },
+  "cooking_bubble_color": 16772291,
+  "cooking_texture": "kaleidoscope_cookery:stockpot/default_cooking",
+  "finished_bubble_color": 16034443,
+  "finished_texture": "kaleidoscope_cookery:stockpot/default_finished",
+  "ingredients": [
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:crops/corn"
+    },
+    {
+      "tag": "c:vegetables/carrot"
+    },
+    {
+      "tag": "c:vegetables/carrot"
+    },
+    {
+      "tag": "c:foods/raw_pork"
+    },
+    {
+      "tag": "c:foods/raw_pork"
+    },
+    {
+      "item": "minecraft:bone"
+    },
+    {
+      "item": "minecraft:bone"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:corn_carrot_pork_rib_soup"
+  },
+  "soup_base": "minecraft:water",
+  "time": 300
+}

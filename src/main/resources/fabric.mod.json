@@ -1,0 +1,39 @@
+{
+	"schemaVersion": 1,
+	"id": "kaleidoscope_nether",
+	"version": "${version}",
+	"name": "Kaleidoscope Nether Refabricated",
+	"description": "Brought an expansion about the Nether to Kaleidoscope Cookery.",
+	"authors": [
+		"BmtUltra", "NightEpiphany"
+	],
+	"contact": {
+		"homepage": "https://www.curseforge.com/minecraft/mc-mods/kaleidoscope-nether",
+		"sources": "https://github.com/BmtUltra/Kaleidoscope-Nether"
+	},
+	"license": "MIT",
+	"icon": "assets/kaleidoscope_nether/cover.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"com.bmt.kaleidoscope_nether.KaleidoscopeNether"
+		],
+		"client": [
+			"com.bmt.kaleidoscope_nether.KaleidoscopeNetherClient"
+		],
+		"jei_mod_plugin": [
+			"com.bmt.kaleidoscope_nether.compat.jei.KNInfo"
+		]
+	},
+	"mixins": [
+		"kaleidoscope_nether.mixins.json"
+	],
+	"accessWidener": "kaleidoscope_nether.accessWidener",
+	"depends": {
+		"fabricloader": ">=0.18",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*",
+		"kaleidoscope_cookery": "*"
+	}
+}

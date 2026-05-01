@@ -1,0 +1,31 @@
+{
+  "required": true,
+  "package": "com.bmt.kaleidoscope_nether.mixins",
+  "compatibilityLevel": "JAVA_21",
+  "plugin": "com.bmt.kaleidoscope_nether.mixins.MainMixinPlugin",
+  "mixins": [
+    "kaleidoscope_nether.AnvilMenuMixin",
+    "kaleidoscope_nether.BlockItemMixin",
+    "kaleidoscope_nether.EntityMixin",
+    "kaleidoscope_nether.HoglinAiMixin",
+    "kaleidoscope_nether.LavaWalkerLivingMixin",
+    "kaleidoscope_nether.LivingEntityMixin",
+    "kaleidoscope_nether.MobEffectInstanceMixin",
+    "kaleidoscope_nether.MobMixin",
+    "kaleidoscope_nether.PiglinAiMixin",
+    "kaleidoscope_nether.PiglinBruteAiMixin",
+    "kaleidoscope_nether.ServerLevelMixin",
+    "kaleidoscope_nether.StarBlessingMixin",
+    "kaleidoscope_nether.TropicalStriderMixin",
+    "kaleidoscope_nether.WitherBossMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "client": [
+    "kaleidoscope_nether.client.ClientLevelMixin"
+  ]
+}

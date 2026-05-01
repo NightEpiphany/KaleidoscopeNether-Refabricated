@@ -1,0 +1,12 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "kaleidoscope_nether:block/doll_0"
+  },
+  "display": {
+    "head": {
+      "translation": [0, 0, 0],
+      "scale": [1.5, 1.5, 1.5]
+    }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "kaleidoscope_cookery:millstone",
+  "ingredient": {
+    "item": "kaleidoscope_nether:wither_rib"
+  },
+  "result": {
+    "count": 8,
+    "id": "minecraft:bone_meal"
+  }
+}

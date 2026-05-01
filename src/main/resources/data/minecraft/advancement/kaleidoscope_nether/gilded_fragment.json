@@ -1,0 +1,33 @@
+{
+  "parent": "minecraft:kaleidoscope_nether/root",
+  "criteria": {
+    "gilded_fragment": {
+      "conditions": {
+        "items": [
+          {
+            "items": "kaleidoscope_nether:gilded_fragment"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.kaleidoscope_nether.gilded_fragment.description"
+    },
+    "icon": {
+      "count": 1,
+      "id": "kaleidoscope_nether:gilded_fragment"
+    },
+    "title": {
+      "translate": "advancements.kaleidoscope_nether.gilded_fragment.title"
+    }
+  },
+  "requirements": [
+    [
+      "gilded_fragment"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

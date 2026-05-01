@@ -1,0 +1,37 @@
+{
+
+  "type":
+ "minecraft:crafting_shapeless",
+
+  "ingredients": [
+
+    { "item": "kaleidoscope_nether:wither_rib" },
+
+    { "item": "kaleidoscope_nether:wither_rib" },
+
+    { "item": "kaleidoscope_nether:wither_rib" },
+
+    { "item": "kaleidoscope_nether:wither_rib" },
+
+    { "item": "kaleidoscope_nether:wither_rib" },
+
+    { "item": "kaleidoscope_nether:wither_rib" },
+
+    { "item": "kaleidoscope_nether:wither_rib" },
+
+    { "item": "kaleidoscope_nether:wither_rib" },
+
+    { "item": "kaleidoscope_nether:wither_rib" }
+
+  ],
+
+  "result":
+ {
+    "id":
+ "minecraft:wither_skeleton_skull",
+
+    "count": 1
+
+  }
+
+}

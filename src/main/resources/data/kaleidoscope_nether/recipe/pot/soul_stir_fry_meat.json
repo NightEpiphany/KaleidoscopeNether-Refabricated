@@ -1,0 +1,32 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:foods/raw_pork"
+    },
+    {
+      "tag": "c:foods/raw_pork"
+    },
+    {
+      "tag": "c:foods/raw_pork"
+    },
+    {
+      "tag": "c:vegetables/soul_pepper"
+    },
+    {
+      "tag": "c:vegetables/soul_pepper"
+    },
+    {
+      "tag": "c:vegetables/soul_pepper"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:soul_stir_fry_meat"
+  },
+  "stir_fry_count": 5,
+  "time": 300
+}

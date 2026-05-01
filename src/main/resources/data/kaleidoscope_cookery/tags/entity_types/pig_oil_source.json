@@ -1,0 +1,28 @@
+{
+  "values": [
+    {
+      "id": "betternether:flying_pig",
+      "required": false
+    },
+    {
+      "id": "bygonenether:piglin_hunter",
+      "required": false
+    },
+    {
+      "id": "bygonenether:piglin_prisoner",
+      "required": false
+    },
+    {
+      "id": "dungeonsmobs:fungus_thrower",
+      "required": false
+    },
+    {
+      "id": "dungeonsmobs:zombified_fungus_thrower",
+      "required": false
+    },
+    {
+      "id": "twilightforest:boar",
+      "required": false
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "kaleidoscope_nether:raw_strider_meat"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:cooked_strider_meat"
+  },
+  "stir_fry_count": 3,
+  "time": 200
+}

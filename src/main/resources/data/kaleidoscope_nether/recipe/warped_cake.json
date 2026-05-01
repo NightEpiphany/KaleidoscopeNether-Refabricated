@@ -1,0 +1,28 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "A": {
+      "item": "minecraft:milk_bucket"
+    },
+    "B": {
+      "tag": "c:crimson_fruits"
+    },
+    "C": {
+      "tag": "c:warped_fruits"
+    },
+    "D": {
+      "tag": "c:flour"
+    }
+  },
+  "pattern": [
+    "ABA",
+    "CCC",
+    "DDD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:warped_cake"
+  },
+  "show_notification": true
+}

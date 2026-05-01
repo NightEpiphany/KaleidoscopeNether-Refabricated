@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:campfire_cooking",
+  "category": "food",
+  "cookingtime": 600,
+  "experience": 0.35,
+  "ingredient": {
+    "item": "kaleidoscope_nether:raw_piglin_meat"
+  },
+  "result": {
+    "id": "kaleidoscope_nether:cooked_piglin_meat"
+  }
+}

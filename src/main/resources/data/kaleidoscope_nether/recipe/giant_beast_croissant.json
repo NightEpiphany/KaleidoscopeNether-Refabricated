@@ -1,0 +1,25 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "#": {
+      "item": "kaleidoscope_nether:strider_rock_shell"
+    },
+    "C": {
+      "item": "kaleidoscope_nether:blaze_heart"
+    },
+    "S": {
+      "item": "minecraft:bread"
+    }
+  },
+  "pattern": [
+    "#C#",
+    "#S#",
+    "###"
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:giant_beast_croissant"
+  },
+  "show_notification": true
+}

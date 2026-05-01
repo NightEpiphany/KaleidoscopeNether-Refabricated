@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "kaleidoscope_nether:hoglin_hide"
+    }
+  ],
+  "result": {
+    "id": "minecraft:leather",
+    "count": 3
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:flour"
+    },
+    {
+      "tag": "c:flour"
+    },
+    [
+      {
+        "tag": "c:raw_ham"
+      },
+      {
+        "item": "kaleidoscope_nether:ham_slice"
+      }
+    ],
+    [
+      {
+        "tag": "c:raw_ham"
+      },
+      {
+        "item": "kaleidoscope_nether:ham_slice"
+      }
+    ],
+    [
+      {
+        "tag": "c:raw_ham"
+      },
+      {
+        "item": "kaleidoscope_nether:ham_slice"
+      }
+    ]
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:ham_yogurt"
+  },
+  "stir_fry_count": 3,
+  "time": 350
+}

@@ -1,0 +1,20 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "ingredients": [
+    {
+      "item": "kaleidoscope_nether:ghast_hide"
+    },
+    {
+      "item": "kaleidoscope_nether:ghast_hide"
+    },
+    {
+      "item": "kaleidoscope_nether:ghast_hide"
+    }
+  ],
+  "result": {
+    "count": 9,
+    "id": "kaleidoscope_cookery:oil"
+  },
+  "stir_fry_count": 5,
+  "time": 200
+}

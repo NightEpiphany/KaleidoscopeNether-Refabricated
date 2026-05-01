@@ -1,0 +1,35 @@
+{
+  "type": "kaleidoscope_cookery:pot",
+  "carrier": {
+    "item": "minecraft:bowl"
+  },
+  "ingredients": [
+    {
+      "tag": "c:vegetables/soul_pepper"
+    },
+    {
+      "tag": "c:vegetables/soul_pepper"
+    },
+    {
+      "tag": "c:vegetables/soul_pepper"
+    },
+    {
+      "tag": "c:soul_speed_blocks"
+    },
+    {
+      "tag": "c:soul_speed_blocks"
+    },
+    {
+      "tag": "c:soul_speed_blocks"
+    },
+    {
+      "item": "kaleidoscope_nether:star_dust"
+    }
+  ],
+  "result": {
+    "count": 1,
+    "id": "kaleidoscope_nether:soul_return_rice"
+  },
+  "stir_fry_count": 3,
+  "time": 500
+}
