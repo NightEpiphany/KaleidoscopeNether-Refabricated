@@ -1,27 +1,26 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "item": "minecraft:magma_cream"
-    },
-    {
-      "item": "minecraft:magma_cream"
-    },
-    {
-      "item": "minecraft:magma_cream"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:sugar"
-    }
+
+      "minecraft:magma_cream"
+,
+
+      "minecraft:magma_cream"
+,
+
+      "minecraft:magma_cream"
+,
+
+      "minecraft:sugar"
+,
+
+      "minecraft:sugar"
+,
+
+      "minecraft:sugar"
+
   ],
   "result": {
     "count": 1,

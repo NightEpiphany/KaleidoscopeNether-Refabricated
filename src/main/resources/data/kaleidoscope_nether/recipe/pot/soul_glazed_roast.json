@@ -1,30 +1,29 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "tag": "c:vegetables/tomato"
-    },
-    {
-      "tag": "c:vegetables/tomato"
-    },
-    {
-      "tag": "c:vegetables/lettuce"
-    }
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:foods/raw_beef"
+,
+
+      "#c:foods/raw_beef"
+,
+
+      "#c:vegetables/tomato"
+,
+
+      "#c:vegetables/tomato"
+,
+
+      "#c:vegetables/lettuce"
+
   ],
   "result": {
     "count": 1,

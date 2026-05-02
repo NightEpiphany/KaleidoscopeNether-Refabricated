@@ -1,24 +1,24 @@
 {
   "type": "kaleidoscope_cookery:pot",
   "ingredients": [
-    {
-      "item": "minecraft:chicken"
-    },
-    {
-      "tag": "c:hot_spices"
-    },
-    {
-      "tag": "c:hot_spices"
-    },
-    {
-      "item": "minecraft:magma_block"
-    },
-    {
-      "item": "minecraft:magma_block"
-    },
-    {
-      "item": "minecraft:magma_block"
-    }
+
+      "minecraft:chicken"
+,
+
+      "#c:hot_spices"
+,
+
+      "#c:hot_spices"
+,
+
+      "minecraft:magma_block"
+,
+
+      "minecraft:magma_block"
+,
+
+      "minecraft:magma_block"
+
   ],
   "result": {
     "count": 1,

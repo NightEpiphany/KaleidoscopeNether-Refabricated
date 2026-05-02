@@ -5,24 +5,23 @@
 
   "ingredients": [
 
-    { "item": "kaleidoscope_nether:wither_rib" },
+    "kaleidoscope_nether:wither_rib",
 
-    { "item": "kaleidoscope_nether:wither_rib" },
+    "kaleidoscope_nether:wither_rib",
 
-    { "item": "kaleidoscope_nether:wither_rib" },
+    "kaleidoscope_nether:wither_rib",
 
-    { "item": "kaleidoscope_nether:wither_rib" },
+    "kaleidoscope_nether:wither_rib",
 
-    { "item": "kaleidoscope_nether:wither_rib" },
+    "kaleidoscope_nether:wither_rib",
 
-    { "item": "kaleidoscope_nether:wither_rib" },
+    "kaleidoscope_nether:wither_rib",
 
-    { "item": "kaleidoscope_nether:wither_rib" },
+    "kaleidoscope_nether:wither_rib",
 
-    { "item": "kaleidoscope_nether:wither_rib" },
+    "kaleidoscope_nether:wither_rib",
 
-    { "item": "kaleidoscope_nether:wither_rib" }
-
+    "kaleidoscope_nether:wither_rib"
   ],
 
   "result":

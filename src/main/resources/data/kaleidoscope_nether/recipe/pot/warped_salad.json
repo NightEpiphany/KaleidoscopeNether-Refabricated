@@ -1,37 +1,14 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier": 
+  "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:warped_fruits"
-    },
-    {
-      "tag": "c:warped_fruits"
-    },
-    {
-      "item": "minecraft:warped_fungus"
-    },
-    {
-      "item": "minecraft:warped_fungus"
-    },
-    [
-      {
-        "item": "minecraft:warped_roots"
-      },
-      {
-        "item": "minecraft:twisting_vines"
-      }
-    ],
-    [
-      {
-        "item": "minecraft:warped_roots"
-      },
-      {
-        "item": "minecraft:twisting_vines"
-      }
-    ]
+      "#c:warped_fruits",
+      "#c:warped_fruits",
+      "minecraft:warped_fungus",
+      "minecraft:warped_fungus",
+      "minecraft:warped_roots",
+      "minecraft:twisting_vines"
   ],
   "result": {
     "count": 1,

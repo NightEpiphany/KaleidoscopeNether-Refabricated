@@ -1,15 +1,14 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:stick"
-  },
+  "carrier":
+    "minecraft:stick",
   "ingredients": [
-    {
-      "tag": "c:crimson_fruits"
-    },
-    {
-      "item": "minecraft:crimson_fungus"
-    }
+
+      "#c:crimson_fruits"
+,
+
+      "minecraft:crimson_fungus"
+
   ],
   "result": {
     "count": 1,

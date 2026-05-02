@@ -1,31 +1,30 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier": 
+    "minecraft:bowl",
   "cooking_bubble_color": 0,
   "cooking_texture": "kaleidoscope_cookery:stockpot/default_cooking",
   "finished_bubble_color": 0,
   "finished_texture": "kaleidoscope_cookery:stockpot/default_finished",
   "ingredients": [
-    {
-      "tag": "c:wither"
-    },
-    {
-      "tag": "c:wither"
-    },
-    {
-      "tag": "c:wither"
-    },
-    {
-      "item": "minecraft:coal"
-    },
-    {
-      "item": "minecraft:coal"
-    },
-    {
-      "item": "minecraft:coal"
-    }
+
+      "#c:wither"
+,
+
+      "#c:wither"
+,
+
+      "#c:wither"
+,
+
+      "minecraft:coal"
+,
+
+      "minecraft:coal"
+,
+
+      "minecraft:coal"
+    
   ],
   "result": {
     "count": 3,

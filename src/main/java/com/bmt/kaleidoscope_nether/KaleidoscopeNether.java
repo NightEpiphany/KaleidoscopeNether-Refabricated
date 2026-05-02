@@ -12,9 +12,9 @@ import com.bmt.kaleidoscope_nether.event.StarBlessingEffectEvents;
 import com.bmt.kaleidoscope_nether.init.*;
 import com.bmt.kaleidoscope_nether.integration.KaleidoscopeDollIntegration;
 import com.mojang.logging.LogUtils;
-import fuzs.forgeconfigapiport.fabric.api.neoforge.v4.NeoForgeConfigRegistry;
+import fuzs.forgeconfigapiport.fabric.api.v5.ConfigRegistry;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.neoforged.fml.config.ModConfig;
 import org.slf4j.Logger;
 
@@ -24,7 +24,7 @@ public final class KaleidoscopeNether implements ModInitializer {
 
     @Override
     public void onInitialize() {
-        NeoForgeConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.COMMON, MainConfig.SPEC);
+        ConfigRegistry.INSTANCE.register(MOD_ID, ModConfig.Type.COMMON, MainConfig.SPEC);
 
         KNEffects.registerEffects();
         KNSounds.registerSoundEvents();
@@ -51,7 +51,7 @@ public final class KaleidoscopeNether implements ModInitializer {
         LOGGER.info("Kaleidoscope Nether initialized on Fabric");
     }
 
-    public static ResourceLocation id(String name) {
-        return ResourceLocation.fromNamespaceAndPath(MOD_ID, name);
+    public static Identifier id(String name) {
+        return Identifier.fromNamespaceAndPath(MOD_ID, name);
     }
 }

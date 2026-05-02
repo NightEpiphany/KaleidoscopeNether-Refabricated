@@ -5,13 +5,13 @@
 
   "ingredients": [
 
-    { "item": "kaleidoscope_nether:gilded_fragment" },
+    "kaleidoscope_nether:gilded_fragment",
 
-    { "item": "kaleidoscope_nether:gilded_fragment" },
+    "kaleidoscope_nether:gilded_fragment",
 
-    { "item": "kaleidoscope_nether:gilded_fragment" },
+    "kaleidoscope_nether:gilded_fragment",
 
-    { "item": "kaleidoscope_nether:gilded_fragment" }
+    "kaleidoscope_nether:gilded_fragment"
 
   ],
 

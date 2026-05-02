@@ -1,5 +1,6 @@
 package com.bmt.kaleidoscope_nether.effect;
 
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -11,13 +12,11 @@ public class StarBlessingEffect extends MobEffect {
     }
 
     @Override
-    public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-        if (!entity.level().isClientSide() && entity instanceof Player player) {
-            if (player.tickCount % 10 == 0) {
-                float maxHealth = player.getMaxHealth();
-                float healAmount = maxHealth * 0.02f;
-                player.heal(healAmount);
-            }
+    public boolean applyEffectTick(ServerLevel serverLevel, LivingEntity entity, int amplifier) {
+        if (entity instanceof Player player && player.tickCount % 10 == 0) {
+            float maxHealth = player.getMaxHealth();
+            float healAmount = maxHealth * 0.02f;
+            player.heal(healAmount);
         }
         return true;
     }

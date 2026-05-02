@@ -9,7 +9,6 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
@@ -17,6 +16,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
 public class SoulPepper extends KNCropBlockBase {
     public SoulPepper(Properties properties) {
@@ -25,11 +25,11 @@ public class SoulPepper extends KNCropBlockBase {
 
 
     @Override
-    protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
+    protected boolean mayPlaceOn(BlockState blockState, @NonNull BlockGetter blockGetter, @NonNull BlockPos blockPos) {
         return blockState.is(KNTags.Blocks.SOUL_SOIL_SAND);
     }
 
-    public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
+    public void randomTick(BlockState blockState, @NonNull ServerLevel serverLevel, @NonNull BlockPos blockPos, @NonNull RandomSource randomSource) {
         int i = blockState.getValue(AGE);
         if (i < 7 && randomSource.nextInt(10) == 0) {
             blockState = blockState.setValue(AGE, i + 1);
@@ -43,15 +43,10 @@ public class SoulPepper extends KNCropBlockBase {
     }
 
     @Override
-    public void animateTick(BlockState blockState, Level level, BlockPos blockPos, RandomSource randomSource) {
+    public void animateTick(@NonNull BlockState blockState, @NonNull Level level, @NonNull BlockPos blockPos, RandomSource randomSource) {
         if (randomSource.nextInt(5) == 0) {
             spawnSoulParticles(level, blockPos);
         }
-    }
-
-    @Override
-    public void entityInside(BlockState blockState, Level level, BlockPos blockPos, Entity entity) {
-        super.entityInside(blockState, level, blockPos, entity);
     }
 
     @Override
@@ -61,7 +56,7 @@ public class SoulPepper extends KNCropBlockBase {
 
 
     @Override
-    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
+    public boolean canSurvive(@NonNull BlockState blockState, @NonNull LevelReader levelReader, BlockPos blockPos) {
         BlockPos blockpos = blockPos.below();
         return this.mayPlaceOn(levelReader.getBlockState(blockpos), levelReader, blockpos);
     }

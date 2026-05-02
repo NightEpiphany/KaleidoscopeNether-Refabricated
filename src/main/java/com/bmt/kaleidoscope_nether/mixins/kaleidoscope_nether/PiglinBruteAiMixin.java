@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_nether.mixins.kaleidoscope_nether;
 
 import com.bmt.kaleidoscope_nether.effect.WarpedEffect;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.piglin.AbstractPiglin;
 import net.minecraft.world.entity.monster.piglin.PiglinBruteAi;
@@ -15,18 +16,18 @@ import java.util.Optional;
 @Mixin(PiglinBruteAi.class)
 public abstract class PiglinBruteAiMixin {
     @Inject(
-            method = "findNearestValidAttackTarget(Lnet/minecraft/world/entity/monster/piglin/AbstractPiglin;)Ljava/util/Optional;",
+            method = "findNearestValidAttackTarget",
             at = @At("RETURN"),
             cancellable = true
     )
-    private static void onFindNearestValidAttackTarget(AbstractPiglin piglinBrute, CallbackInfoReturnable<Optional<LivingEntity>> cir) {
-        Optional<LivingEntity> targetOptional = cir.getReturnValue();
+    private static void onFindNearestValidAttackTarget(ServerLevel serverLevel, AbstractPiglin abstractPiglin, CallbackInfoReturnable<Optional<? extends LivingEntity>> cir) {
+        Optional<? extends LivingEntity> targetOptional = cir.getReturnValue();
 
         if (targetOptional.isPresent()) {
             LivingEntity target = targetOptional.get();
 
             if (target instanceof Player player) {
-                if (WarpedEffect.shouldAffectMob(piglinBrute, player)) {
+                if (WarpedEffect.shouldAffectMob(abstractPiglin, player)) {
                     cir.setReturnValue(Optional.empty());
                 }
             }

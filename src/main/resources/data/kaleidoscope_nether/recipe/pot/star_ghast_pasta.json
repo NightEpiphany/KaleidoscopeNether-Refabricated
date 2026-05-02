@@ -1,24 +1,23 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_ghast"
-    },
-    {
-      "tag": "c:foods/raw_ghast"
-    },
-    {
-      "tag": "c:foods/pasta"
-    },
-    {
-      "tag": "c:foods/pasta"
-    },
-    {
-      "item": "kaleidoscope_nether:star_dust"
-    }
+
+      "#c:foods/raw_ghast"
+,
+
+      "#c:foods/raw_ghast"
+,
+
+      "#c:foods/pasta"
+,
+
+      "#c:foods/pasta"
+,
+
+      "kaleidoscope_nether:star_dust"
+
   ],
   "result": {
     "count": 1,

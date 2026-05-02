@@ -1,41 +1,40 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:flour"
-    },
-    {
-      "tag": "c:flour"
-    },
-    {
-      "tag": "c:flour"
-    },
+
+      "#c:flour"
+,
+
+      "#c:flour"
+,
+
+      "#c:flour"
+,
     [
-      {
-        "tag": "c:raw_ham"
-      },
-      {
-        "item": "kaleidoscope_nether:ham_slice"
-      }
+  
+        "#c:raw_ham"
+  ,
+  
+        "kaleidoscope_nether:ham_slice"
+  
     ],
     [
-      {
-        "tag": "c:raw_ham"
-      },
-      {
-        "item": "kaleidoscope_nether:ham_slice"
-      }
+  
+        "#c:raw_ham"
+  ,
+  
+        "kaleidoscope_nether:ham_slice"
+  
     ],
     [
-      {
-        "tag": "c:raw_ham"
-      },
-      {
-        "item": "kaleidoscope_nether:ham_slice"
-      }
+  
+        "#c:raw_ham"
+  ,
+  
+        "kaleidoscope_nether:ham_slice"
+  
     ]
   ],
   "result": {

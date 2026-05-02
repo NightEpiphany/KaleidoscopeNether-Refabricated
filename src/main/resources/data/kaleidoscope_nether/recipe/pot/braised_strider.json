@@ -1,29 +1,12 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier": "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_strider"
-    },
-    {
-      "tag": "c:foods/raw_strider"
-    },
-    [
-      {
-        "tag": "c:warped_fruits"
-      },
-      {
-        "item": "minecraft:warped_fungus"
-      }
-    ],
-    {
-      "tag": "c:vegetables/chilipepper"
-    },
-    {
-      "tag": "c:vegetables/chilipepper"
-    }
+    "#c:foods/raw_strider",
+    "#c:foods/raw_strider",
+    "#c:warped_fruits",
+    "#c:vegetables/chilipepper",
+    "#c:vegetables/chilipepper"
   ],
   "result": {
     "count": 1,

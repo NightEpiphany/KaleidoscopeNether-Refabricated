@@ -1,15 +1,15 @@
 {
   "type": "kaleidoscope_cookery:pot",
   "ingredients": [
-    {
-      "tag": "c:dough"
-    },
-    {
-      "tag": "c:raw_meats"
-    },
-    {
-      "tag": "c:dough"
-    }
+
+      "#c:dough"
+,
+
+      "#c:raw_meats"
+,
+
+      "#c:dough"
+
   ],
   "result": {
     "count": 1,

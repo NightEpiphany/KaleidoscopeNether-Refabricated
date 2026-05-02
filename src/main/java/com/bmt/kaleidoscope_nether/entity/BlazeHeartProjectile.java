@@ -4,7 +4,7 @@ import com.bmt.kaleidoscope_nether.init.KNItems;
 import com.bmt.kaleidoscope_nether.init.KNEntities;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.projectile.ThrowableItemProjectile;
+import net.minecraft.world.entity.projectile.throwableitemprojectile.ThrowableItemProjectile;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.HitResult;
@@ -18,11 +18,11 @@ public class BlazeHeartProjectile extends ThrowableItemProjectile {
     }
 
     public BlazeHeartProjectile(Level level, LivingEntity shooter) {
-        super(KNEntities.BLAZE_HEART_PROJECTILE.get(), shooter, level);
+        super(KNEntities.BLAZE_HEART_PROJECTILE.get(), level);
     }
 
     public BlazeHeartProjectile(Level level, double x, double y, double z) {
-        super(KNEntities.BLAZE_HEART_PROJECTILE.get(), x, y, z, level);
+        super(KNEntities.BLAZE_HEART_PROJECTILE.get(), level);
     }
 
     @Override

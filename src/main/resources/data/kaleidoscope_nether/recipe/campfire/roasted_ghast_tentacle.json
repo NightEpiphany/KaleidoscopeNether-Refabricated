@@ -3,9 +3,7 @@
   "category": "food",
   "cookingtime": 600,
   "experience": 0.35,
-  "ingredient": {
-    "item": "kaleidoscope_nether:ghast_tentacle"
-  },
+  "ingredient": "kaleidoscope_nether:ghast_tentacle",
   "result": {
     "id": "kaleidoscope_nether:roasted_ghast_tentacle"
   }

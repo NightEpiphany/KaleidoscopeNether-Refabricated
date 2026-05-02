@@ -3,9 +3,7 @@
   "category": "food",
   "cookingtime": 600,
   "experience": 0.35,
-  "ingredient": {
-    "item": "kaleidoscope_nether:raw_strider_meat"
-  },
+  "ingredient": "kaleidoscope_nether:raw_strider_meat",
   "result": {
     "id": "kaleidoscope_nether:cooked_strider_meat"
   }

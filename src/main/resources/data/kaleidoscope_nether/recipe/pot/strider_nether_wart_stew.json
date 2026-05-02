@@ -1,30 +1,29 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_strider"
-    },
-    {
-      "tag": "c:foods/raw_strider"
-    },
-    {
-      "item": "minecraft:string"
-    },
-    {
-      "item": "minecraft:string"
-    },
-    {
-      "item": "minecraft:nether_wart"
-    },
-    {
-      "item": "minecraft:nether_wart"
-    },
-    {
-      "item": "minecraft:nether_wart"
-    }
+
+      "#c:foods/raw_strider"
+,
+
+      "#c:foods/raw_strider"
+,
+
+      "minecraft:string"
+,
+
+      "minecraft:string"
+,
+
+      "minecraft:nether_wart"
+,
+
+      "minecraft:nether_wart"
+,
+
+      "minecraft:nether_wart"
+
   ],
   "result": {
     "count": 1,

@@ -1,9 +1,9 @@
 {
   "type": "kaleidoscope_cookery:pot",
   "ingredients": [
-    {
-      "item": "kaleidoscope_nether:ghast_hide"
-    }
+
+      "kaleidoscope_nether:ghast_hide"
+
   ],
   "result": {
     "count": 3,

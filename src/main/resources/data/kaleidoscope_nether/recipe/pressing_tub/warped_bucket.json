@@ -1,16 +1,6 @@
 {
-  "fabric:load_conditions": [
-    {
-      "condition": "fabric:any_mods_loaded",
-      "values": [
-        "kaleidoscope_tavern"
-      ]
-    }
-  ],
   "type": "kaleidoscope_tavern:pressing_tub",
   "fluid": "kaleidoscope_nether:warped_juice",
   "fluid_amount": 125,
-  "ingredient": {
-    "item": "kaleidoscope_nether:warped_fruit"
-  }
+  "ingredient": "kaleidoscope_nether:warped_fruit"
 }

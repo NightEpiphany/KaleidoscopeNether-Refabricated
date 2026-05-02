@@ -49,10 +49,8 @@ public class LavaWalkerEventHandler {
         boolean isMoving = motion.lengthSqr() > 0.0001;
 
         boolean inLava = entity.isInLava();
-        boolean onLavaGround = entity.level().getBlockState(entity.getOnPos()).is(Blocks.LAVA) && entity.position().y - 0.9f <= entity.getOnPos().getY();
-        if (onLavaGround || inLava) {
-            entity.setNoGravity(true);
-            entity.setPos(pos.x, pos.y + 0.15f, pos.z);
+        boolean onLavaGround = entity.level().getFluidState(entity.getOnPos()).is(FluidTags.LAVA);
+        if (onLavaGround) {
             if (motion.y < 0) {
                 entity.setDeltaMovement(new Vec3(motion.x, 0, motion.z));
             }

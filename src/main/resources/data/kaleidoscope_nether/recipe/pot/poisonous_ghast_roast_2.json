@@ -1,37 +1,36 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
     [
-      {
-        "tag": "c:foods/raw_ghast"
-      },
-      {
-        "item": "minecraft:ghast_tear"
-      }
+  
+        "#c:foods/raw_ghast"
+  ,
+  
+        "minecraft:ghast_tear"
+  
     ],
     [
-      {
-        "tag": "c:foods/raw_ghast"
-      },
-      {
-        "item": "minecraft:ghast_tear"
-      }
+  
+        "#c:foods/raw_ghast"
+  ,
+  
+        "minecraft:ghast_tear"
+  
     ],
-    {
-      "tag": "c:foods/raw_ghast"
-    },
-    {
-      "tag": "c:foods/raw_ghast"
-    },
-    {
-      "item": "kaleidoscope_nether:poisonous_fruit"
-    },
-    {
-      "item": "kaleidoscope_nether:poisonous_fruit"
-    }
+
+      "#c:foods/raw_ghast"
+,
+
+      "#c:foods/raw_ghast"
+,
+
+      "kaleidoscope_nether:poisonous_fruit"
+,
+
+      "kaleidoscope_nether:poisonous_fruit"
+
   ],
   "result": {
     "count": 2,

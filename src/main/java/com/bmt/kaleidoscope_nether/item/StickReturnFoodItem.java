@@ -9,12 +9,13 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
 public class StickReturnFoodItem extends FoodWithEffectsItem implements IHasContainer {
-    public StickReturnFoodItem(FoodProperties properties) {
-        super(properties);
+    public StickReturnFoodItem(Item.Properties itemProperties, FoodProperties properties, Consumable consumable) {
+        super(itemProperties, properties, consumable);
     }
 
     @Override

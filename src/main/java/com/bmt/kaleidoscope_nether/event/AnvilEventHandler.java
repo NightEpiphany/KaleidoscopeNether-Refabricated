@@ -5,10 +5,12 @@ import com.bmt.kaleidoscope_nether.init.KNEnchantments;
 import com.bmt.kaleidoscope_nether.init.KNEvents;
 import com.bmt.kaleidoscope_nether.init.KNItems;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.ItemEnchantments;
+import net.minecraft.world.item.equipment.Equippable;
 
 public class AnvilEventHandler {
     private static final String SHELL_COUNT_TAG = "StriderShellCount";
@@ -23,7 +25,9 @@ public class AnvilEventHandler {
 
         if (isBoots(left) && right.is(KNItems.STRIDER_ROCK_SHELL.get())) {
             ItemEnchantments enchantments = left.getEnchantments();
-            if (enchantments.getLevel(event.getPlayer().level().registryAccess().lookupOrThrow(KNEnchantments.LAVA_WALKER.registryKey()).getOrThrow(KNEnchantments.LAVA_WALKER)) > 0) {
+            var enchantmentLookup = event.getPlayer().level().registryAccess().lookupOrThrow(Registries.ENCHANTMENT);
+            var lavaWalker = enchantmentLookup.getOrThrow(KNEnchantments.LAVA_WALKER);
+            if (enchantments.getLevel(lavaWalker) > 0) {
                 return;
             }
 
@@ -34,7 +38,7 @@ public class AnvilEventHandler {
             ItemStack result = left.copy();
 
             ItemEnchantments.Mutable mutable = new ItemEnchantments.Mutable(result.getEnchantments());
-            mutable.set(event.getPlayer().level().registryAccess().lookupOrThrow(KNEnchantments.LAVA_WALKER.registryKey()).getOrThrow(KNEnchantments.LAVA_WALKER), 1);
+            mutable.set(lavaWalker, 1);
             result.set(DataComponents.ENCHANTMENTS, mutable.toImmutable());
 
             CompoundTag tag = left.getOrDefault(DataComponents.CUSTOM_DATA, net.minecraft.world.item.component.CustomData.EMPTY)
@@ -54,11 +58,10 @@ public class AnvilEventHandler {
     }
 
     private static boolean isBoots(ItemStack stack) {
-        if (stack.isEmpty()) return false;
-
-        if (stack.getItem() instanceof net.minecraft.world.item.ArmorItem armorItem) {
-            return armorItem.getEquipmentSlot() == EquipmentSlot.FEET;
+        if (stack.isEmpty()) {
+            return false;
         }
-        return false;
+        Equippable equippable = stack.get(DataComponents.EQUIPPABLE);
+        return equippable != null && equippable.slot() == EquipmentSlot.FEET;
     }
 }

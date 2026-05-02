@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_nether.mixins.kaleidoscope_nether;
 
 import com.bmt.kaleidoscope_nether.effect.WarpedEffect;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.piglin.Piglin;
 import net.minecraft.world.entity.monster.piglin.PiglinAi;
@@ -15,13 +16,12 @@ import java.util.Optional;
 @Mixin(PiglinAi.class)
 public abstract class PiglinAiMixin {
     @Inject(
-            method = "findNearestValidAttackTarget(Lnet/minecraft/world/entity/monster/piglin/Piglin;)Ljava/util/Optional;",
+            method = "findNearestValidAttackTarget",
             at = @At("RETURN"),
             cancellable = true
     )
-    private static void onFindNearestValidAttackTarget(Piglin piglin, CallbackInfoReturnable<Optional<LivingEntity>> cir) {
-        Optional<LivingEntity> targetOptional = cir.getReturnValue();
-
+    private static void onFindNearestValidAttackTarget(ServerLevel serverLevel, Piglin piglin, CallbackInfoReturnable<Optional<? extends LivingEntity>> cir) {
+        Optional<? extends LivingEntity> targetOptional = cir.getReturnValue();
         if (targetOptional.isPresent()) {
             LivingEntity target = targetOptional.get();
 

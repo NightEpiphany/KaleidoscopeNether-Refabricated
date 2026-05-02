@@ -1,27 +1,26 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "item": "minecraft:magma_block"
-    },
-    {
-      "item": "minecraft:magma_block"
-    },
-    {
-      "item": "minecraft:magma_block"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:sugar"
-    }
+
+      "minecraft:magma_block"
+,
+
+      "minecraft:magma_block"
+,
+
+      "minecraft:magma_block"
+,
+
+      "minecraft:sugar"
+,
+
+      "minecraft:sugar"
+,
+
+      "minecraft:sugar"
+
   ],
   "result": {
     "count": 1,

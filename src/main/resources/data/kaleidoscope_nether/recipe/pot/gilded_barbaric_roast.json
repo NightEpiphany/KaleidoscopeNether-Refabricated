@@ -1,150 +1,149 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "item": "kaleidoscope_nether:gilded_fragment"
-    },
-    {
-      "item": "kaleidoscope_nether:gilded_fragment"
-    },
-    {
-      "tag": "c:hot_spices"
-    },
-    {
-      "tag": "c:hot_spices"
-    },
+
+      "kaleidoscope_nether:gilded_fragment"
+,
+
+      "kaleidoscope_nether:gilded_fragment"
+,
+
+      "#c:hot_spices"
+,
+
+      "#c:hot_spices"
+,
     [
-      {
-        "tag": "c:foods/raw_pork"
-      },
-      {
-        "tag": "c:foods/raw_beef"
-      },
-      {
-        "tag": "c:foods/raw_mutton"
-      },
-      {
-        "tag": "c:foods/raw_chicken"
-      },
-      {
-        "item": "minecraft:rabbit"
-      },
-      {
-        "item": "kaleidoscope_nether:raw_strider_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_donkey_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_cut_small_meats"
-      }
+  
+        "#c:foods/raw_pork"
+  ,
+  
+        "#c:foods/raw_beef"
+  ,
+  
+        "#c:foods/raw_mutton"
+  ,
+  
+        "#c:foods/raw_chicken"
+  ,
+  
+        "minecraft:rabbit"
+  ,
+  
+        "kaleidoscope_nether:raw_strider_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_donkey_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_cut_small_meats"
+  
     ],
     [
-      {
-        "tag": "c:foods/raw_pork"
-      },
-      {
-        "tag": "c:foods/raw_beef"
-      },
-      {
-        "tag": "c:foods/raw_mutton"
-      },
-      {
-        "tag": "c:foods/raw_chicken"
-      },
-      {
-        "item": "minecraft:rabbit"
-      },
-      {
-        "item": "kaleidoscope_nether:raw_strider_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_donkey_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_cut_small_meats"
-      }
+  
+        "#c:foods/raw_pork"
+  ,
+  
+        "#c:foods/raw_beef"
+  ,
+  
+        "#c:foods/raw_mutton"
+  ,
+  
+        "#c:foods/raw_chicken"
+  ,
+  
+        "minecraft:rabbit"
+  ,
+  
+        "kaleidoscope_nether:raw_strider_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_donkey_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_cut_small_meats"
+  
     ],
     [
-      {
-        "tag": "c:foods/raw_pork"
-      },
-      {
-        "tag": "c:foods/raw_beef"
-      },
-      {
-        "tag": "c:foods/raw_mutton"
-      },
-      {
-        "tag": "c:foods/raw_chicken"
-      },
-      {
-        "item": "minecraft:rabbit"
-      },
-      {
-        "item": "kaleidoscope_nether:raw_strider_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_donkey_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_cut_small_meats"
-      }
+  
+        "#c:foods/raw_pork"
+  ,
+  
+        "#c:foods/raw_beef"
+  ,
+  
+        "#c:foods/raw_mutton"
+  ,
+  
+        "#c:foods/raw_chicken"
+  ,
+  
+        "minecraft:rabbit"
+  ,
+  
+        "kaleidoscope_nether:raw_strider_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_donkey_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_cut_small_meats"
+  
     ],
     [
-      {
-        "tag": "c:foods/raw_pork"
-      },
-      {
-        "tag": "c:foods/raw_beef"
-      },
-      {
-        "tag": "c:foods/raw_mutton"
-      },
-      {
-        "tag": "c:foods/raw_chicken"
-      },
-      {
-        "item": "minecraft:rabbit"
-      },
-      {
-        "item": "kaleidoscope_nether:raw_strider_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_donkey_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_cut_small_meats"
-      }
+  
+        "#c:foods/raw_pork"
+  ,
+  
+        "#c:foods/raw_beef"
+  ,
+  
+        "#c:foods/raw_mutton"
+  ,
+  
+        "#c:foods/raw_chicken"
+  ,
+  
+        "minecraft:rabbit"
+  ,
+  
+        "kaleidoscope_nether:raw_strider_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_donkey_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_cut_small_meats"
+  
     ],
     [
-      {
-        "tag": "c:foods/raw_pork"
-      },
-      {
-        "tag": "c:foods/raw_beef"
-      },
-      {
-        "tag": "c:foods/raw_mutton"
-      },
-      {
-        "tag": "c:foods/raw_chicken"
-      },
-      {
-        "item": "minecraft:rabbit"
-      },
-      {
-        "item": "kaleidoscope_nether:raw_strider_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_donkey_meat"
-      },
-      {
-        "item": "kaleidoscope_cookery:raw_cut_small_meats"
-      }
+  
+        "#c:foods/raw_pork"
+  ,
+  
+        "#c:foods/raw_beef"
+  ,
+  
+        "#c:foods/raw_mutton"
+  ,
+  
+        "#c:foods/raw_chicken"
+  ,
+  
+        "minecraft:rabbit"
+  ,
+  
+        "kaleidoscope_nether:raw_strider_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_donkey_meat"
+  ,
+  
+        "kaleidoscope_cookery:raw_cut_small_meats"
+  
     ]
   ],
   "result": {

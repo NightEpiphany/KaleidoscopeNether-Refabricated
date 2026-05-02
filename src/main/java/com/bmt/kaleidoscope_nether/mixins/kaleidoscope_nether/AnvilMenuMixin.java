@@ -19,13 +19,19 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
 @Mixin(AnvilMenu.class)
 public abstract class AnvilMenuMixin extends ItemCombinerMenu {
+    @Unique
+    private static final ItemCombinerMenuSlotDefinition KN$SLOT_DEFINITION = ItemCombinerMenuSlotDefinition.create()
+            .withSlot(0, 27, 47, stack -> true)
+            .withSlot(1, 76, 47, stack -> true)
+            .withResultSlot(2, 134, 47)
+            .build();
 
     @Shadow
     @Nullable
     private String itemName;
 
     public AnvilMenuMixin(@Nullable MenuType<?> menuType, int i, Inventory inventory, ContainerLevelAccess containerLevelAccess) {
-        super(menuType, i, inventory, containerLevelAccess);
+        super(menuType, i, inventory, containerLevelAccess, KN$SLOT_DEFINITION);
     }
 
     @Inject(method = "createResult", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;isEmpty()Z", ordinal = 0, shift = At.Shift.BEFORE), cancellable = true)

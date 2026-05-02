@@ -2,18 +2,10 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "key": {
-    "A": {
-      "item": "minecraft:milk_bucket"
-    },
-    "B": {
-      "tag": "c:crimson_fruits"
-    },
-    "C": {
-      "tag": "c:warped_fruits"
-    },
-    "D": {
-      "tag": "c:flour"
-    }
+    "A": "minecraft:milk_bucket",
+    "B": "#c:crimson_fruits",
+    "C": "#c:warped_fruits",
+    "D": "#c:flour"
   },
   "pattern": [
     "ABA",

@@ -9,26 +9,31 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.world.entity.Relative;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
-import java.util.List;
 import java.util.Optional;
+import java.util.Set;
+import java.util.function.Consumer;
 
 public class SoulReturnRiceItem extends FoodWithEffectsItem {
-    public SoulReturnRiceItem(FoodProperties food) {
-        super(food);
+    public SoulReturnRiceItem(Item.Properties properties, FoodProperties food, Consumable consumable) {
+        super(properties, food, consumable);
     }
 
+    @SuppressWarnings("deprecation")
     @Override
-    public void appendHoverText(@NotNull ItemStack stack, Item.@NotNull TooltipContext context, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-        super.appendHoverText(stack, context, tooltip, flag);
-
-        tooltip.add(Component.translatable("item.kaleidoscope_nether.soul_return_rice.tooltip.line1")
+    public void appendHoverText(@NonNull ItemStack stack, Item.@NonNull TooltipContext context, @NonNull TooltipDisplay tooltipDisplay, @NonNull Consumer<Component> consumer, @NonNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, tooltipDisplay, consumer, flag);
+        consumer.accept(Component.translatable("item.kaleidoscope_nether.soul_return_rice.tooltip.line1")
                 .withStyle(ChatFormatting.GRAY));
     }
 
@@ -40,7 +45,7 @@ public class SoulReturnRiceItem extends FoodWithEffectsItem {
             Optional<GlobalPos> deathLocation = player.getLastDeathLocation();
             if (deathLocation.isPresent()) {
                 GlobalPos globalPos = deathLocation.get();
-                ServerLevel targetLevel = player.server.getLevel(globalPos.dimension());
+                ServerLevel targetLevel = level.getServer() == null ? null : level.getServer().getLevel(globalPos.dimension());
 
                 if (targetLevel != null) {
                     BlockPos pos = globalPos.pos();
@@ -49,8 +54,10 @@ public class SoulReturnRiceItem extends FoodWithEffectsItem {
                             pos.getX() + 0.5,
                             pos.getY(),
                             pos.getZ() + 0.5,
+                            Set.of(),
                             player.getYRot(),
-                            player.getXRot());
+                            player.getXRot(),
+                            true);
 
                     player.level().playSound(null, player.getX(), player.getY(), player.getZ(),
                             SoundEvents.ENDERMAN_TELEPORT, SoundSource.PLAYERS, 1.0F, 1.0F);

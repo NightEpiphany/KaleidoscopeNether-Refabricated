@@ -1,27 +1,26 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:crimson_fruits"
-    },
-    {
-      "tag": "c:crimson_fruits"
-    },
-    {
-      "tag": "c:warped_fruits"
-    },
-    {
-      "tag": "c:warped_fruits"
-    },
-    {
-      "tag": "c:poisonous_fruits"
-    },
-    {
-      "tag": "c:poisonous_fruits"
-    }
+
+      "#c:crimson_fruits"
+,
+
+      "#c:crimson_fruits"
+,
+
+      "#c:warped_fruits"
+,
+
+      "#c:warped_fruits"
+,
+
+      "#c:poisonous_fruits"
+,
+
+      "#c:poisonous_fruits"
+
   ],
   "result": {
     "count": 1,

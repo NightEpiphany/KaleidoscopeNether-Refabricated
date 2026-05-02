@@ -1,18 +1,17 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:stick"
-  },
+  "carrier":
+    "minecraft:stick",
   "ingredients": [
-    {
-      "item": "minecraft:ghast_tear"
-    },
-    {
-      "item": "kaleidoscope_nether:ghast_tentacle"
-    },
-    {
-      "item": "kaleidoscope_nether:ghast_tentacle"
-    }
+
+      "minecraft:ghast_tear"
+,
+
+      "kaleidoscope_nether:ghast_tentacle"
+,
+
+      "kaleidoscope_nether:ghast_tentacle"
+
   ],
   "result": {
     "count": 2,

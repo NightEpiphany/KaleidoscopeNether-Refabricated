@@ -1,0 +1,6 @@
+{
+  "model": {
+  "type": "minecraft:model",
+    "model": "kaleidoscope_nether:item/primitive_machete"
+  }
+}

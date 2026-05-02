@@ -2,12 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": {
-      "item": "kaleidoscope_nether:hoglin_tusk"
-    },
-    "S": {
-      "item": "minecraft:netherite_ingot"
-    }
+    "#": "kaleidoscope_nether:hoglin_tusk",
+    "S": "minecraft:netherite_ingot"
   },
   "pattern": [
     "  #",

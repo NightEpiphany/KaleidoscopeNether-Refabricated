@@ -1,27 +1,26 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "item": "minecraft:magma_cream"
-    },
-    {
-      "item": "minecraft:magma_cream"
-    },
-    {
-      "item": "minecraft:magma_cream"
-    }
+
+      "#c:foods/raw_beef"
+,
+
+      "#c:foods/raw_beef"
+,
+
+      "#c:foods/raw_beef"
+,
+
+      "minecraft:magma_cream"
+,
+
+      "minecraft:magma_cream"
+,
+
+      "minecraft:magma_cream"
+
   ],
   "result": {
     "count": 1,

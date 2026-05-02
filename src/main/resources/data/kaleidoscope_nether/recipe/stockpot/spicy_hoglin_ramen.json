@@ -1,47 +1,46 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier": 
+    "minecraft:bowl",
   "cooking_bubble_color": 16772291,
   "cooking_texture": "kaleidoscope_cookery:stockpot/default_cooking",
   "finished_bubble_color": 16034443,
   "finished_texture": "kaleidoscope_cookery:stockpot/default_finished",
   "ingredients": [
     [
-      {
-        "tag": "c:raw_ham"
-      },
-      {
-        "item": "kaleidoscope_nether:ham_slice"
-      }
+  
+        "#c:raw_ham"
+  ,
+  
+        "kaleidoscope_nether:ham_slice"
+      
     ],
     [
-      {
-        "tag": "c:raw_ham"
-      },
-      {
-        "item": "kaleidoscope_nether:ham_slice"
-      }
+  
+        "#c:raw_ham"
+  ,
+  
+        "kaleidoscope_nether:ham_slice"
+      
     ],
-    {
-      "tag": "c:hot_spices"
-    },
-    {
-      "tag": "c:vegetables/pepper"
-    },
-    {
-      "tag": "c:vegetables/pepper"
-    },
-    {
-      "tag": "c:foods/pasta"
-    },
-    {
-      "tag": "c:foods/pasta"
-    },
-    {
-      "tag": "c:foods/pasta"
-    }
+
+      "#c:hot_spices"
+,
+
+      "#c:vegetables/pepper"
+,
+
+      "#c:vegetables/pepper"
+,
+
+      "#c:foods/pasta"
+,
+
+      "#c:foods/pasta"
+,
+
+      "#c:foods/pasta"
+    
   ],
   "result": {
     "count": 3,

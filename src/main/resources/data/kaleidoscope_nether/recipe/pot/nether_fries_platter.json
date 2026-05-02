@@ -1,36 +1,35 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "item": "minecraft:blaze_rod"
-    },
-    {
-      "item": "minecraft:blaze_rod"
-    },
-    {
-      "tag": "c:hot_spices"
-    },
-    {
-      "tag": "c:hot_spices"
-    },
-    {
-      "tag": "c:hot_spices"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:soul_speed_blocks"
-    },
-    {
-      "tag": "c:soul_speed_blocks"
-    }
+
+      "minecraft:blaze_rod"
+,
+
+      "minecraft:blaze_rod"
+,
+
+      "#c:hot_spices"
+,
+
+      "#c:hot_spices"
+,
+
+      "#c:hot_spices"
+,
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:soul_speed_blocks"
+,
+
+      "#c:soul_speed_blocks"
+
   ],
   "result": {
     "count": 1,

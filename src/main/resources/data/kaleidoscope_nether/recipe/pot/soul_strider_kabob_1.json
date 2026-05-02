@@ -1,15 +1,14 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:stick"
-  },
+  "carrier":
+    "minecraft:stick",
   "ingredients": [
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "item": "kaleidoscope_nether:raw_strider_meat"
-    }
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "kaleidoscope_nether:raw_strider_meat"
+
   ],
   "result": {
     "count": 1,

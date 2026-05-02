@@ -1,15 +1,9 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:stick"
-  },
+  "carrier": "minecraft:stick",
   "ingredients": [
-    {
-      "item": "minecraft:blaze_powder"
-    },
-    {
-      "item": "minecraft:blaze_rod"
-    }
+    "minecraft:blaze_powder",
+    "minecraft:blaze_rod"
   ],
   "result": {
     "count": 1,

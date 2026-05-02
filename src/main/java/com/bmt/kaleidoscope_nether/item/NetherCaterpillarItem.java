@@ -10,21 +10,24 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.component.Consumable;
+import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
-import java.util.List;
+import java.util.function.Consumer;
 
 public class NetherCaterpillarItem extends Item {
-    public NetherCaterpillarItem(FoodProperties food) {
-        super(new Properties().food(food));
+    public NetherCaterpillarItem(Properties properties, FoodProperties food, Consumable consumable) {
+        super(properties.food(food, consumable));
     }
 
+    @SuppressWarnings("deprecation")
     @Override
-    public void appendHoverText(@NotNull ItemStack stack, Item.@NotNull TooltipContext context, @NotNull List<Component> tooltip, @NotNull TooltipFlag flag) {
-        super.appendHoverText(stack, context, tooltip, flag);
-
-        tooltip.add(Component.translatable("item.kaleidoscope_nether.nether_caterpillar.tooltip.line1"));
+    public void appendHoverText(@NonNull ItemStack stack, Item.@NonNull TooltipContext context, @NonNull TooltipDisplay tooltipDisplay, @NonNull Consumer<Component> consumer, @NonNull TooltipFlag flag) {
+        super.appendHoverText(stack, context, tooltipDisplay, consumer, flag);
+        consumer.accept(Component.translatable("item.kaleidoscope_nether.nether_caterpillar.tooltip.line1"));
     }
 
     @Override

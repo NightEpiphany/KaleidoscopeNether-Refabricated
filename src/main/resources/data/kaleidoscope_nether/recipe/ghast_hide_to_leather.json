@@ -1,9 +1,7 @@
 {
   "type": "minecraft:crafting_shapeless",
   "ingredients": [
-    {
-      "item": "kaleidoscope_nether:ghast_hide"
-    }
+    "kaleidoscope_nether:ghast_hide"
   ],
   "result": {
     "id": "minecraft:leather",

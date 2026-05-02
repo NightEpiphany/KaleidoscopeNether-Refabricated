@@ -1,8 +1,6 @@
 {
   "type": "kaleidoscope_cookery:millstone",
-  "ingredient": {
-    "item": "minecraft:nether_star"
-  },
+  "ingredient": "minecraft:nether_star",
   "result": {
     "count": 2,
     "id": "kaleidoscope_nether:star_dust"

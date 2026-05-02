@@ -1,15 +1,15 @@
 {
   "type": "kaleidoscope_cookery:pot",
   "ingredients": [
-    {
-      "item": "kaleidoscope_nether:hoglin_hide"
-    },
-    {
-      "item": "kaleidoscope_nether:hoglin_hide"
-    },
-    {
-      "item": "kaleidoscope_nether:hoglin_hide"
-    }
+
+      "kaleidoscope_nether:hoglin_hide"
+,
+
+      "kaleidoscope_nether:hoglin_hide"
+,
+
+      "kaleidoscope_nether:hoglin_hide"
+
   ],
   "result": {
     "count": 12,

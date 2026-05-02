@@ -1,9 +1,7 @@
 ﻿{
   "type": "kaleidoscope_cookery:chopping_board",
   "cut_count": 5,
-  "ingredient": {
-    "item": "farmersdelight:ham"
-  },
+  "ingredient": "farmersdelight:ham",
   "model_id": "kaleidoscope_nether:ham",
   "result": {
     "count": 2,

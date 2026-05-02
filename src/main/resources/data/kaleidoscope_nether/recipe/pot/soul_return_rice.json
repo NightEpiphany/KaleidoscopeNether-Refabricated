@@ -1,30 +1,29 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:soul_speed_blocks"
-    },
-    {
-      "tag": "c:soul_speed_blocks"
-    },
-    {
-      "tag": "c:soul_speed_blocks"
-    },
-    {
-      "item": "kaleidoscope_nether:star_dust"
-    }
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:soul_speed_blocks"
+,
+
+      "#c:soul_speed_blocks"
+,
+
+      "#c:soul_speed_blocks"
+,
+
+      "kaleidoscope_nether:star_dust"
+
   ],
   "result": {
     "count": 1,

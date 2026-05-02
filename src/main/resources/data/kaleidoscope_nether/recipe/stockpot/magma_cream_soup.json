@@ -1,34 +1,32 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier": 
+    "minecraft:bowl",
   "cooking_bubble_color": 16772291,
   "cooking_texture": "kaleidoscope_cookery:stockpot/default_cooking",
   "finished_bubble_color": 16034443,
   "finished_texture": "kaleidoscope_cookery:stockpot/default_finished",
   "ingredients": [
-    {
-      "item": "minecraft:magma_cream"
-    },
-    {
-      "item": "minecraft:magma_cream"
-    },
-    {
-      "item": "minecraft:magma_cream"
-    },
-    {
-      "tag": "c:vegetables/carrot"
-    },
-    {
-      "tag": "c:vegetables/carrot"
-    },
-    {
-      "tag": "c:vegetables/potato"
-    },
-    {
-      "tag": "c:vegetables/potato"
-    }
+
+      "minecraft:magma_cream"
+,
+
+      "minecraft:magma_cream"
+,
+
+      "minecraft:magma_cream"
+,
+
+      "#c:vegetables/carrot"
+,
+
+      "#c:vegetables/carrot"
+,
+
+      "#c:vegetables/potato"
+,
+
+      "#c:vegetables/potato"
   ],
   "result": {
     "count": 3,

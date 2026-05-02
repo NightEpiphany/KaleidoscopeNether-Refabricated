@@ -1,9 +1,9 @@
 package com.bmt.kaleidoscope_nether.effect;
 
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
-import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import org.jetbrains.annotations.NotNull;
 
 public class MysteriousPoisonEffect extends MobEffect {
@@ -13,15 +13,11 @@ public class MysteriousPoisonEffect extends MobEffect {
     }
 
     @Override
-    public boolean applyEffectTick(LivingEntity livingEntity, int amplifier) {
-        if (!livingEntity.level().isClientSide()) {
-            float maxHealth = livingEntity.getMaxHealth();
-            float damage = maxHealth * 0.01f + amplifier * 0.5f;
-
-            damage = Math.max(damage, 1.0f);
-
-            livingEntity.hurt(livingEntity.damageSources().magic(), damage);
-        }
+    public boolean applyEffectTick(@NotNull ServerLevel serverLevel, @NotNull LivingEntity livingEntity, int amplifier) {
+        float maxHealth = livingEntity.getMaxHealth();
+        float damage = maxHealth * 0.01f + amplifier * 0.5f;
+        damage = Math.max(damage, 1.0f);
+        livingEntity.hurt(serverLevel.damageSources().magic(), damage);
         return true;
     }
 
@@ -31,15 +27,5 @@ public class MysteriousPoisonEffect extends MobEffect {
         interval = Math.max(interval, 5);
 
         return duration % interval == 0;
-    }
-
-    @Override
-    public void addAttributeModifiers(@NotNull AttributeMap attributeMap, int amplifier) {
-        super.addAttributeModifiers(attributeMap, amplifier);
-    }
-
-    @Override
-    public void removeAttributeModifiers(@NotNull AttributeMap attributeMap) {
-        super.removeAttributeModifiers(attributeMap);
     }
 }

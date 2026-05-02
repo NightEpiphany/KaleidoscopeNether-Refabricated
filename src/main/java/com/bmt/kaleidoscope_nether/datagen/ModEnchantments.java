@@ -26,7 +26,7 @@ public class ModEnchantments {
                                 1,
                                 EquipmentSlotGroup.FEET
                         )
-                ).build(KNEnchantments.LAVA_WALKER.location())
+                ).build(KNEnchantments.LAVA_WALKER.identifier())
         );
     }
 }

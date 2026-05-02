@@ -1,30 +1,29 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "tag": "c:vegetables/pepper"
-    },
-    {
-      "tag": "c:vegetables/pepper"
-    },
-    {
-      "tag": "c:vegetables/pepper"
-    },
-    {
-      "item": "kaleidoscope_nether:star_dust"
-    }
+
+      "#c:foods/raw_beef"
+,
+
+      "#c:foods/raw_beef"
+,
+
+      "#c:foods/raw_beef"
+,
+
+      "#c:vegetables/pepper"
+,
+
+      "#c:vegetables/pepper"
+,
+
+      "#c:vegetables/pepper"
+,
+
+      "kaleidoscope_nether:star_dust"
+
   ],
   "result": {
     "count": 1,

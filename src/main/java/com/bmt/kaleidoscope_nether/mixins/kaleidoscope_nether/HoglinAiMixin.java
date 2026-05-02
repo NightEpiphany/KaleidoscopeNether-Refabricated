@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_nether.mixins.kaleidoscope_nether;
 
 import com.bmt.kaleidoscope_nether.effect.WarpedEffect;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.monster.hoglin.Hoglin;
 import net.minecraft.world.entity.monster.hoglin.HoglinAi;
@@ -17,13 +18,12 @@ import java.util.Optional;
 public abstract class HoglinAiMixin {
 
     @Inject(
-            method = "findNearestValidAttackTarget(Lnet/minecraft/world/entity/monster/hoglin/Hoglin;)Ljava/util/Optional;",
+            method = "findNearestValidAttackTarget",
             at = @At("RETURN"),
             cancellable = true
     )
-    private static void onFindNearestValidAttackTarget(Hoglin hoglin, CallbackInfoReturnable<Optional<LivingEntity>> cir) {
-        Optional<LivingEntity> targetOptional = cir.getReturnValue();
-
+    private static void onFindNearestValidAttackTarget(ServerLevel serverLevel, Hoglin hoglin, CallbackInfoReturnable<Optional<? extends LivingEntity>> cir) {
+        Optional<? extends LivingEntity> targetOptional = cir.getReturnValue();
         if (targetOptional.isPresent()) {
             LivingEntity target = targetOptional.get();
 
@@ -36,11 +36,11 @@ public abstract class HoglinAiMixin {
     }
 
     @Inject(
-            method = "wasHurtBy(Lnet/minecraft/world/entity/monster/hoglin/Hoglin;Lnet/minecraft/world/entity/LivingEntity;)V",
+            method = "wasHurtBy",
             at = @At("HEAD"),
             cancellable = true
     )
-    private static void onWasHurtBy(Hoglin hoglin, LivingEntity attacker, CallbackInfo ci) {
+    private static void onWasHurtBy(ServerLevel serverLevel, Hoglin hoglin, LivingEntity attacker, CallbackInfo ci) {
         if (attacker instanceof Player player) {
             if (WarpedEffect.shouldAffectMob(hoglin, player)) {
                 ci.cancel();

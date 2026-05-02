@@ -1,30 +1,14 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier": "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_pork"
-    },
-    {
-      "tag": "c:foods/raw_pork"
-    },
-    {
-      "tag": "c:vegetables/pepper"
-    },
-    {
-      "tag": "c:vegetables/pepper"
-    },
-    {
-      "tag": "c:eggs"
-    },
-    {
-      "tag": "c:eggs"
-    },
-    {
-      "item": "kaleidoscope_cookery:cooked_rice"
-    }
+    "#c:foods/raw_pork",
+    "#c:foods/raw_pork",
+    "#c:vegetables/pepper",
+    "#c:vegetables/pepper",
+    "#c:eggs",
+    "#c:eggs",
+    "kaleidoscope_cookery:cooked_rice"
   ],
   "result": {
     "count": 1,

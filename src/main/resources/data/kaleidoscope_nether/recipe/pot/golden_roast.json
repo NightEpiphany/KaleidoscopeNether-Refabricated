@@ -1,27 +1,26 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "tag": "c:foods/raw_beef"
-    },
-    {
-      "tag": "c:hot_spices"
-    },
-    {
-      "tag": "c:hot_spices"
-    },
-    {
-      "item": "minecraft:gold_block"
-    },
-    {
-      "item": "minecraft:gold_block"
-    }
+
+      "#c:foods/raw_beef"
+,
+
+      "#c:foods/raw_beef"
+,
+
+      "#c:hot_spices"
+,
+
+      "#c:hot_spices"
+,
+
+      "minecraft:gold_block"
+,
+
+      "minecraft:gold_block"
+
   ],
   "result": {
     "count": 1,

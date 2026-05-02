@@ -6,7 +6,7 @@ import com.bmt.kaleidoscope_nether.init.KNEvents;
 import com.bmt.kaleidoscope_nether.init.KNPotions;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.entity.projectile.Arrow;
+import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.alchemy.PotionContents;
 
@@ -16,7 +16,7 @@ public class ModEvents {
     }
 
     public static void onLivingIncomingDamage(LivingIncomingDamageEvent event) {
-        if (!(event.getSource().getDirectEntity() instanceof Arrow arrow)) {
+        if (!(event.getSource().getDirectEntity() instanceof AbstractArrow arrow)) {
             return;
         }
 
@@ -33,7 +33,7 @@ public class ModEvents {
         }
     }
 
-    private static PotionContents getArrowPotionContents(Arrow arrow) {
+    private static PotionContents getArrowPotionContents(AbstractArrow arrow) {
         ItemStack pickupStack = arrow.getPickupItemStackOrigin();
         return pickupStack.getOrDefault(DataComponents.POTION_CONTENTS, PotionContents.EMPTY);
     }

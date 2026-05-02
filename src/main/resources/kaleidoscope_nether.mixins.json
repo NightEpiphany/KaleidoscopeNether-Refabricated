@@ -10,7 +10,6 @@
     "kaleidoscope_nether.HoglinAiMixin",
     "kaleidoscope_nether.LavaWalkerLivingMixin",
     "kaleidoscope_nether.LivingEntityMixin",
-    "kaleidoscope_nether.MobEffectInstanceMixin",
     "kaleidoscope_nether.MobMixin",
     "kaleidoscope_nether.PiglinAiMixin",
     "kaleidoscope_nether.PiglinBruteAiMixin",

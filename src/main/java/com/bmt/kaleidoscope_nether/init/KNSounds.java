@@ -3,7 +3,7 @@ package com.bmt.kaleidoscope_nether.init;
 import com.bmt.kaleidoscope_nether.KaleidoscopeNether;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.sounds.SoundEvent;
 
 import java.util.function.Supplier;
@@ -13,7 +13,7 @@ public final class KNSounds {
     public static final Supplier<SoundEvent> STAR_DUST_REPAIR = registerSoundEvent("star_dust_repair");
 
     private static Supplier<SoundEvent> registerSoundEvent(String name) {
-        ResourceLocation location = KaleidoscopeNether.id(name);
+        Identifier location = KaleidoscopeNether.id(name);
         SoundEvent soundEvent = Registry.register(BuiltInRegistries.SOUND_EVENT, location, SoundEvent.createVariableRangeEvent(location));
         return () -> soundEvent;
     }

@@ -14,7 +14,7 @@ public final class KNPotions {
         MYSTERIOUS_POISON = Registry.registerForHolder(
                 BuiltInRegistries.POTION,
                 KaleidoscopeNether.id("mysterious_poison"),
-                new Potion(new MobEffectInstance(KNEffects.MYSTERIOUS_POISON, 1500, 0))
+                new Potion("mysterious_poison", new MobEffectInstance(KNEffects.MYSTERIOUS_POISON, 1500, 0))
         );
     }
 }

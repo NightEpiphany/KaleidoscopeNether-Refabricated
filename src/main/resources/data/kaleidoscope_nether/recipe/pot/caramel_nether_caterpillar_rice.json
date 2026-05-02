@@ -1,18 +1,17 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "tag": "c:foods/cooked_rice"
-  },
+  "carrier":
+    "#c:foods/cooked_rice",
   "ingredients": [
-    {
-      "item": "kaleidoscope_nether:nether_caterpillar"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:sugar"
-    }
+
+      "kaleidoscope_nether:nether_caterpillar"
+,
+
+      "minecraft:sugar"
+,
+
+      "minecraft:sugar"
+
   ],
   "result": {
     "count": 1,

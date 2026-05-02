@@ -1,24 +1,23 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "tag": "c:foods/cooked_rice"
-  },
+  "carrier":
+    "#c:foods/cooked_rice",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_pork"
-    },
-    {
-      "tag": "c:foods/raw_pork"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    }
+
+      "#c:foods/raw_pork"
+,
+
+      "#c:foods/raw_pork"
+,
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:vegetables/soul_pepper"
+
   ],
   "result": {
     "count": 1,

@@ -28,6 +28,7 @@ import net.minecraft.world.level.gameevent.GameEvent;
 import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
 public class TwistingCaveVinesHead extends GrowingPlantHeadBlock implements BonemealableBlock {
 
@@ -48,7 +49,7 @@ public class TwistingCaveVinesHead extends GrowingPlantHeadBlock implements Bone
     }
 
     @Override
-    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+    protected void createBlockStateDefinition(StateDefinition.@NonNull Builder<Block, BlockState> builder) {
         super.createBlockStateDefinition(builder);
         builder.add(BERRIES);
     }
@@ -59,7 +60,7 @@ public class TwistingCaveVinesHead extends GrowingPlantHeadBlock implements Bone
     }
 
     @Override
-    protected int getBlocksToGrowWhenBonemealed(RandomSource random) {
+    protected int getBlocksToGrowWhenBonemealed(@NonNull RandomSource random) {
         return 0;
     }
 
@@ -69,7 +70,7 @@ public class TwistingCaveVinesHead extends GrowingPlantHeadBlock implements Bone
     }
 
     @Override
-    protected @NotNull InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hit) {
+    protected @NotNull InteractionResult useWithoutItem(BlockState state, @NonNull Level level, @NonNull BlockPos pos, @NonNull Player player, @NonNull BlockHitResult hit) {
         if (state.getValue(BERRIES)) {
             Block.popResource(level, pos, new ItemStack(KNItems.WARPED_FRUIT.get(), 1));
             float f = Mth.randomBetween(level.random, 0.8F, 1.2F);
@@ -77,24 +78,24 @@ public class TwistingCaveVinesHead extends GrowingPlantHeadBlock implements Bone
             BlockState newState = state.setValue(BERRIES, Boolean.FALSE);
             level.setBlock(pos, newState, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, pos, GameEvent.Context.of(player, newState));
-            return InteractionResult.sidedSuccess(level.isClientSide);
+            return InteractionResult.SUCCESS;
         }
         
         return InteractionResult.PASS;
     }
 
     @Override
-    public boolean isValidBonemealTarget(LevelReader level, BlockPos pos, BlockState state) {
+    public boolean isValidBonemealTarget(@NonNull LevelReader level, @NonNull BlockPos pos, @NonNull BlockState state) {
         return true;
     }
 
     @Override
-    public boolean isBonemealSuccess(Level level, RandomSource random, BlockPos pos, BlockState state) {
+    public boolean isBonemealSuccess(@NonNull Level level, @NonNull RandomSource random, @NonNull BlockPos pos, @NonNull BlockState state) {
         return true;
     }
 
     @Override
-    public void performBonemeal(ServerLevel level, RandomSource random, BlockPos pos, BlockState state) {
+    public void performBonemeal(@NonNull ServerLevel level, @NonNull RandomSource random, @NonNull BlockPos pos, BlockState state) {
         if (state.getValue(BERRIES)) {
             Block.popResource(level, pos, new ItemStack(KNItems.WARPED_FRUIT.get(), 1));
             float f = Mth.randomBetween(level.random, 0.8F, 1.2F);

@@ -1,30 +1,29 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "item": "kaleidoscope_cookery:raw_cow_offal"
-    },
-    {
-      "item": "kaleidoscope_cookery:raw_cow_offal"
-    },
-    {
-      "item": "kaleidoscope_cookery:raw_cow_offal"
-    },
-    {
-      "tag": "c:vegetables/chilipepper"
-    },
-    {
-      "tag": "c:vegetables/chilipepper"
-    },
-    {
-      "item": "minecraft:beetroot"
-    },
-    {
-      "item": "minecraft:beetroot"
-    }
+
+      "kaleidoscope_cookery:raw_cow_offal"
+,
+
+      "kaleidoscope_cookery:raw_cow_offal"
+,
+
+      "kaleidoscope_cookery:raw_cow_offal"
+,
+
+      "#c:vegetables/chilipepper"
+,
+
+      "#c:vegetables/chilipepper"
+,
+
+      "minecraft:beetroot"
+,
+
+      "minecraft:beetroot"
+
   ],
   "result": {
     "count": 1,

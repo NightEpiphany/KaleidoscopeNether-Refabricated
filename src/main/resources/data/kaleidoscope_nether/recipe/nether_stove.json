@@ -2,17 +2,8 @@
   "type": "minecraft:crafting_shaped",
   "category": "redstone",
   "key": {
-    "#": {
-      "item": "minecraft:blackstone"
-    },
-    "F": [
-      {
-        "item": "minecraft:campfire"
-      },
-      {
-        "item": "minecraft:soul_campfire"
-      }
-    ]
+    "#": "minecraft:blackstone",
+    "F": "minecraft:soul_campfire"
   },
   "pattern": [
     "###",

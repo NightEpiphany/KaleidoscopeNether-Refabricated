@@ -9,7 +9,7 @@ import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.data.worldgen.features.FeatureUtils;
 import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
-import net.minecraft.util.random.SimpleWeightedRandomList;
+import net.minecraft.util.random.WeightedList;
 import net.minecraft.util.valueproviders.ConstantInt;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -43,12 +43,12 @@ public class ModFeatures {
     }
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
-        RandomizedIntStateProvider TwistingCaveVinesHead = new RandomizedIntStateProvider(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(KNBlocks.TWISTING_CAVE_VINES.get().defaultBlockState(), 4).add(KNBlocks.TWISTING_CAVE_VINES.get().defaultBlockState().setValue(CaveVines.BERRIES, true), 1).build()), CaveVinesBlock.AGE, UniformInt.of(23, 25));
-        WeightedStateProvider TwistingCaveVinesPlant = new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(KNBlocks.TWISTING_CAVE_VINES_PLANT.get().defaultBlockState(), 1).add(KNBlocks.TWISTING_CAVE_VINES_PLANT.get().defaultBlockState().setValue(CaveVines.BERRIES, true), 1));
+        RandomizedIntStateProvider TwistingCaveVinesHead = new RandomizedIntStateProvider(new WeightedStateProvider(WeightedList.<BlockState>builder().add(KNBlocks.TWISTING_CAVE_VINES.get().defaultBlockState(), 4).add(KNBlocks.TWISTING_CAVE_VINES.get().defaultBlockState().setValue(CaveVines.BERRIES, true), 1).build()), CaveVinesBlock.AGE, UniformInt.of(23, 25));
+        WeightedStateProvider TwistingCaveVinesPlant = new WeightedStateProvider(WeightedList.<BlockState>builder().add(KNBlocks.TWISTING_CAVE_VINES_PLANT.get().defaultBlockState(), 1).add(KNBlocks.TWISTING_CAVE_VINES_PLANT.get().defaultBlockState().setValue(CaveVines.BERRIES, true), 1).build());
 
 
-        RandomizedIntStateProvider WeepingCaveVinesHead = new RandomizedIntStateProvider(new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(KNBlocks.WEEPING_CAVE_VINES.get().defaultBlockState(), 4).add(KNBlocks.WEEPING_CAVE_VINES.get().defaultBlockState().setValue(CaveVines.BERRIES, true), 1).build()), CaveVinesBlock.AGE, UniformInt.of(23, 25));
-        WeightedStateProvider WeepingCaveVinesPlant = new WeightedStateProvider(SimpleWeightedRandomList.<BlockState>builder().add(KNBlocks.WEEPING_CAVE_VINES_PLANT.get().defaultBlockState(), 1).add(KNBlocks.WEEPING_CAVE_VINES_PLANT.get().defaultBlockState().setValue(CaveVines.BERRIES, true), 1));
+        RandomizedIntStateProvider WeepingCaveVinesHead = new RandomizedIntStateProvider(new WeightedStateProvider(WeightedList.<BlockState>builder().add(KNBlocks.WEEPING_CAVE_VINES.get().defaultBlockState(), 4).add(KNBlocks.WEEPING_CAVE_VINES.get().defaultBlockState().setValue(CaveVines.BERRIES, true), 1).build()), CaveVinesBlock.AGE, UniformInt.of(23, 25));
+        WeightedStateProvider WeepingCaveVinesPlant = new WeightedStateProvider(WeightedList.<BlockState>builder().add(KNBlocks.WEEPING_CAVE_VINES_PLANT.get().defaultBlockState(), 1).add(KNBlocks.WEEPING_CAVE_VINES_PLANT.get().defaultBlockState().setValue(CaveVines.BERRIES, true), 1).build());
 
 
         FeatureUtils.register(
@@ -74,7 +74,7 @@ public class ModFeatures {
                 Feature.BLOCK_COLUMN,
                 new BlockColumnConfiguration(List.of(
                         BlockColumnConfiguration.layer(
-                                new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder()
+                                new WeightedListInt(WeightedList.<IntProvider>builder()
                                         .add(UniformInt.of(0, 19), 1)
                                         .add(UniformInt.of(0, 2), 3)
                                         .add(UniformInt.of(0, 6), 10)
@@ -94,7 +94,7 @@ public class ModFeatures {
                 Feature.BLOCK_COLUMN,
                 new BlockColumnConfiguration(List.of(
                         BlockColumnConfiguration.layer(
-                                new WeightedListInt(SimpleWeightedRandomList.<IntProvider>builder()
+                                new WeightedListInt(WeightedList.<IntProvider>builder()
                                         .add(UniformInt.of(0, 19), 1)
                                         .add(UniformInt.of(0, 2), 3)
                                         .add(UniformInt.of(0, 6), 10)

@@ -51,7 +51,7 @@ public abstract class WitherBossMixin {
     }
 
     @Inject(
-            method = "customServerAiStep()V",
+            method = "customServerAiStep",
             at = @At(
                     value = "INVOKE",
                     target = "Lnet/minecraft/world/entity/boss/wither/WitherBoss;getTarget()Lnet/minecraft/world/entity/LivingEntity;",

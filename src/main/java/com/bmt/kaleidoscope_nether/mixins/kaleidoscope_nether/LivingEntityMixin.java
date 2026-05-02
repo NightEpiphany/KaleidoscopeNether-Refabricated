@@ -6,6 +6,7 @@ import com.bmt.kaleidoscope_nether.api.event.MobEffectAddedEvent;
 import com.bmt.kaleidoscope_nether.effect.CrimsonEffect;
 import com.bmt.kaleidoscope_nether.init.KNEffects;
 import com.bmt.kaleidoscope_nether.init.KNEvents;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
@@ -19,8 +20,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
-    @Inject(method = "hurt", at = @At("HEAD"), cancellable = true)
-    private void onIncomingDamage(DamageSource damageSource, float damage, CallbackInfoReturnable<Boolean> cir) {
+    @Inject(method = "hurtServer", at = @At("HEAD"), cancellable = true)
+    private void onIncomingDamage(ServerLevel serverLevel, DamageSource damageSource, float damage, CallbackInfoReturnable<Boolean> cir) {
         LivingIncomingDamageEvent event = new LivingIncomingDamageEvent((LivingEntity) (Object) this, damageSource, damage);
         KNEvents.LIVING_INCOMING_DAMAGE.invoker().onIncomingDamage(event);
         if (event.isCanceled()) {
@@ -28,8 +29,8 @@ public class LivingEntityMixin {
         }
     }
 
-    @ModifyVariable(method = "hurt", at = @At("HEAD"), argsOnly = true, ordinal = 0)
-    private float modifyDamage(float damage, DamageSource damageSource) {
+    @ModifyVariable(method = "hurtServer", at = @At("HEAD"), argsOnly = true, ordinal = 0)
+    private float modifyDamage(float damage, ServerLevel serverLevel, DamageSource damageSource) {
         LivingDamageModifyEvent event = new LivingDamageModifyEvent((LivingEntity) (Object) this, damageSource, damage);
         KNEvents.MODIFY_LIVING_DAMAGE.invoker().onModify(event);
         return event.getNewDamage();

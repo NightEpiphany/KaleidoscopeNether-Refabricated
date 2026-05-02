@@ -2,33 +2,15 @@
   "type": "minecraft:crafting_shapeless",
   "category": "misc",
   "ingredients": [
-    {
-      "item": "minecraft:sweet_berries"
-    },
-    {
-      "item": "minecraft:honey_bottle"
-    },
-    {
-      "item": "minecraft:sweet_berries"
-    },
-    {
-      "item": "minecraft:sweet_berries"
-    },
-    {
-      "tag": "c:foods/cooked_ham"
-    },
-    {
-      "item": "minecraft:sweet_berries"
-    },
-    {
-      "tag": "c:foods/cooked_rice"
-    },
-    {
-      "item": "minecraft:bowl"
-    },
-    {
-      "tag": "c:foods/cooked_rice"
-    }
+    "minecraft:sweet_berries",
+    "minecraft:honey_bottle",
+    "minecraft:sweet_berries",
+    "minecraft:sweet_berries",
+    "#c:foods/cooked_ham",
+    "minecraft:sweet_berries",
+    "#c:foods/cooked_rice",
+    "minecraft:bowl",
+    "#c:foods/cooked_rice"
   ],
   "result": {
     "count": 1,

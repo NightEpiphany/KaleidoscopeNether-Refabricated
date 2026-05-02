@@ -1,8 +1,6 @@
 {
   "type": "kaleidoscope_cookery:millstone",
-  "ingredient": {
-    "item": "kaleidoscope_nether:hoglin_hide"
-  },
+  "ingredient": "kaleidoscope_nether:hoglin_hide",
   "result": {
     "count": 5,
     "id": "minecraft:leather"

@@ -90,7 +90,7 @@ public final class KNCreativeTabs {
                         output.accept(KNItems.GIANT_BEAST_CROISSANT.get());
 
                         KNFoodBiteRegistry.forEach((resourceLocation, foodData) -> {
-                            Item item = BuiltInRegistries.ITEM.get(resourceLocation);
+                            Item item = BuiltInRegistries.ITEM.getValue(resourceLocation);
                             if (item != Items.AIR) {
                                 output.accept(item);
                             }

@@ -1,36 +1,35 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/tropical_fish"
-    },
-    {
-      "tag": "c:foods/tropical_fish"
-    },
-    {
-      "tag": "c:foods/tropical_fish"
-    },
-    {
-      "tag": "c:foods/tropical_fish"
-    },
-    {
-      "item": "minecraft:nether_wart"
-    },
-    {
-      "item": "minecraft:nether_wart"
-    },
-    {
-      "item": "minecraft:nether_wart"
-    },
-    {
-      "item": "minecraft:nether_wart"
-    },
-    {
-      "item": "kaleidoscope_nether:nether_caterpillar"
-    }
+
+      "#c:foods/tropical_fish"
+,
+
+      "#c:foods/tropical_fish"
+,
+
+      "#c:foods/tropical_fish"
+,
+
+      "#c:foods/tropical_fish"
+,
+
+      "minecraft:nether_wart"
+,
+
+      "minecraft:nether_wart"
+,
+
+      "minecraft:nether_wart"
+,
+
+      "minecraft:nether_wart"
+,
+
+      "kaleidoscope_nether:nether_caterpillar"
+
   ],
   "result": {
     "count": 1,

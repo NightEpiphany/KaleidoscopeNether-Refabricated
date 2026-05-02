@@ -1,30 +1,29 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_pork"
-    },
-    {
-      "tag": "c:foods/raw_pork"
-    },
-    {
-      "item": "kaleidoscope_nether:warped_fruit"
-    },
-    {
-      "item": "kaleidoscope_nether:warped_fruit"
-    },
-    {
-      "item": "kaleidoscope_nether:crimson_fruit"
-    },
-    {
-      "item": "kaleidoscope_nether:crimson_fruit"
-    },
-    {
-      "item": "minecraft:magma_cream"
-    }
+
+      "#c:foods/raw_pork"
+,
+
+      "#c:foods/raw_pork"
+,
+
+      "kaleidoscope_nether:warped_fruit"
+,
+
+      "kaleidoscope_nether:warped_fruit"
+,
+
+      "kaleidoscope_nether:crimson_fruit"
+,
+
+      "kaleidoscope_nether:crimson_fruit"
+,
+
+      "minecraft:magma_cream"
+
   ],
   "result": {
     "count": 1,

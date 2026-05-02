@@ -1,42 +1,14 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "item": "minecraft:rotten_flesh"
-    },
-    {
-      "item": "minecraft:rotten_flesh"
-    },
-    {
-      "item": "minecraft:rotten_flesh"
-    },
-    [
-      {
-        "tag": "c:warped_fruits"
-      },
-      {
-        "item": "minecraft:warped_fungus"
-      }
-    ],
-    [
-      {
-        "tag": "c:warped_fruits"
-      },
-      {
-        "item": "minecraft:warped_fungus"
-      }
-    ],
-    [
-      {
-        "tag": "c:warped_fruits"
-      },
-      {
-        "item": "minecraft:warped_fungus"
-      }
-    ]
+      "minecraft:rotten_flesh",
+      "minecraft:rotten_flesh",
+      "minecraft:rotten_flesh",
+      "#c:warped_fruits",
+      "#c:warped_fruits",
+      "minecraft:warped_fungus"
   ],
   "result": {
     "count": 1,

@@ -2,15 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "equipment",
   "key": {
-    "#": {
-      "item": "kaleidoscope_nether:strider_rock_shell"
-    },
-    "C": {
-      "item": "kaleidoscope_nether:blaze_heart"
-    },
-    "S": {
-      "item": "minecraft:bread"
-    }
+    "#": "kaleidoscope_nether:strider_rock_shell",
+    "C": "kaleidoscope_nether:blaze_heart",
+    "S": "minecraft:bread"
   },
   "pattern": [
     "#C#",

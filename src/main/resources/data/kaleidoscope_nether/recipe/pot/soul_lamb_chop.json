@@ -1,27 +1,26 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:foods/raw_mutton"
-    },
-    {
-      "tag": "c:foods/raw_mutton"
-    },
-    {
-      "tag": "c:foods/raw_mutton"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    },
-    {
-      "tag": "c:vegetables/soul_pepper"
-    }
+
+      "#c:foods/raw_mutton"
+,
+
+      "#c:foods/raw_mutton"
+,
+
+      "#c:foods/raw_mutton"
+,
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:vegetables/soul_pepper"
+,
+
+      "#c:vegetables/soul_pepper"
+
   ],
   "result": {
     "count": 1,

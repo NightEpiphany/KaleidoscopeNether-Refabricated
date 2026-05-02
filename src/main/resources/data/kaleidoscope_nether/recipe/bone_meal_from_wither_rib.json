@@ -3,9 +3,7 @@
   "category": "misc",
   "group": "bonemeal",
   "ingredients": [
-    {
-      "item": "kaleidoscope_nether:wither_rib"
-    }
+    "kaleidoscope_nether:wither_rib"
   ],
   "result": {
     "count": 5,

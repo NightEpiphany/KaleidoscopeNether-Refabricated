@@ -7,12 +7,13 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.component.Consumable;
 import net.minecraft.world.level.Level;
 import org.jetbrains.annotations.NotNull;
 
 public class LavaRoastedChickenItem extends Item {
-    public LavaRoastedChickenItem(FoodProperties food) {
-        super(new Properties().food(food));
+    public LavaRoastedChickenItem(Properties properties, FoodProperties food, Consumable consumable) {
+        super(properties.food(food, consumable));
     }
 
     @Override

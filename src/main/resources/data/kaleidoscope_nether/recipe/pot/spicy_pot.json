@@ -1,44 +1,43 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:bowl"
-  },
+  "carrier":
+    "minecraft:bowl",
   "ingredients": [
-    {
-      "tag": "c:raw_meats"
-    },
-    {
-      "tag": "c:raw_meats"
-    },
+
+      "#c:raw_meats"
+,
+
+      "#c:raw_meats"
+,
     [
-      {
-        "tag": "c:vegetables/carrot"
-      },
-      {
-        "tag": "c:vegetables/potato"
-      },
-      {
-        "item": "minecraft:beetroot"
-      }
+  
+        "#c:vegetables/carrot"
+  ,
+  
+        "#c:vegetables/potato"
+  ,
+  
+        "minecraft:beetroot"
+  
     ],
-    {
-      "tag": "c:vegetables/lettuce"
-    },
+
+      "#c:vegetables/lettuce"
+,
     [
-      {
-        "tag": "c:vegetables/pepper"
-      },
-      {
-        "tag": "c:hot_spices"
-      }
+  
+        "#c:vegetables/pepper"
+  ,
+  
+        "#c:hot_spices"
+  
     ],
     [
-      {
-        "tag": "c:vegetables/pepper"
-      },
-      {
-        "tag": "c:hot_spices"
-      }
+  
+        "#c:vegetables/pepper"
+  ,
+  
+        "#c:hot_spices"
+  
     ]
   ],
   "result": {

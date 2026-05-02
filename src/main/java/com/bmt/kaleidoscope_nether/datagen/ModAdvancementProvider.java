@@ -14,7 +14,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.data.CachedOutput;
 import net.minecraft.data.DataProvider;
 import net.minecraft.data.PackOutput;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 
 public class ModAdvancementProvider extends AdvancementProvider {
     private final PackOutput.PathProvider pathProvider;
@@ -24,7 +24,7 @@ public class ModAdvancementProvider extends AdvancementProvider {
         this.pathProvider = output.createPathProvider(PackOutput.Target.DATA_PACK, "advancements");
     }
 
-    public static BiConsumer<JsonObject, ResourceLocation> BUILD_CONDITION;
+    public static BiConsumer<JsonObject, Identifier> BUILD_CONDITION;
 
     @Override
     public @NotNull CompletableFuture<?> run(@NotNull CachedOutput cachedOutput) {

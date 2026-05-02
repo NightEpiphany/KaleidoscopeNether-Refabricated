@@ -1,5 +1,6 @@
 package com.bmt.kaleidoscope_nether.fluid;
 
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -31,7 +32,7 @@ public abstract class NetherFluids extends WaterFluid {
     }
 
     @Override
-    protected boolean canConvertToSource(Level level) {
+    protected boolean canConvertToSource(ServerLevel level) {
         return false;
     }
 

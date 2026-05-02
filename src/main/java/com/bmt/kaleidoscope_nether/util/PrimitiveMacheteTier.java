@@ -1,41 +1,19 @@
 package com.bmt.kaleidoscope_nether.util;
 
-import com.bmt.kaleidoscope_nether.init.KNItems;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.tags.TagKey;
-import net.minecraft.world.item.Tier;
-import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.level.block.Block;
-import org.jetbrains.annotations.NotNull;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.world.item.ToolMaterial;
 
-public class PrimitiveMacheteTier implements Tier {
-    @Override
-    public int getUses() {
-        return 2031;
-    }
+public final class PrimitiveMacheteTier {
+    public static final ToolMaterial INSTANCE = new ToolMaterial(
+            BlockTags.INCORRECT_FOR_NETHERITE_TOOL,
+            2031,
+            7.0F,
+            7.0F,
+            15,
+            ItemTags.NON_FLAMMABLE_WOOD
+    );
 
-    @Override
-    public float getSpeed() {
-        return 7.0F;
-    }
-
-    @Override
-    public float getAttackDamageBonus() {
-        return 7.0F;
-    }
-
-    @Override
-    public @NotNull TagKey<Block> getIncorrectBlocksForDrops() {
-        return BlockTags.INCORRECT_FOR_NETHERITE_TOOL;
-    }
-
-    @Override
-    public int getEnchantmentValue() {
-        return 15;
-    }
-
-    @Override
-    public @NotNull Ingredient getRepairIngredient() {
-        return Ingredient.of(KNItems.HOGLIN_TUSK.get());
+    private PrimitiveMacheteTier() {
     }
 }

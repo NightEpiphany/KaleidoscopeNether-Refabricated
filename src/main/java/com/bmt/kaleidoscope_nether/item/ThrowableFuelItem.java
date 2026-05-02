@@ -5,7 +5,7 @@ import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.stats.Stats;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
@@ -19,14 +19,14 @@ public class ThrowableFuelItem extends FuelItem {
     }
     
     @Override
-    public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player, @NotNull InteractionHand hand) {
+    public @NotNull InteractionResult use(Level level, Player player, @NotNull InteractionHand hand) {
         ItemStack itemstack = player.getItemInHand(hand);
 
         level.playSound(null, player.getX(), player.getY(), player.getZ(), 
             SoundEvents.SNOWBALL_THROW, SoundSource.NEUTRAL, 
             0.5F, 0.4F / (level.getRandom().nextFloat() * 0.4F + 0.8F));
         
-        if (!level.isClientSide) {
+        if (!level.isClientSide()) {
             BlazeHeartProjectile projectile = new BlazeHeartProjectile(level, player);
             projectile.setItem(itemstack);
 
@@ -41,7 +41,7 @@ public class ThrowableFuelItem extends FuelItem {
 
         player.awardStat(Stats.ITEM_USED.get(this));
         
-        return InteractionResultHolder.sidedSuccess(itemstack, level.isClientSide());
+        return level.isClientSide() ? InteractionResult.SUCCESS : InteractionResult.SUCCESS_SERVER;
     }
     
     @Override

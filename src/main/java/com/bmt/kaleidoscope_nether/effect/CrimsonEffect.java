@@ -1,6 +1,7 @@
 package com.bmt.kaleidoscope_nether.effect;
 
 import com.bmt.kaleidoscope_nether.init.KNEffects;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,7 +15,7 @@ public class CrimsonEffect extends MobEffect {
     }
 
     @Override
-    public boolean applyEffectTick(@NotNull LivingEntity livingEntity, int amplifier) {
+    public boolean applyEffectTick(@NotNull ServerLevel serverLevel, @NotNull LivingEntity livingEntity, int amplifier) {
         return false;
     }
 

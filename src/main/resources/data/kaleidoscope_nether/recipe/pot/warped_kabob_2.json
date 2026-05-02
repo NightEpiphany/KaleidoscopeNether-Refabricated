@@ -1,21 +1,12 @@
 {
   "type": "kaleidoscope_cookery:pot",
-  "carrier": {
-    "item": "minecraft:stick"
-  },
+  "carrier":
+    "minecraft:stick",
   "ingredients": [
-    {
-      "tag": "c:warped_fruits"
-    },
-    {
-      "tag": "c:warped_fruits"
-    },
-    {
-      "item": "minecraft:warped_fungus"
-    },
-    {
-      "item": "minecraft:warped_fungus"
-    }
+      "#c:warped_fruits",
+      "#c:warped_fruits",
+      "minecraft:warped_fungus",
+      "minecraft:warped_fungus"
   ],
   "result": {
     "count": 2,

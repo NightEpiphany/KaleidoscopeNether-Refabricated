@@ -4,7 +4,7 @@ import com.bmt.kaleidoscope_nether.KaleidoscopeNether;
 import com.bmt.kaleidoscope_nether.fluid.NetherFluids;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.material.Fluid;
 
 public final class KNFluids {
@@ -22,7 +22,7 @@ public final class KNFluids {
     }
 
     private static Fluid register(String id, Fluid fluid) {
-        return Registry.register(BuiltInRegistries.FLUID, ResourceLocation.fromNamespaceAndPath(KaleidoscopeNether.MOD_ID, id), fluid);
+        return Registry.register(BuiltInRegistries.FLUID, Identifier.fromNamespaceAndPath(KaleidoscopeNether.MOD_ID, id), fluid);
     }
 
     public static void registerFluids() {

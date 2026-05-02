@@ -7,6 +7,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.phys.Vec3;
+import org.jspecify.annotations.NonNull;
 
 public class GhostEffect extends MobEffect {
     public GhostEffect(int color) {
@@ -14,54 +15,57 @@ public class GhostEffect extends MobEffect {
     }
 
     @Override
-    public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-        if (entity.horizontalCollision) {
+    public boolean applyEffectTick(@NonNull ServerLevel serverLevel, @NonNull LivingEntity entity, int amplifier) {
+        if (shouldWallClimb(entity)) {
             entity.fallDistance = 0.0F;
 
-            final float velocity = 0.15F;
-
             Vec3 motion = entity.getDeltaMovement();
+            final double horizontalLimit = 0.15D;
+            final double climbSpeed = entity.isSuppressingSlidingDownLadder() ? 0.0D : 0.2D;
 
-            double motionX = Mth.clamp(motion.x, -velocity, velocity);
-            double motionY = 0.2;
-            double motionZ = Mth.clamp(motion.z, -velocity, velocity);
-
-            if (entity.isSuppressingSlidingDownLadder()) {
-                motionY = 0.0;
-            }
-
-            entity.setDeltaMovement(motionX, motionY, motionZ);
+            entity.setDeltaMovement(
+                    Mth.clamp(motion.x, -horizontalLimit, horizontalLimit),
+                    Math.max(motion.y, climbSpeed),
+                    Mth.clamp(motion.z, -horizontalLimit, horizontalLimit)
+            );
+            entity.hurtMarked = true;
+            entity.setDiscardFriction(true);
         }
 
-        spawnSoulParticles(entity, amplifier);
+        spawnSoulParticles(serverLevel, entity, amplifier);
         return true;
     }
 
-    private void spawnSoulParticles(LivingEntity entity, int amplifier) {
-        if (!entity.level().isClientSide() && entity.level() instanceof ServerLevel serverLevel) {
-            if (entity.tickCount % 10 == 0) {
-                Vec3 pos = entity.position();
-                int particleCount = 1 + amplifier;
+    private boolean shouldWallClimb(LivingEntity entity) {
+        if (entity.onClimbable() || entity.isInWater() || entity.isInLava()) {
+            return false;
+        }
+        return entity.horizontalCollision || entity.minorHorizontalCollision;
+    }
 
-                for (int i = 0; i < particleCount; i++) {
-                    double offsetX = (entity.getRandom().nextDouble() - 0.5) * entity.getBbWidth();
-                    double offsetY = entity.getRandom().nextDouble() * entity.getBbHeight();
-                    double offsetZ = (entity.getRandom().nextDouble() - 0.5) * entity.getBbWidth();
+    private void spawnSoulParticles(ServerLevel serverLevel, LivingEntity entity, int amplifier) {
+        if (entity.tickCount % 10 == 0) {
+            Vec3 pos = entity.position();
+            int particleCount = 1 + amplifier;
 
-                    double speedX = (entity.getRandom().nextDouble() - 0.5) * 0.01;
-                    double speedY = entity.getRandom().nextDouble() * 0.03 + 0.01;
-                    double speedZ = (entity.getRandom().nextDouble() - 0.5) * 0.01;
+            for (int i = 0; i < particleCount; i++) {
+                double offsetX = (entity.getRandom().nextDouble() - 0.5) * entity.getBbWidth();
+                double offsetY = entity.getRandom().nextDouble() * entity.getBbHeight();
+                double offsetZ = (entity.getRandom().nextDouble() - 0.5) * entity.getBbWidth();
 
-                    serverLevel.sendParticles(
-                            ParticleTypes.SOUL,
-                            pos.x() + offsetX,
-                            pos.y() + offsetY,
-                            pos.z() + offsetZ,
-                            1,
-                            speedX, speedY, speedZ,
-                            0.0
-                    );
-                }
+                double speedX = (entity.getRandom().nextDouble() - 0.5) * 0.01;
+                double speedY = entity.getRandom().nextDouble() * 0.03 + 0.01;
+                double speedZ = (entity.getRandom().nextDouble() - 0.5) * 0.01;
+
+                serverLevel.sendParticles(
+                        ParticleTypes.SOUL,
+                        pos.x() + offsetX,
+                        pos.y() + offsetY,
+                        pos.z() + offsetZ,
+                        1,
+                        speedX, speedY, speedZ,
+                        0.0
+                );
             }
         }
     }

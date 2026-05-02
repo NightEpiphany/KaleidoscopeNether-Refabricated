@@ -10,12 +10,14 @@ import net.minecraft.util.RandomSource;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.world.entity.InsideBlockEffectApplier;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.ItemLike;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jspecify.annotations.NonNull;
 
 
 public class PoisonousFruit extends KNCropBlockBase {
@@ -24,11 +26,11 @@ public class PoisonousFruit extends KNCropBlockBase {
     }
 
     @Override
-    protected boolean mayPlaceOn(BlockState blockState, BlockGetter blockGetter, BlockPos blockPos) {
+    protected boolean mayPlaceOn(BlockState blockState, @NonNull BlockGetter blockGetter, @NonNull BlockPos blockPos) {
         return blockState.is(KNTags.Blocks.SOUL_SOIL_SAND);
     }
 
-    public void randomTick(BlockState blockState, ServerLevel serverLevel, BlockPos blockPos, RandomSource randomSource) {
+    public void randomTick(BlockState blockState, @NonNull ServerLevel serverLevel, @NonNull BlockPos blockPos, @NonNull RandomSource randomSource) {
         int i = blockState.getValue(AGE);
         if (i < 7 && randomSource.nextInt(10) == 0) {
             blockState = blockState.setValue(AGE, i + 1);
@@ -37,9 +39,8 @@ public class PoisonousFruit extends KNCropBlockBase {
 
     }
 
-
     @Override
-    public void entityInside(BlockState blockState, Level level, BlockPos blockPos, Entity entity) {
+    protected void entityInside(@NonNull BlockState blockState, @NonNull Level level, @NonNull BlockPos blockPos, @NonNull Entity entity, @NonNull InsideBlockEffectApplier insideBlockEffectApplier, boolean bl) {
         if (entity instanceof Player living) {
             if (!(living.getItemBySlot(EquipmentSlot.FEET).getItem() == ModItems.FARMER_BOOTS &&
                     living.getItemBySlot(EquipmentSlot.LEGS).getItem() == ModItems.FARMER_LEGGINGS &&
@@ -54,17 +55,17 @@ public class PoisonousFruit extends KNCropBlockBase {
                 }
             }
         }
-        super.entityInside(blockState, level, blockPos, entity);
+        super.entityInside(blockState, level, blockPos, entity, insideBlockEffectApplier, bl);
     }
 
     @Override
-    protected ItemLike getBaseSeedId() {
+    protected @NonNull ItemLike getBaseSeedId() {
         return KNItems.POISONOUS_FRUIT.get();
     }
 
 
     @Override
-    public boolean canSurvive(BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
+    public boolean canSurvive(@NonNull BlockState blockState, LevelReader levelReader, BlockPos blockPos) {
         BlockPos blockpos = blockPos.below();
         BlockState belowState = levelReader.getBlockState(blockpos);
         return this.mayPlaceOn(belowState, levelReader, blockpos);
