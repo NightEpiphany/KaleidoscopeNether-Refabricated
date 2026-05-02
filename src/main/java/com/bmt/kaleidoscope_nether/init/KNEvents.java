@@ -4,7 +4,7 @@ import com.bmt.kaleidoscope_nether.api.event.*;
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
 
-public class KNEvents {
+public final class KNEvents {
     public static final Event<AnvilUpdateEvent.AnvilUpdateHandler> UPDATE_ANVIL = EventFactory.createArrayBacked(AnvilUpdateEvent.AnvilUpdateHandler.class, listeners -> event -> {
         for (AnvilUpdateEvent.AnvilUpdateHandler listener : listeners) {
             listener.onUpdate(event);

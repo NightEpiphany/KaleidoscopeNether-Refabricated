@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.function.BiConsumer;
 
-public class KNFoodBiteRegistry {
+public final class KNFoodBiteRegistry {
     public static final Map<ResourceLocation, FoodBiteRegistry.FoodData> FOOD_DATA_MAP = new ConcurrentHashMap<>();
     private static final CopyOnWriteArrayList<ResourceLocation> FOOD_DATA_ORDER = new CopyOnWriteArrayList<>();
 

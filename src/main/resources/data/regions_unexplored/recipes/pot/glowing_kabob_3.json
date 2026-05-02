@@ -1,8 +1,10 @@
 ﻿{
-  "neoforge:conditions": [
+  "fabric:load_conditions": [
     {
-      "type": "neoforge:mod_loaded",
-      "modid": "regions_unexplored"
+      "condition": "fabric:any_mods_loaded",
+      "values": [
+        "regions_unexplored"
+      ]
     }
   ],
   "type": "kaleidoscope_cookery:pot",

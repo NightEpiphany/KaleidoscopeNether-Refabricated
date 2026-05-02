@@ -9,7 +9,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 
-public class KNCreativeTabs {
+public final class KNCreativeTabs {
     public static void registerTabs() {
         Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, KaleidoscopeNether.id("kaleidoscope_nether_tab"), FabricItemGroup.builder()
                 .title(Component.translatable("itemGroup.kaleidoscope_nether"))

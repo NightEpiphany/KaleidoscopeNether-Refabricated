@@ -9,7 +9,7 @@ import net.minecraft.world.entity.MobCategory;
 
 import java.util.function.Supplier;
 
-public class KNEntities {
+public final class KNEntities {
     public static final Supplier<EntityType<BlazeHeartProjectile>> BLAZE_HEART_PROJECTILE = register(
             "blaze_heart_projectile",
             EntityType.Builder.<BlazeHeartProjectile>of(BlazeHeartProjectile::new, MobCategory.MISC)

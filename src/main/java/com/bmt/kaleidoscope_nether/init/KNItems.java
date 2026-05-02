@@ -17,7 +17,7 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import java.util.function.Supplier;
 
-public class KNItems {
+public final class KNItems {
     // 巨型野兽可颂
     public static final Supplier<Item> GIANT_BEAST_CROISSANT = register("giant_beast_croissant",
             () -> new Item(new Item.Properties()

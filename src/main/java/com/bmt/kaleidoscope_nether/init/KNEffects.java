@@ -12,7 +12,7 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffect;
 
-public class KNEffects {
+public final class KNEffects {
     public static Holder<MobEffect> CRIMSON;
     public static Holder<MobEffect> WARPED;
     public static Holder<MobEffect> STAR_BLESSING;

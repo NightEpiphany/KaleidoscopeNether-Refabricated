@@ -8,7 +8,7 @@ import net.minecraft.sounds.SoundEvent;
 
 import java.util.function.Supplier;
 
-public class KNSounds {
+public final class KNSounds {
     public static final Supplier<SoundEvent> LAVA_ROASTED_CHICKEN_EAT = registerSoundEvent("lava_roasted_chicken_eat");
     public static final Supplier<SoundEvent> STAR_DUST_REPAIR = registerSoundEvent("star_dust_repair");
 

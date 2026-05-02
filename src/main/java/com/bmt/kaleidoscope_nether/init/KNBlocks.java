@@ -15,7 +15,7 @@ import net.minecraft.world.level.material.PushReaction;
 
 import java.util.function.Supplier;
 
-public class KNBlocks {
+public final class KNBlocks {
     public static final Supplier<BlockBehaviour.Properties> CROP_DEFAULT_PROPERTIES =
             () -> BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).noCollission().randomTicks().instabreak().sound(SoundType.CROP).pushReaction(PushReaction.DESTROY);
 

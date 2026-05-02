@@ -2,8 +2,7 @@ package com.bmt.kaleidoscope_nether.init;
 
 import net.minecraft.world.level.block.ComposterBlock;
 
-@SuppressWarnings("deprecation")
-public class KNComposterRegistry {
+public final class KNComposterRegistry {
 
     public static void register() {
         ComposterBlock.COMPOSTABLES.put(KNItems.CRIMSON_FRUIT.get(), 0.65F);

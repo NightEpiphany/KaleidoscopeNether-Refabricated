@@ -9,7 +9,7 @@ import net.minecraft.world.food.FoodProperties;
 
 import org.jetbrains.annotations.Nullable;
 
-public class KNFoods {
+public interface KNFoods {
     // 巨型野兽可颂
     public static final FoodProperties GIANT_BEAST_CROISSANT = new FoodProperties.Builder()
             .nutrition(2).saturationModifier(0.3f)

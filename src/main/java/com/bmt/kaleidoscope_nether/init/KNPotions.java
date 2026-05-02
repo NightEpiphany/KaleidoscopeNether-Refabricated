@@ -7,7 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.item.alchemy.Potion;
 
-public class KNPotions {
+public final class KNPotions {
     public static Holder<Potion> MYSTERIOUS_POISON;
 
     public static void registerPotions() {

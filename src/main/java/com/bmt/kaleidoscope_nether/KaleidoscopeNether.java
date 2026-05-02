@@ -18,7 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.neoforged.fml.config.ModConfig;
 import org.slf4j.Logger;
 
-public class KaleidoscopeNether implements ModInitializer {
+public final class KaleidoscopeNether implements ModInitializer {
     public static final String MOD_ID = "kaleidoscope_nether";
     public static final Logger LOGGER = LogUtils.getLogger();
 
@@ -38,7 +38,7 @@ public class KaleidoscopeNether implements ModInitializer {
         KNFoods.init();
         KNComposterRegistry.register();
         KNBrewingRecipes.register();
-
+        KNFluids.registerFluids();
         KNEventSubscriber.register();
         ModEvents.register();
         DamageEventHandler.register();
