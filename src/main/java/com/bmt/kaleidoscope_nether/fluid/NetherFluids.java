@@ -1,7 +1,6 @@
 package com.bmt.kaleidoscope_nether.fluid;
 
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.material.FlowingFluid;
@@ -9,6 +8,7 @@ import net.minecraft.world.level.material.Fluid;
 import net.minecraft.world.level.material.FluidState;
 import net.minecraft.world.level.material.WaterFluid;
 import org.jetbrains.annotations.NotNull;
+import org.jspecify.annotations.NonNull;
 
 import java.util.function.Supplier;
 
@@ -32,22 +32,22 @@ public abstract class NetherFluids extends WaterFluid {
     }
 
     @Override
-    protected boolean canConvertToSource(ServerLevel level) {
+    protected boolean canConvertToSource(@NonNull ServerLevel level) {
         return false;
     }
 
     @Override
-    public int getTickDelay(LevelReader level) {
+    public int getTickDelay(@NonNull LevelReader level) {
         return 20;
     }
 
     @Override
-    public boolean isSource(FluidState fluidState) {
+    public boolean isSource(@NonNull FluidState fluidState) {
         return false;
     }
 
     @Override
-    public int getAmount(FluidState fluidState) {
+    public int getAmount(@NonNull FluidState fluidState) {
         return 0;
     }
 
@@ -57,12 +57,12 @@ public abstract class NetherFluids extends WaterFluid {
         }
 
         @Override
-        public boolean isSource(FluidState state) {
+        public boolean isSource(@NonNull FluidState state) {
             return true;
         }
 
         @Override
-        public int getAmount(FluidState state) {
+        public int getAmount(@NonNull FluidState state) {
             return 8;
         }
     }
@@ -80,7 +80,7 @@ public abstract class NetherFluids extends WaterFluid {
         }
 
         @Override
-        public int getAmount(FluidState state) {
+        public int getAmount(@NonNull FluidState state) {
             return state.getValue(FlowingFluid.LEVEL);
         }
     }

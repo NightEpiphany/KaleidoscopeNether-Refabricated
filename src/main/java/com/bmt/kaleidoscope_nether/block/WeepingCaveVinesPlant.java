@@ -63,7 +63,7 @@ public class WeepingCaveVinesPlant extends GrowingPlantBodyBlock implements Bone
     protected @NotNull InteractionResult useWithoutItem(BlockState state, @NonNull Level level, @NonNull BlockPos pos, @NonNull Player player, @NonNull BlockHitResult hit) {
         if (state.getValue(BERRIES)) {
             Block.popResource(level, pos, new ItemStack(KNItems.CRIMSON_FRUIT.get(), 1));
-            float f = Mth.randomBetween(level.random, 0.8F, 1.2F);
+            float f = Mth.randomBetween(level.getRandom(), 0.8F, 1.2F);
             level.playSound(null, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, f);
             BlockState newState = state.setValue(BERRIES, Boolean.FALSE);
             level.setBlock(pos, newState, 2);
@@ -88,7 +88,7 @@ public class WeepingCaveVinesPlant extends GrowingPlantBodyBlock implements Bone
     public void performBonemeal(@NonNull ServerLevel level, @NonNull RandomSource random, @NonNull BlockPos pos, BlockState state) {
         if (state.getValue(BERRIES)) {
             Block.popResource(level, pos, new ItemStack(KNItems.CRIMSON_FRUIT.get(), 1));
-            float f = Mth.randomBetween(level.random, 0.8F, 1.2F);
+            float f = Mth.randomBetween(level.getRandom(), 0.8F, 1.2F);
             level.playSound(null, pos, SoundEvents.CAVE_VINES_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, f);
             BlockState newState = state.setValue(BERRIES, Boolean.FALSE);
             level.setBlock(pos, newState, 2);

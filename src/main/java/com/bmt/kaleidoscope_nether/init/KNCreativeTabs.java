@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_nether.init;
 
 import com.bmt.kaleidoscope_nether.KaleidoscopeNether;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
+import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -11,7 +11,7 @@ import net.minecraft.world.item.Items;
 
 public final class KNCreativeTabs {
     public static void registerTabs() {
-        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, KaleidoscopeNether.id("kaleidoscope_nether_tab"), FabricItemGroup.builder()
+        Registry.register(BuiltInRegistries.CREATIVE_MODE_TAB, KaleidoscopeNether.id("kaleidoscope_nether_tab"), FabricCreativeModeTab.builder()
                 .title(Component.translatable("itemGroup.kaleidoscope_nether"))
                 .icon(() -> new ItemStack(KNItems.BLOWGUN.get()))
 .displayItems((parameters, output) -> {

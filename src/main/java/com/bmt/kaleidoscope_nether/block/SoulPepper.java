@@ -69,13 +69,13 @@ public class SoulPepper extends KNCropBlockBase {
         int particleCount = 1;
 
         for (int i = 0; i < particleCount; i++) {
-            double offsetX = (level.random.nextDouble() - 0.5) * 0.8;
-            double offsetY = level.random.nextDouble() * 0.5;
-            double offsetZ = (level.random.nextDouble() - 0.5) * 0.8;
+            double offsetX = (level.getRandom().nextDouble() - 0.5) * 0.8;
+            double offsetY = level.getRandom().nextDouble() * 0.5;
+            double offsetZ = (level.getRandom().nextDouble() - 0.5) * 0.8;
 
-            double speedX = (level.random.nextDouble() - 0.5) * 0.02;
-            double speedY = level.random.nextDouble() * 0.03 + 0.01;
-            double speedZ = (level.random.nextDouble() - 0.5) * 0.02;
+            double speedX = (level.getRandom().nextDouble() - 0.5) * 0.02;
+            double speedY = level.getRandom().nextDouble() * 0.03 + 0.01;
+            double speedZ = (level.getRandom().nextDouble() - 0.5) * 0.02;
 
             level.addParticle(
                     ParticleTypes.SOUL,
