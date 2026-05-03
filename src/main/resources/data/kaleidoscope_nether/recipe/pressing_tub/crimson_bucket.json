@@ -8,7 +8,7 @@
     }
   ],
   "type": "kaleidoscope_tavern:pressing_tub",
-  "fluid": "kaleidoscope_nether:warped_juice",
+  "fluid": "kaleidoscope_nether:crimson_juice",
   "fluid_amount": 125,
-  "ingredient": "kaleidoscope_nether:warped_fruit"
+  "ingredient": "kaleidoscope_nether:crimson_fruit"
 }
