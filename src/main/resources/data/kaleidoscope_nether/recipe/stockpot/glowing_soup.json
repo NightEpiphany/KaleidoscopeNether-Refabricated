@@ -1,21 +1,20 @@
 {
   "type": "kaleidoscope_cookery:stockpot",
-  "carrier": "minecraft:flower_pot",
+  "carrier": "minecraft:bowl",
   "cooking_bubble_color": 16772291,
   "cooking_texture": "kaleidoscope_cookery:stockpot/default_cooking",
-  "finished_bubble_color": 16034443,
+  "finished_bubble_color": 16503296,
   "finished_texture": "kaleidoscope_cookery:stockpot/default_finished_yellow",
   "ingredients": [
-    "#c:vegetables/carrot",
-    "#c:vegetables/carrot",
-    "#c:foods/raw_pork",
-    "#c:foods/raw_pork",
-    "minecraft:bone",
-    "minecraft:bone"
+    "minecraft:glowstone",
+    "minecraft:glowstone_dust",
+    "minecraft:glowstone_dust",
+    "minecraft:glowstone_dust",
+    "minecraft:glowstone_dust"
   ],
   "result": {
     "count": 1,
-    "id": "kaleidoscope_nether:corn_carrot_pork_rib_soup"
+    "id": "kaleidoscope_nether:glowing_soup"
   },
   "soup_base": "minecraft:water",
   "time": 300
