@@ -5,7 +5,7 @@
   "ingredients": [
     [
   
-        "#c:foods/raw_ghast"
+        "kaleidoscope_nether:ghast_tentacle"
   ,
   
         "minecraft:ghast_tear"
@@ -13,7 +13,7 @@
     ],
     [
   
-        "#c:foods/raw_ghast"
+        "kaleidoscope_nether:ghast_tentacle"
   ,
   
         "minecraft:ghast_tear"
@@ -21,20 +21,20 @@
     ],
     [
   
-        "#c:foods/raw_ghast"
+        "kaleidoscope_nether:ghast_tentacle"
   ,
   
         "minecraft:ghast_tear"
   
     ],
 
-      "#c:foods/raw_ghast"
+      "kaleidoscope_nether:ghast_tentacle"
 ,
 
-      "#c:foods/raw_ghast"
+      "kaleidoscope_nether:ghast_tentacle"
 ,
 
-      "#c:foods/raw_ghast"
+      "kaleidoscope_nether:ghast_tentacle"
 ,
 
       "kaleidoscope_nether:poisonous_fruit"

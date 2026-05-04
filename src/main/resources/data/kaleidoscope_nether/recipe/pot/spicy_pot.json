@@ -9,7 +9,7 @@
 
       "#c:raw_meats"
 ,
-    [
+
   
         "#c:vegetables/carrot"
   ,
@@ -17,28 +17,11 @@
         "#c:vegetables/potato"
   ,
   
-        "minecraft:beetroot"
+        "minecraft:beetroot",
   
-    ],
+        "#c:hot_spices"
+  
 
-      "#c:vegetables/lettuce"
-,
-    [
-  
-        "#c:vegetables/pepper"
-  ,
-  
-        "#c:hot_spices"
-  
-    ],
-    [
-  
-        "#c:vegetables/pepper"
-  ,
-  
-        "#c:hot_spices"
-  
-    ]
   ],
   "result": {
     "count": 1,

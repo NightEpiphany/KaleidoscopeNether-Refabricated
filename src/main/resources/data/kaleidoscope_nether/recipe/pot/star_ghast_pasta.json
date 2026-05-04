@@ -4,10 +4,10 @@
     "minecraft:bowl",
   "ingredients": [
 
-      "#c:foods/raw_ghast"
+      "kaleidoscope_nether:ghast_tentacle"
 ,
 
-      "#c:foods/raw_ghast"
+      "kaleidoscope_nether:ghast_tentacle"
 ,
 
       "#c:foods/pasta"
