@@ -6,7 +6,7 @@
   "cooking_bubble_color": 0,
   "cooking_texture": "kaleidoscope_cookery:stockpot/default_cooking",
   "finished_bubble_color": 0,
-  "finished_texture": "kaleidoscope_cookery:stockpot/default_finished",
+  "finished_texture": "kaleidoscope_cookery:stockpot/default_finished_black",
   "ingredients": [
     {
       "tag": "c:wither"

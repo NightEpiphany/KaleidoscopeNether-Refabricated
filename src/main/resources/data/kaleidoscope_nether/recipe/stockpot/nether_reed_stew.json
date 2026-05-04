@@ -5,35 +5,29 @@
   },
   "cooking_bubble_color": 16772291,
   "cooking_texture": "kaleidoscope_cookery:stockpot/default_cooking",
-  "finished_bubble_color": 16034443,
+  "finished_bubble_color": 4583412,
   "finished_texture": "kaleidoscope_cookery:stockpot/default_finished_blue",
   "ingredients": [
     {
-      "tag": "c:vegetables/soul_pepper"
+      "item": "minecraft:nether_sprouts"
     },
     {
-      "tag": "c:vegetables/soul_pepper"
+      "item": "minecraft:nether_sprouts"
     },
     {
-      "tag": "c:vegetables/soul_pepper"
+      "item": "minecraft:nether_sprouts"
     },
     {
-      "tag": "c:vegetables/lettuce"
+      "item": "minecraft:nether_sprouts"
     },
     {
-      "tag": "c:vegetables/lettuce"
-    },
-    {
-      "tag": "c:vegetables/carrot"
-    },
-    {
-      "tag": "c:vegetables/carrot"
+      "item": "minecraft:warped_fungus"
     }
   ],
   "result": {
     "count": 3,
-    "id": "kaleidoscope_nether:soul_soup"
+    "id": "kaleidoscope_nether:nether_reed_stew"
   },
   "soup_base": "minecraft:water",
-  "time": 300
+  "time": 350
 }
