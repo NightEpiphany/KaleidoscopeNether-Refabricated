@@ -1,48 +1,34 @@
 ## About
-# Kaleidoscope Nether Refabricated   
-# 森罗物语：下界-重织
+# Kaleidoscope End Refabricated   
+# 森罗物语：末地-重织
 
-> A Minecraft mod that brought an expansion about the Nether to Kaleidoscope Cookery.
+> A Minecraft mod that brought an expansion about the End to Kaleidoscope Cookery.
 
 ## Compendium
-- This is the **fabric port** for [**Kaleidoscope Nether**](https://modrinth.com/mod/kaleidoscope-nether) mod.
+- This is the **fabric port** for [**Kaleidoscope End**](https://modrinth.com/mod/kaleidoscope-end) mod.
 - Requires [**Kaleidoscope Cookery Refabricated**](https://modrinth.com/mod/kaleidoscope-cookery-refabricated).
-- Sorry, but no backport planned. Higher versions may be supported in the future.
+- Sorry, but no backport planned.
 
 ## Overview
 ![Minecraft](https://img.shields.io/badge/Minecraft-Java%20Edition-brightgreen)
-![Fabric](https://img.shields.io/badge/Fabric-%201.21.1-orange)
+![Fabric](https://img.shields.io/badge/Fabric-%201.21.1|%201.21.11|%2026.1.2-orange)
 ![License](https://img.shields.io/badge/License-MIT-blue)  
-Who says the Nether can't have delicious food? This mod brings Nether-themed food expansions to "Kaleidoscope: Cookery", adding a large variety of foods and some useful small items.
+The End needs delicious food too! This mod brings End-related expansions to Kaleidoscope: Kitchen.
 
-Currently, you can create dishes related to Nether mobs such as Blazes, Magma Cubes, Piglins, Piglin Brutes, Hoglins, Ghasts, and Wither Skeletons.
+You can find two new crops in the End: Dream Berries and Ender Mint.
 
-Pick delicious Crimson Fruits and Warped Fruits in Crimson Forests and Warped Forests.
+### 🍽️ Diverse Cuisine
+Dragon Cuisine: Includes Dragon Breath Chorus Soup, Cooked Ender Dragon Meat, Fried Dragon Egg, etc.;
 
-Use Nether Caterpillars to feed Striders.
+Shulker Cuisine: Such as Stuffed Shulker, Shulker Ice Cream;
 
-You can even turn Nether Stars into gourmet food that grants you unique attributes when consumed.
+Chorus Fruit Series: Chorus Pasta, Chorus Flower Tea, Chorus Flower Cake.
 
-## Content
-Soul Return Rice: Returns you to your death point when consumed.
+And... the chubby End Caterpillar.
 
-Lava Chicken: Yes, it's exactly what you're thinking - lava roasted chicken.
+### ✨ New Effects and Mechanics
+Consuming dragon egg dishes brings unique new effects...
 
-Seed Bag: Can store seeds. After placing seeds inside, you can plant them directly. Sneak to plant in a 3x3 area. When players pick up seeds, they automatically go into the seed bag.
+Suspicious Dragon Egg...?
 
-Nether Caterpillar: Used to feed Striders, making them grow up immediately. Of course, you can also turn it into delicious sashimi.
-
-## Cross-mod Content
-- Regions Unexplored
-
-Adds cross-mod dishes for the Glowing Mushroom biome in the Nether, such as Glowing Pudding, Glowing Soup, Glowing Salad, etc.
-
-- Better Nether
-
-Adds Black Apple Salad, Ruby Steak, and Nether Reed Stew.
-
-- Artifacts
-
-Everlasting Flame Steak: An upgraded version of the Everlasting Steak. It's not consumed when eaten and grants the Satiety Compensation effect.
-
-![img](https://cdn.modrinth.com/data/O4YuhMsI/images/91420d2e5886bdf817beb179251da83c494245c6.png)
+![img](https://cdn.modrinth.com/data/cached_images/53efdeace61fd8654eda31d662e865baf0c350cd_0.webp)
