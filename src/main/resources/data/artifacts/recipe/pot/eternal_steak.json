@@ -9,9 +9,7 @@
   ],
   "type": "kaleidoscope_cookery:pot",
   "ingredients": [
-    {
-      "item": "artifacts:everlasting_beef"
-    }
+    "artifacts:everlasting_beef"
   ],
   "result": {
     "count": 1,

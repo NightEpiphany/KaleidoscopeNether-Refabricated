@@ -9,33 +9,15 @@
   ],
   "type": "kaleidoscope_cookery:pot",
   "ingredients": [
-    {
-      "item": "kaleidoscope_nether:blaze_heart"
-    },
-    {
-      "item": "kaleidoscope_nether:blaze_heart"
-    },
-    {
-      "item": "kaleidoscope_nether:blaze_heart"
-    },
-    {
-      "item": "kaleidoscope_nether:star_dust"
-    },
-    {
-      "item": "artifacts:eternal_steak"
-    },
-    {
-      "item": "kaleidoscope_nether:star_dust"
-    },
-    {
-      "item": "kaleidoscope_nether:gilded_fragment"
-    },
-    {
-      "item": "kaleidoscope_nether:gilded_fragment"
-    },
-    {
-      "item": "kaleidoscope_nether:gilded_fragment"
-    }
+    "kaleidoscope_nether:blaze_heart",
+    "kaleidoscope_nether:blaze_heart",
+    "kaleidoscope_nether:blaze_heart",
+    "kaleidoscope_nether:star_dust",
+    "artifacts:eternal_steak",
+    "kaleidoscope_nether:star_dust",
+    "kaleidoscope_nether:gilded_fragment",
+    "kaleidoscope_nether:gilded_fragment",
+    "kaleidoscope_nether:gilded_fragment"
   ],
   "result": {
     "count": 1,
