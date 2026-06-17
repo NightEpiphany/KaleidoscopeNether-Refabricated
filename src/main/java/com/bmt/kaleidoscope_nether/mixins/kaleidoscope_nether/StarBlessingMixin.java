@@ -35,17 +35,17 @@ public abstract class StarBlessingMixin extends Entity {
         }
     }
 
-    @Inject(method = "knockback", at = @At("HEAD"), cancellable = true)
-    private void onKnockback(double strength, double x, double z, CallbackInfo ci) {
+    @Inject(method = "knockback*", at = @At("HEAD"), cancellable = true)
+    private void onKnockback(double power, double xd, double zd, final DamageSource source, final float damage, final boolean comesFromEffect, CallbackInfo ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         if (livingEntity.hasEffect(KNEffects.STAR_BLESSING)) {
             ci.cancel();
         }
     }
 
-    @Inject(method = "hurtServer", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;knockback(DDD)V")
+    @Inject(method = "hurtServer", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;dealDefaultKnockback(Lnet/minecraft/world/damagesource/DamageSource;FZ)V")
     )
-    private void onHurtKnockback(ServerLevel serverLevel, DamageSource damageSource, float f, CallbackInfoReturnable<Boolean> cir) {
+    private void onHurtKnockback(ServerLevel level, DamageSource source, float damage, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         livingEntity.hasEffect(KNEffects.STAR_BLESSING);
     }

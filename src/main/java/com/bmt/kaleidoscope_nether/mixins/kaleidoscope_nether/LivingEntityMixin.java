@@ -21,8 +21,8 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 @Mixin(LivingEntity.class)
 public class LivingEntityMixin {
     @Inject(method = "hurtServer", at = @At("HEAD"), cancellable = true)
-    private void onIncomingDamage(ServerLevel serverLevel, DamageSource damageSource, float damage, CallbackInfoReturnable<Boolean> cir) {
-        LivingIncomingDamageEvent event = new LivingIncomingDamageEvent((LivingEntity) (Object) this, damageSource, damage);
+    private void onIncomingDamage(ServerLevel level, DamageSource source, float damage, CallbackInfoReturnable<Boolean> cir) {
+        LivingIncomingDamageEvent event = new LivingIncomingDamageEvent((LivingEntity) (Object) this, source, damage);
         KNEvents.LIVING_INCOMING_DAMAGE.invoker().onIncomingDamage(event);
         if (event.isCanceled()) {
             cir.setReturnValue(false);
@@ -30,15 +30,15 @@ public class LivingEntityMixin {
     }
 
     @ModifyVariable(method = "hurtServer", at = @At("HEAD"), argsOnly = true, ordinal = 0)
-    private float modifyDamage(float damage, ServerLevel serverLevel, DamageSource damageSource) {
-        LivingDamageModifyEvent event = new LivingDamageModifyEvent((LivingEntity) (Object) this, damageSource, damage);
+    private float modifyDamage(float damage, ServerLevel level, DamageSource source) {
+        LivingDamageModifyEvent event = new LivingDamageModifyEvent((LivingEntity) (Object) this, source, damage);
         KNEvents.MODIFY_LIVING_DAMAGE.invoker().onModify(event);
         return event.getNewDamage();
     }
 
     @Inject(method = "addEffect(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;onEffectAdded(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)V", shift = At.Shift.AFTER))
-    private void onEffectAdded(MobEffectInstance effectInstance, @Nullable Entity source, CallbackInfoReturnable<Boolean> cir) {
-        KNEvents.MOB_EFFECT_ADDED.invoker().onAdded(new MobEffectAddedEvent((LivingEntity) (Object) this, effectInstance, source));
+    private void onEffectAdded(MobEffectInstance newEffect, @Nullable Entity source, CallbackInfoReturnable<Boolean> cir) {
+        KNEvents.MOB_EFFECT_ADDED.invoker().onAdded(new MobEffectAddedEvent((LivingEntity) (Object) this, newEffect, source));
     }
 
 
