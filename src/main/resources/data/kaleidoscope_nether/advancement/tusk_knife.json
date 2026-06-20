@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:kaleidoscope_nether/hoglin_tusk",
+  "parent": "kaleidoscope_nether:hoglin_tusk",
   "criteria": {
     "primitive_machete": {
       "conditions": {

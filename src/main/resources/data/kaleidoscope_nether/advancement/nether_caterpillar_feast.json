@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:kaleidoscope_nether/nether_caterpillar",
+  "parent": "kaleidoscope_nether:nether_caterpillar",
   "criteria": {
     "caramel_nether_caterpillar": {
       "conditions": {

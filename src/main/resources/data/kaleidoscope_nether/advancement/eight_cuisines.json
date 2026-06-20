@@ -1,5 +1,5 @@
 {
-  "parent": "minecraft:kaleidoscope_nether/root",
+  "parent": "kaleidoscope_nether:root",
   "criteria": {
     "chongqing_noodles": {
       "conditions": {
