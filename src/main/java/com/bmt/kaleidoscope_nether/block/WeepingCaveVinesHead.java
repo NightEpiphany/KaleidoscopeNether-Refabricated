@@ -41,7 +41,7 @@ public class WeepingCaveVinesHead extends GrowingPlantHeadBlock implements Bonem
         return CODEC;
     }
 
-    public static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    private static final VoxelShape SHAPE = Block.column(8.0F, 9.0F, 16.0F);
 
     public WeepingCaveVinesHead(Properties properties) {
         super(properties, Direction.DOWN, SHAPE, false, 0.1D);
