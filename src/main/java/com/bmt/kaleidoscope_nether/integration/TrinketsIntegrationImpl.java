@@ -6,7 +6,7 @@ import java.lang.reflect.Method;
 import java.util.Map;
 import java.util.Optional;
 
-class CuriosIntegrationImpl {
+class TrinketsIntegrationImpl {
     @SuppressWarnings("unchecked")
     static boolean hasItemInCurios(Player player, Class<?> itemClass) {
         try {

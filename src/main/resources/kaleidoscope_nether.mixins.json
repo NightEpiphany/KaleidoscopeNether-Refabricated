@@ -11,6 +11,7 @@
     "kaleidoscope_nether.LavaWalkerLivingMixin",
     "kaleidoscope_nether.LivingEntityMixin",
     "kaleidoscope_nether.MobMixin",
+    "kaleidoscope_nether.NetherFossilPiecesMixin",
     "kaleidoscope_nether.PiglinAiMixin",
     "kaleidoscope_nether.PiglinBruteAiMixin",
     "kaleidoscope_nether.ServerLevelMixin",
