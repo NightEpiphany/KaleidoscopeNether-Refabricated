@@ -41,7 +41,7 @@ public class WeepingCaveVinesPlant extends GrowingPlantBodyBlock implements Bone
         return CODEC;
     }
 
-    public static final VoxelShape SHAPE = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    public static final VoxelShape SHAPE = Block.column(14.0F, 0.0F, 16.0F);
 
     public WeepingCaveVinesPlant(Properties properties) {
         super(properties, Direction.DOWN, SHAPE, false);

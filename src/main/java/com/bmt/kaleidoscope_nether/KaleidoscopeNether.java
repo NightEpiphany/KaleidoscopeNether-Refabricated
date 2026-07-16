@@ -11,6 +11,7 @@ import com.bmt.kaleidoscope_nether.event.ModEvents;
 import com.bmt.kaleidoscope_nether.event.StarBlessingEffectEvents;
 import com.bmt.kaleidoscope_nether.init.*;
 import com.bmt.kaleidoscope_nether.integration.KaleidoscopeDollIntegration;
+import com.bmt.kaleidoscope_nether.worldgen.KNWorldGeneration;
 import com.mojang.logging.LogUtils;
 import fuzs.forgeconfigapiport.fabric.api.v5.ConfigRegistry;
 import net.fabricmc.api.ModInitializer;
@@ -29,6 +30,7 @@ public final class KaleidoscopeNether implements ModInitializer {
         KNEffects.registerEffects();
         KNSounds.registerSoundEvents();
         KNBlocks.registerBlocks();
+        KNWorldGeneration.register();
         KNEntities.registerEntities();
         KNPotions.registerPotions();
         KNAdvancementTriggerRegistry.register();

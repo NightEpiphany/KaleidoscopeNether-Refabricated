@@ -1,6 +1,6 @@
 package com.bmt.kaleidoscope_nether.item;
 
-import com.bmt.kaleidoscope_nether.integration.CuriosIntegration;
+import com.bmt.kaleidoscope_nether.integration.TrinketsIntegration;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
@@ -22,6 +22,6 @@ public class GhastPendantItem extends Item {
         if (chestplate.getItem() instanceof GhastPendantItem) {
             return true;
         }
-        return CuriosIntegration.hasItemInCurios(player, GhastPendantItem.class);
+        return TrinketsIntegration.hasItemInCurios(player, GhastPendantItem.class);
     }
 }

@@ -22,12 +22,12 @@ public abstract class StarBlessingMixin extends Entity {
         super(entityType, level);
     }
 
-    @Inject(method = "addEffect(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)Z", 
+    @Inject(method = "addEffect(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)Z",
             at = @At("HEAD"), cancellable = true)
-    private void onAddEffect(MobEffectInstance effectInstance, Entity entity, CallbackInfoReturnable<Boolean> cir) {
+    private void onAddEffect(MobEffectInstance newEffect, Entity source, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         if (livingEntity.hasEffect(KNEffects.STAR_BLESSING)) {
-            MobEffect effect = effectInstance.getEffect().value();
+            MobEffect effect = newEffect.getEffect().value();
             if (effect.getCategory() == MobEffectCategory.HARMFUL) {
                 cir.setReturnValue(false);
                 cir.cancel();
@@ -36,7 +36,7 @@ public abstract class StarBlessingMixin extends Entity {
     }
 
     @Inject(method = "knockback", at = @At("HEAD"), cancellable = true)
-    private void onKnockback(double strength, double x, double z, CallbackInfo ci) {
+    private void onKnockback(double power, double xd, double zd, CallbackInfo ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         if (livingEntity.hasEffect(KNEffects.STAR_BLESSING)) {
             ci.cancel();
@@ -45,7 +45,7 @@ public abstract class StarBlessingMixin extends Entity {
 
     @Inject(method = "hurtServer", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;knockback(DDD)V")
     )
-    private void onHurtKnockback(ServerLevel serverLevel, DamageSource damageSource, float f, CallbackInfoReturnable<Boolean> cir) {
+    private void onHurtKnockback(ServerLevel level, DamageSource source, float f, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         livingEntity.hasEffect(KNEffects.STAR_BLESSING);
     }
