@@ -11,7 +11,7 @@
 
 ## Overview
 ![Minecraft](https://img.shields.io/badge/Minecraft-Java%20Edition-brightgreen)
-![Fabric](https://img.shields.io/badge/Fabric-%201.21.1|%201.21.11|%2026.1.2|%2026.2-orange)
+![Fabric](https://img.shields.io/badge/Fabric-%201.21.1|%201.21.11|%2026.1.2|%2026.2|%2026.3-orange)
 ![License](https://img.shields.io/badge/License-MIT-blue)  
 Who says the Nether can't have delicious food? This mod brings Nether-themed food expansions to "Kaleidoscope: Cookery", adding a large variety of foods and some useful small items.
 
