@@ -9,5 +9,5 @@ pluginManagement {
 	}
 }
 
-// Should match your modid
-rootProject.name = 'kaleidoscope_nether'
+// Title for the project
+rootProject.name = "KN-1.21.11-fabric"
