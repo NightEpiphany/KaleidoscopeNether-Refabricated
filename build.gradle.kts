@@ -12,6 +12,10 @@ loom {
 	accessWidenerPath.set(file("src/main/resources/kaleidoscope_nether.accessWidener"))
 }
 
+base {
+	archivesName = providers.gradleProperty("archives_base_name")
+}
+
 
 repositories {
 	maven {
