@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "kaleidoscope_nether_test",
+  "version": "1.0.0",
+  "name": "Kaleidoscope Nether regression tests",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-gametest": [
+      "com.bmt.kaleidoscope_nether.worldgen.WorldGenerationGameTest",
+      "com.bmt.kaleidoscope_nether.worldgen.OptionalLootGameTest"
+    ]
+  },
+  "depends": {
+    "kaleidoscope_nether": "*",
+    "fabric-gametest-api-v1": "*"
+  }
+}

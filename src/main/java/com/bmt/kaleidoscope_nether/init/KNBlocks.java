@@ -59,7 +59,7 @@ public final class KNBlocks {
                 .randomTicks()
                 .instabreak()
                 .sound(SoundType.CROP)
-                .pushReaction(PushReaction.DESTROY);
+                .pushReaction(PushReaction.POPPED);
     }
 
     private static BlockBehaviour.Properties caveVinesProperties() {
@@ -69,7 +69,7 @@ public final class KNBlocks {
                 .noCollision()
                 .instabreak()
                 .sound(SoundType.WEEPING_VINES)
-                .pushReaction(PushReaction.DESTROY);
+                .pushReaction(PushReaction.POPPED);
     }
 
     public static void registerBlocks() {

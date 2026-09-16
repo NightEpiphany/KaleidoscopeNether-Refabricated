@@ -20,6 +20,7 @@ import net.minecraft.world.level.block.CropBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
+import org.jspecify.annotations.NonNull;
 
 public class KNCropBlockBase extends CropBlock {
 
@@ -28,7 +29,7 @@ public class KNCropBlockBase extends CropBlock {
     }
 
     @Override
-    protected @NotNull InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
+    protected @NotNull InteractionResult useWithoutItem(@NonNull BlockState state, @NonNull Level level, @NonNull BlockPos pos, Player player, @NonNull BlockHitResult hitResult) {
         if (player.getMainHandItem().getItem() instanceof SickleItem ||
                 player.getOffhandItem().getItem() instanceof SickleItem) {
             return InteractionResult.PASS;

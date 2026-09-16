@@ -46,3 +46,10 @@ Adds Black Apple Salad, Ruby Steak, and Nether Reed Stew.
 Everlasting Flame Steak: An upgraded version of the Everlasting Steak. It's not consumed when eaten and grants the Satiety Compensation effect.
 
 ![img](https://cdn.modrinth.com/data/O4YuhMsI/images/91420d2e5886bdf817beb179251da83c494245c6.png)
+
+## Development checks (26.3)
+
+Use JDK 25. Run `./gradlew build` (`.\gradlew.bat build` on Windows) to build the mod and run both JUnit and Fabric server GameTests.
+Run `test` or `runGameTest` individually for faster iteration. Reports are written to `build/reports/tests/test/index.html` and `build/test-results/gametest.xml`.
+
+The startup regressions cover worldgen resource references, offset distributions, Nether biome feature injection, plant placement, and optional doll loot tables when their items are absent. Test code lives in separate `test` and `gametest` source sets and is not included in the released mod.

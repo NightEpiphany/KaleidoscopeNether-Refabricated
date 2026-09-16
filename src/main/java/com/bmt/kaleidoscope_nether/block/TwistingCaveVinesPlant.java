@@ -2,7 +2,6 @@ package com.bmt.kaleidoscope_nether.block;
 
 import com.bmt.kaleidoscope_nether.init.KNBlocks;
 import com.bmt.kaleidoscope_nether.init.KNItems;
-import com.mojang.serialization.MapCodec;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
@@ -15,10 +14,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.level.LevelReader;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.BonemealableBlock;
-import net.minecraft.world.level.block.GrowingPlantBodyBlock;
-import net.minecraft.world.level.block.GrowingPlantHeadBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.properties.BlockStateProperties;
@@ -31,14 +27,7 @@ import org.jspecify.annotations.NonNull;
 
 public class TwistingCaveVinesPlant extends GrowingPlantBodyBlock implements BonemealableBlock {
 
-    public static final MapCodec<TwistingCaveVinesPlant> CODEC = simpleCodec(TwistingCaveVinesPlant::new);
-
     public static final BooleanProperty BERRIES = BlockStateProperties.BERRIES;
-
-    @Override
-    protected @NotNull MapCodec<? extends GrowingPlantBodyBlock> codec() {
-        return CODEC;
-    }
 
     public static final VoxelShape SHAPE = Block.box(4.0D, 0.0D, 4.0D, 12.0D, 16.0D, 12.0D);
 
@@ -74,17 +63,17 @@ public class TwistingCaveVinesPlant extends GrowingPlantBodyBlock implements Bon
     }
 
     @Override
-    public boolean isValidBonemealTarget(@NonNull LevelReader level, @NonNull BlockPos pos, @NonNull BlockState state) {
+    public boolean isValidBonemealTarget(@NonNull LevelReader level, @NonNull BlockPos pos, @NonNull BlockState state, @NonNull BonemealSource source) {
         return true;
     }
 
     @Override
-    public boolean isBonemealSuccess(@NonNull Level level, @NonNull RandomSource random, @NonNull BlockPos pos, @NonNull BlockState state) {
+    public boolean isBonemealSuccess(@NonNull Level level, @NonNull RandomSource random, @NonNull BlockPos pos, @NonNull BlockState state, @NonNull BonemealSource source) {
         return true;
     }
 
     @Override
-    public void performBonemeal(@NonNull ServerLevel level, @NonNull RandomSource random, @NonNull BlockPos pos, BlockState state) {
+    public void performBonemeal(@NonNull ServerLevel level, @NonNull RandomSource random, @NonNull BlockPos pos, BlockState state, @NonNull BonemealSource source) {
         if (state.getValue(BERRIES)) {
             Block.popResource(level, pos, new ItemStack(KNItems.WARPED_FRUIT.get(), 1));
             float f = Mth.randomBetween(level.getRandom(), 0.8F, 1.2F);

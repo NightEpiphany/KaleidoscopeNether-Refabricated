@@ -12,6 +12,17 @@ loom {
 	accessWidenerPath.set(file("src/main/resources/kaleidoscope_nether.accessWidener"))
 }
 
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "kaleidoscope_nether_test"
+		enableClientGameTests = false
+	}
+}
+
+loom.runConfigs.named("gameTest") {
+	systemProperties.put("fabric-api.gametest.report-file", layout.buildDirectory.file("test-results/gametest.xml").get().asFile.absolutePath)
+}
 
 repositories {
 	maven {
@@ -44,6 +55,17 @@ dependencies {
 	implementation ("maven.modrinth:kaleidoscope-cookery-refabricated:${providers.gradleProperty("kaleidoscope_cookery_version").get()}-fabric+mc${providers.gradleProperty("minecraft_version").get()}")
 	implementation("net.fabricmc.fabric-api:fabric-api:${providers.gradleProperty("fabric_api_version").get()}")
 	implementation ("fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${providers.gradleProperty("forge_config_api_version").get()}")
+	testImplementation("org.junit.jupiter:junit-jupiter:5.14.2")
+	testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.14.2")
+}
+
+tasks.test {
+	useJUnitPlatform()
+	val testRunDirectory = layout.buildDirectory.dir("run/unitTest")
+	workingDir(testRunDirectory)
+	doFirst {
+		testRunDirectory.get().asFile.mkdirs()
+	}
 }
 
 tasks.processResources {

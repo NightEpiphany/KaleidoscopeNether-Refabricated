@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:simple_block",
+  "to_place": {
+    "id": "kaleidoscope_nether:poisonous_fruit",
+    "properties": {
+      "age": "7"
+    }
+  }
+}

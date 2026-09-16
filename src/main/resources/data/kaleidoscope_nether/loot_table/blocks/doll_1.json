@@ -1,4 +1,13 @@
 {
+  "fabric:load_conditions": [
+    {
+      "condition": "fabric:registry_contains",
+      "registry": "minecraft:item",
+      "values": [
+        "kaleidoscope_nether:doll_1"
+      ]
+    }
+  ],
   "type": "minecraft:block",
   "pools": [
     {

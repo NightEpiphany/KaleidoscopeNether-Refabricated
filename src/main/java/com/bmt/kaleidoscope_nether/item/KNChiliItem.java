@@ -5,13 +5,14 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 import org.jspecify.annotations.NonNull;
 
 public class KNChiliItem extends Item {
     private final int damage;
 
     public KNChiliItem(Item.Properties p, int damage) {
-        super(p.food(ModFoods.CHILI));
+        super(p.food(ModFoods.CHILI).compostable(ContextIntProviders.COMPOSTABLE_LOW));
         this.damage = damage;
     }
 

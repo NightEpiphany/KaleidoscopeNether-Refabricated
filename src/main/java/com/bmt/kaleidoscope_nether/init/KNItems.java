@@ -16,6 +16,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
+
 import java.util.function.Function;
 import java.util.function.Supplier;
 
@@ -98,7 +100,7 @@ public final class KNItems {
 
     // 下界猪儿虫
     public static final Supplier<Item> NETHER_CATERPILLAR = register("nether_caterpillar",
-            properties -> new NetherCaterpillarItem(properties, KNFoods.NETHER_CATERPILLAR, KNConsumables.NETHER_CATERPILLAR));
+            properties -> new NetherCaterpillarItem(properties.compostable(ContextIntProviders.COMPOSTABLE_ALWAYS_ADD_ONE), KNFoods.NETHER_CATERPILLAR, KNConsumables.NETHER_CATERPILLAR));
 
     // 回魂饭
     public static final Supplier<Item> SOUL_RETURN_RICE = register("soul_return_rice",
@@ -334,7 +336,7 @@ public final class KNItems {
 
     // 诡异蛋糕
     public static final Supplier<Item> WARPED_CAKE = register("warped_cake",
-            properties -> new FoodWithEffectsItem(properties, KNFoods.WARPED_CAKE, KNConsumables.WARPED_CAKE));
+            properties -> new FoodWithEffectsItem(properties.compostable(ContextIntProviders.COMPOSTABLE_ALWAYS_ADD_ONE), KNFoods.WARPED_CAKE, KNConsumables.WARPED_CAKE));
 
     // 重庆小面
     public static final Supplier<Item> CHONGQING_NOODLES = register("chongqing_noodles",

@@ -38,8 +38,6 @@ public final class KaleidoscopeNether implements ModInitializer {
         KNFoodBiteRegistry.registerFoodBiteBlocks();
         KNCreativeTabs.registerTabs();
         KNFoods.init();
-        KNComposterRegistry.register();
-        KNBrewingRecipes.register();
         KNFluids.registerFluids();
         KNEventSubscriber.register();
         ModEvents.register();

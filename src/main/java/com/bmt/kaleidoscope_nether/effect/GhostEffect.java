@@ -28,7 +28,7 @@ public class GhostEffect extends MobEffect {
                     Math.max(motion.y, climbSpeed),
                     Mth.clamp(motion.z, -horizontalLimit, horizontalLimit)
             );
-            entity.hurtMarked = true;
+            entity.syncVelocity = true;
             entity.setDiscardFriction(true);
         }
 
