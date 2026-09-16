@@ -57,6 +57,10 @@ dependencies {
 	implementation ("fuzs.forgeconfigapiport:forgeconfigapiport-fabric:${providers.gradleProperty("forge_config_api_version").get()}")
 	testImplementation("org.junit.jupiter:junit-jupiter:5.14.2")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.14.2")
+	implementation("maven.modrinth:rrv:${providers.gradleProperty("rrv_version").get()}") {
+		exclude(group = "net.fabricmc.fabric-api")
+		exclude(group = "eu.pb4")
+	}
 }
 
 tasks.test {
