@@ -2,7 +2,7 @@ package com.bmt.kaleidoscope_nether.item;
 
 import com.bmt.kaleidoscope_nether.KaleidoscopeNether;
 import com.github.ysbbbbbb.kaleidoscopecookery.block.food.FoodBiteBlock;
-import com.github.ysbbbbbb.kaleidoscopecookery.config.ClientConfig;
+import com.github.ysbbbbbb.kaleidoscopecookery.config.ConfigGetter;
 import com.google.common.collect.Lists;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -44,6 +44,7 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
 
+@SuppressWarnings("all")
 public class KNBowlFoodBlockItem extends BlockItem {
     private final List<MobEffectInstance> effectInstances = Lists.newArrayList();
     private final Optional<ItemLike> usingConvertsTo;
@@ -116,7 +117,7 @@ public class KNBowlFoodBlockItem extends BlockItem {
                 consumer.accept(CommonComponents.EMPTY);
             }
         }
-        if (!this.effectInstances.isEmpty() && ClientConfig.SHOW_FOOD_EFFECT_TOOLTIPS.get()) {
+        if (!this.effectInstances.isEmpty() && ConfigGetter.Client.getShowFoodEffectTooltips()) {
             consumer.accept(CommonComponents.space());
             PotionContents.addPotionTooltip(this.effectInstances, consumer, 1.0F, tooltip.tickRate());
         }
