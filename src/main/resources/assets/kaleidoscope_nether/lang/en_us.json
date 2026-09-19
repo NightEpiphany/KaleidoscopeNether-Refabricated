@@ -1,4 +1,6 @@
 {
+  "modmenu.nameTranslation.kaleidoscope_end": "Kaleidoscope Nether Refabricated",
+  "modmenu.descriptionTranslation.kaleidoscope_end": "Brought an expansion about the Nether to Kaleidoscope Cookery.",
   "itemGroup.kaleidoscope_nether": "Kaleidoscope: Nether",
 
   "item.kaleidoscope_nether.ghast_hide": "Ghast Hide",
