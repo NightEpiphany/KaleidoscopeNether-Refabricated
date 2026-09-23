@@ -7,7 +7,8 @@
   "entrypoints": {
     "fabric-gametest": [
       "com.bmt.kaleidoscope_nether.worldgen.WorldGenerationGameTest",
-      "com.bmt.kaleidoscope_nether.worldgen.OptionalLootGameTest"
+      "com.bmt.kaleidoscope_nether.worldgen.OptionalLootGameTest",
+      "com.bmt.kaleidoscope_nether.loot.LootTableGameTest"
     ]
   },
   "depends": {

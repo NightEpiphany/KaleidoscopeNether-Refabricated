@@ -3,15 +3,13 @@
   "pools": [
     {
       "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "minecraft:killed_by_player"
-        }
-      ],
+      "condition": {
+        "type": "minecraft:killed_by_player"
+      },
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -19,7 +17,7 @@
                 "max": 1.0,
                 "min": 0.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             },
             {
               "count": {
@@ -28,7 +26,7 @@
                 "min": 0.0
               },
               "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+              "type": "minecraft:enchanted_count_increase"
             }
           ],
           "name": "minecraft:blaze_rod"
@@ -38,19 +36,17 @@
     },
     {
       "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "kaleidoscope_cookery:advance_entity_match_tool",
-          "predicate": {
-            "items": "#kaleidoscope_cookery:kitchen_knife"
-          },
-          "slot": "mainhand"
-        }
-      ],
+      "condition": {
+        "type": "kaleidoscope_cookery:advance_entity_match_tool",
+        "predicate": {
+          "items": "#kaleidoscope_cookery:kitchen_knife"
+        },
+        "slot": "mainhand"
+      },
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -58,7 +54,7 @@
                 "max": 2.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:blaze_heart"
@@ -75,12 +71,10 @@
         }
       ],
       "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:random_chance",
-          "chance": 0.2
-        }
-      ]
+      "condition": {
+        "type": "minecraft:random_chance",
+        "chance": 0.2
+      }
     },
     {
       "bonus_rolls": 0.0,
@@ -91,25 +85,35 @@
         }
       ],
       "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:random_chance",
-          "chance": 0.2
-        },
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "enchantments": [
-              {
-                "enchantments": "minecraft:looting",
-                "levels": {
-                  "min": 1
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:random_chance",
+            "chance": 0.2
+          },
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "attacker",
+            "predicate": {
+              "minecraft:equipment": {
+                "mainhand": {
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:looting",
+                        "levels": {
+                          "min": 1
+                        }
+                      }
+                    ]
+                  }
                 }
               }
-            ]
+            }
           }
-        }
-      ]
+        ]
+      }
     },
     {
       "bonus_rolls": 0.0,
@@ -120,25 +124,35 @@
         }
       ],
       "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:random_chance",
-          "chance": 0.2
-        },
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "enchantments": [
-              {
-                "enchantments": "minecraft:looting",
-                "levels": {
-                  "min": 2
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:random_chance",
+            "chance": 0.2
+          },
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "attacker",
+            "predicate": {
+              "minecraft:equipment": {
+                "mainhand": {
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:looting",
+                        "levels": {
+                          "min": 2
+                        }
+                      }
+                    ]
+                  }
                 }
               }
-            ]
+            }
           }
-        }
-      ]
+        ]
+      }
     },
     {
       "bonus_rolls": 0.0,
@@ -149,25 +163,35 @@
         }
       ],
       "rolls": 1.0,
-      "conditions": [
-        {
-          "condition": "minecraft:random_chance",
-          "chance": 0.2
-        },
-        {
-          "condition": "minecraft:match_tool",
-          "predicate": {
-            "enchantments": [
-              {
-                "enchantments": "minecraft:looting",
-                "levels": {
-                  "min": 3
+      "condition": {
+        "type": "minecraft:all_of",
+        "terms": [
+          {
+            "type": "minecraft:random_chance",
+            "chance": 0.2
+          },
+          {
+            "type": "minecraft:entity_properties",
+            "entity": "attacker",
+            "predicate": {
+              "minecraft:equipment": {
+                "mainhand": {
+                  "predicates": {
+                    "minecraft:enchantments": [
+                      {
+                        "enchantments": "minecraft:looting",
+                        "levels": {
+                          "min": 3
+                        }
+                      }
+                    ]
+                  }
                 }
               }
-            ]
+            }
           }
-        }
-      ]
+        ]
+      }
     }
   ],
   "random_sequence": "kaleidoscope_nether:blaze"

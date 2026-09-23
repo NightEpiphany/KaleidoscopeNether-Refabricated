@@ -11,7 +11,7 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -19,7 +19,7 @@
                 "max": 2.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:ghast_hide",
@@ -27,7 +27,7 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -35,7 +35,7 @@
                 "max": 2.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:strider_rock_shell",
@@ -43,7 +43,7 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -51,7 +51,7 @@
                 "max": 5.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:raw_strider_meat",
@@ -59,7 +59,7 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -67,7 +67,7 @@
                 "max": 5.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:ghast_tentacle",

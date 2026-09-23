@@ -6,25 +6,26 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:set_damage",
+              "type": "minecraft:set_damage",
               "damage": {
+                "type": "minecraft:uniform",
                 "min": 0.15,
                 "max": 0.8
               }
             },
             {
-              "function": "minecraft:enchant_randomly"
+              "type": "minecraft:enchant_randomly"
             }
           ],
           "name": "kaleidoscope_cookery:diamond_kitchen_knife"
         },
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
-              "function": "minecraft:enchant_randomly"
+              "type": "minecraft:enchant_randomly"
             }
           ],
           "name": "kaleidoscope_cookery:gold_kitchen_knife",
@@ -42,7 +43,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -50,7 +51,7 @@
                 "max": 6.0,
                 "min": 3.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:soul_pepper",
@@ -58,7 +59,7 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -66,7 +67,7 @@
                 "max": 4.0,
                 "min": 2.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:ham",
@@ -74,7 +75,7 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -82,7 +83,7 @@
                 "max": 3.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:roasted_ham",
@@ -90,7 +91,7 @@
         },
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -98,7 +99,7 @@
                 "max": 2.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:nether_caterpillar"

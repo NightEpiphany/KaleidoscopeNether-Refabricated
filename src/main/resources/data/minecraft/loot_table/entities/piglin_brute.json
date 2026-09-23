@@ -1,21 +1,19 @@
 {
   "type": "minecraft:entity",
   "pools": [
-	{
+    {
       "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "kaleidoscope_cookery:advance_entity_match_tool",
-          "predicate": {
-            "items": "#kaleidoscope_cookery:kitchen_knife"
-          },
-          "slot": "mainhand"
-        }
-      ],
+      "condition": {
+        "type": "kaleidoscope_cookery:advance_entity_match_tool",
+        "predicate": {
+          "items": "#kaleidoscope_cookery:kitchen_knife"
+        },
+        "slot": "mainhand"
+      },
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -23,7 +21,7 @@
                 "max": 4.0,
                 "min": 2.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             },
             {
               "count": {
@@ -32,7 +30,7 @@
                 "min": 1.0
               },
               "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+              "type": "minecraft:enchanted_count_increase"
             }
           ],
           "name": "kaleidoscope_cookery:oil"
@@ -42,19 +40,17 @@
     },
     {
       "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "condition": "kaleidoscope_cookery:advance_entity_match_tool",
-          "predicate": {
-            "items": "#kaleidoscope_cookery:kitchen_knife"
-          },
-          "slot": "mainhand"
-        }
-      ],
+      "condition": {
+        "type": "kaleidoscope_cookery:advance_entity_match_tool",
+        "predicate": {
+          "items": "#kaleidoscope_cookery:kitchen_knife"
+        },
+        "slot": "mainhand"
+      },
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -62,7 +58,7 @@
                 "max": 2.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             }
           ],
           "name": "kaleidoscope_nether:gilded_fragment"
@@ -75,7 +71,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
               "add": false,
               "count": {
@@ -83,7 +79,7 @@
                 "max": 1.0,
                 "min": 0.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             },
             {
               "count": {
@@ -92,7 +88,7 @@
                 "min": 0.0
               },
               "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+              "type": "minecraft:enchanted_count_increase"
             }
           ],
           "name": "kaleidoscope_nether:gilded_fragment"
@@ -105,20 +101,18 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "functions": [
+          "modifier": [
             {
-              "conditions": [
-                {
-                  "condition": "minecraft:entity_properties",
-                  "entity": "this",
-                  "predicate": {
-                    "flags": {
-                      "is_on_fire": true
-                    }
+              "condition": {
+                "type": "minecraft:entity_properties",
+                "entity": "this",
+                "predicate": {
+                  "minecraft:flags": {
+                    "is_on_fire": true
                   }
                 }
-              ],
-              "function": "minecraft:furnace_smelt"
+              },
+              "type": "minecraft:furnace_smelt"
             },
             {
               "add": false,
@@ -127,7 +121,7 @@
                 "max": 3.0,
                 "min": 1.0
               },
-              "function": "minecraft:set_count"
+              "type": "minecraft:set_count"
             },
             {
               "count": {
@@ -136,7 +130,7 @@
                 "min": 0.0
               },
               "enchantment": "minecraft:looting",
-              "function": "minecraft:enchanted_count_increase"
+              "type": "minecraft:enchanted_count_increase"
             }
           ],
           "name": "kaleidoscope_nether:raw_piglin_meat"

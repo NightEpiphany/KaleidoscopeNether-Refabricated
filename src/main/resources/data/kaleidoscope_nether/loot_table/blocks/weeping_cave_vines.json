@@ -3,15 +3,13 @@
   "pools": [
     {
       "bonus_rolls": 0.0,
-      "conditions": [
-        {
-          "block": "kaleidoscope_nether:weeping_cave_vines",
-          "condition": "minecraft:block_state_property",
-          "properties": {
-            "berries": "true"
-          }
+      "condition": {
+        "blocks": "kaleidoscope_nether:weeping_cave_vines",
+        "type": "minecraft:match_block",
+        "state": {
+          "berries": "true"
         }
-      ],
+      },
       "entries": [
         {
           "type": "minecraft:item",
