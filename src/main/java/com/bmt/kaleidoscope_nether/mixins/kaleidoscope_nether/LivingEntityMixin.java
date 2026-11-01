@@ -5,7 +5,6 @@ import com.bmt.kaleidoscope_nether.api.event.LivingIncomingDamageEvent;
 import com.bmt.kaleidoscope_nether.api.event.MobEffectAddedEvent;
 import com.bmt.kaleidoscope_nether.effect.CrimsonEffect;
 import com.bmt.kaleidoscope_nether.init.KNEffects;
-import com.bmt.kaleidoscope_nether.init.KNEvents;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -23,7 +22,7 @@ public class LivingEntityMixin {
     @Inject(method = "hurtServer", at = @At("HEAD"), cancellable = true)
     private void onIncomingDamage(ServerLevel level, DamageSource source, float damage, CallbackInfoReturnable<Boolean> cir) {
         LivingIncomingDamageEvent event = new LivingIncomingDamageEvent((LivingEntity) (Object) this, source, damage);
-        KNEvents.LIVING_INCOMING_DAMAGE.invoker().onIncomingDamage(event);
+        event.post();
         if (event.isCanceled()) {
             cir.setReturnValue(false);
         }
@@ -32,13 +31,13 @@ public class LivingEntityMixin {
     @ModifyVariable(method = "hurtServer", at = @At("HEAD"), argsOnly = true, ordinal = 0)
     private float modifyDamage(float damage, ServerLevel level, DamageSource source) {
         LivingDamageModifyEvent event = new LivingDamageModifyEvent((LivingEntity) (Object) this, source, damage);
-        KNEvents.MODIFY_LIVING_DAMAGE.invoker().onModify(event);
+        event.post();
         return event.getNewDamage();
     }
 
     @Inject(method = "addEffect(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)Z", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/LivingEntity;onEffectAdded(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)V", shift = At.Shift.AFTER))
     private void onEffectAdded(MobEffectInstance newEffect, @Nullable Entity source, CallbackInfoReturnable<Boolean> cir) {
-        KNEvents.MOB_EFFECT_ADDED.invoker().onAdded(new MobEffectAddedEvent((LivingEntity) (Object) this, newEffect, source));
+        new MobEffectAddedEvent((LivingEntity) (Object) this, newEffect, source).post();
     }
 
 

@@ -2,8 +2,8 @@ package com.bmt.kaleidoscope_nether.event;
 
 import com.bmt.kaleidoscope_nether.api.event.AnvilUpdateEvent;
 import com.bmt.kaleidoscope_nether.init.KNEnchantments;
-import com.bmt.kaleidoscope_nether.init.KNEvents;
 import com.bmt.kaleidoscope_nether.init.KNItems;
+import com.github.ysbbbbbb.kaleidoscopecookery.util.event.IKCEvent;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
@@ -16,7 +16,10 @@ public class AnvilEventHandler {
     private static final String SHELL_COUNT_TAG = "StriderShellCount";
     private static final int REQUIRED_SHELLS = 1;
     public static void register() {
-        KNEvents.UPDATE_ANVIL.register(AnvilEventHandler::onAnvilUpdate);
+        IKCEvent.CALLBACK.register(event -> {
+            if (event instanceof AnvilUpdateEvent anvilUpdateEvent)
+                onAnvilUpdate(anvilUpdateEvent);
+        });
     }
 
     public static void onAnvilUpdate(AnvilUpdateEvent event) {

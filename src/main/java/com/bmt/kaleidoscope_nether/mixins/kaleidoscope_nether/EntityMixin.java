@@ -12,10 +12,11 @@ public abstract class EntityMixin {
 
     @WrapOperation(method = "rideTick", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/entity/Entity;tick()V"))
     private void kaleidoscope_nether$rideTick(Entity instance, Operation<Void> original) {
-        EntityTickEvent.Pre pre = EntityTickEvent.Pre.fireEntityTickPre(instance);
+        EntityTickEvent.Pre pre = new EntityTickEvent.Pre(instance);
+        pre.post();
         if (!pre.isCanceled()) {
             original.call(instance);
-            EntityTickEvent.Post.fireEntityTickPost(instance);
+            new EntityTickEvent.Post(instance).post();
         }
     }
 }

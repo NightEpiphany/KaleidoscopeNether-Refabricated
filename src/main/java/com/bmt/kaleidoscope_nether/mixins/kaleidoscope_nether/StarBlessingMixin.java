@@ -36,7 +36,7 @@ public abstract class StarBlessingMixin extends Entity {
     }
 
     @Inject(method = "knockback*", at = @At("HEAD"), cancellable = true)
-    private void onKnockback(double power, double xd, double zd, final DamageSource source, final float damage, final boolean comesFromEffect, CallbackInfo ci) {
+    private void onKnockback(CallbackInfo ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         if (livingEntity.hasEffect(KNEffects.STAR_BLESSING)) {
             ci.cancel();
