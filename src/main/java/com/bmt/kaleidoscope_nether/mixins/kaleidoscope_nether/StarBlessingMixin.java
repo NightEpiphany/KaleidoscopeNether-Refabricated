@@ -24,10 +24,10 @@ public abstract class StarBlessingMixin extends Entity {
 
     @Inject(method = "addEffect(Lnet/minecraft/world/effect/MobEffectInstance;Lnet/minecraft/world/entity/Entity;)Z", 
             at = @At("HEAD"), cancellable = true)
-    private void onAddEffect(MobEffectInstance effectInstance, Entity entity, CallbackInfoReturnable<Boolean> cir) {
+    private void onAddEffect(MobEffectInstance newEffect, Entity source, CallbackInfoReturnable<Boolean> cir) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         if (livingEntity.hasEffect(KNEffects.STAR_BLESSING)) {
-            MobEffect effect = effectInstance.getEffect().value();
+            MobEffect effect = newEffect.getEffect().value();
             if (effect.getCategory() == MobEffectCategory.HARMFUL) {
                 cir.setReturnValue(false);
                 cir.cancel();
@@ -36,7 +36,7 @@ public abstract class StarBlessingMixin extends Entity {
     }
 
     @Inject(method = "knockback*", at = @At("HEAD"), cancellable = true)
-    private void onKnockback(double power, double xd, double zd, final DamageSource source, final float damage, final boolean comesFromEffect, CallbackInfo ci) {
+    private void onKnockback(CallbackInfo ci) {
         LivingEntity livingEntity = (LivingEntity) (Object) this;
         if (livingEntity.hasEffect(KNEffects.STAR_BLESSING)) {
             ci.cancel();

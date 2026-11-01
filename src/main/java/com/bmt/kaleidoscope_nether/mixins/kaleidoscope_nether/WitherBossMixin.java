@@ -17,7 +17,7 @@ public abstract class WitherBossMixin {
             at = @At("RETURN"),
             cancellable = true
     )
-    private void onGetAlternativeTarget(int head, CallbackInfoReturnable<Integer> cir) {
+    private void onGetAlternativeTarget(int headIndex, CallbackInfoReturnable<Integer> cir) {
         int entityId = cir.getReturnValue();
 
         if (entityId > 0) {
@@ -37,10 +37,10 @@ public abstract class WitherBossMixin {
             at = @At("HEAD"),
             cancellable = true
     )
-    private void onSetAlternativeTarget(int targetOffset, int newId, CallbackInfo ci) {
-        if (newId > 0) {
+    private void onSetAlternativeTarget(int headIndex, int entityId, CallbackInfo ci) {
+        if (entityId > 0) {
             WitherBoss self = (WitherBoss) (Object) this;
-            LivingEntity target = self.level().getEntity(newId) instanceof LivingEntity living ? living : null;
+            LivingEntity target = self.level().getEntity(entityId) instanceof LivingEntity living ? living : null;
 
             if (target instanceof Player player) {
                 if (WarpedEffect.shouldAffectMob(self, player)) {

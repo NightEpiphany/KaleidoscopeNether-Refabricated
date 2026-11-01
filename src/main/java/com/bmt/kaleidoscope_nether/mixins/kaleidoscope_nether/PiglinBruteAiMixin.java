@@ -20,14 +20,14 @@ public abstract class PiglinBruteAiMixin {
             at = @At("RETURN"),
             cancellable = true
     )
-    private static void onFindNearestValidAttackTarget(ServerLevel serverLevel, AbstractPiglin abstractPiglin, CallbackInfoReturnable<Optional<? extends LivingEntity>> cir) {
+    private static void onFindNearestValidAttackTarget(ServerLevel level, AbstractPiglin body, CallbackInfoReturnable<Optional<? extends LivingEntity>> cir) {
         Optional<? extends LivingEntity> targetOptional = cir.getReturnValue();
 
         if (targetOptional.isPresent()) {
             LivingEntity target = targetOptional.get();
 
             if (target instanceof Player player) {
-                if (WarpedEffect.shouldAffectMob(abstractPiglin, player)) {
+                if (WarpedEffect.shouldAffectMob(body, player)) {
                     cir.setReturnValue(Optional.empty());
                 }
             }
