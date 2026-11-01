@@ -1,11 +1,10 @@
 package com.bmt.kaleidoscope_nether.api.event;
 
-import com.github.ysbbbbbb.kaleidoscopecookery.api.event.ActionEvent;
-import com.github.ysbbbbbb.kaleidoscopecookery.api.event.IActionCancelable;
+import com.github.ysbbbbbb.kaleidoscopecookery.util.event.CancellableKCEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 
-public class LivingIncomingDamageEvent extends ActionEvent implements IActionCancelable {
+public class LivingIncomingDamageEvent extends CancellableKCEvent {
     private final LivingEntity entity;
     private final DamageSource source;
     private final float amount;

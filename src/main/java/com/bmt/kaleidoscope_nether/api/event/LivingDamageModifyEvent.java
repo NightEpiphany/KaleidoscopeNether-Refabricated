@@ -1,10 +1,10 @@
 package com.bmt.kaleidoscope_nether.api.event;
 
-import com.github.ysbbbbbb.kaleidoscopecookery.api.event.ActionEvent;
+import com.github.ysbbbbbb.kaleidoscopecookery.util.event.IKCEvent;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.entity.LivingEntity;
 
-public class LivingDamageModifyEvent extends ActionEvent {
+public class LivingDamageModifyEvent implements IKCEvent {
     private final LivingEntity entity;
     private final DamageSource source;
     private final float originalDamage;
@@ -35,10 +35,5 @@ public class LivingDamageModifyEvent extends ActionEvent {
 
     public void setNewDamage(float newDamage) {
         this.newDamage = newDamage;
-    }
-
-    @FunctionalInterface
-    public interface LivingDamageModifyHandler {
-        void onModify(LivingDamageModifyEvent event);
     }
 }

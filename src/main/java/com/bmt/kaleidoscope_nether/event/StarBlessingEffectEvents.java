@@ -3,7 +3,7 @@ package com.bmt.kaleidoscope_nether.event;
 import com.bmt.kaleidoscope_nether.api.event.LivingDamageModifyEvent;
 import com.bmt.kaleidoscope_nether.api.event.MobEffectAddedEvent;
 import com.bmt.kaleidoscope_nether.init.KNEffects;
-import com.bmt.kaleidoscope_nether.init.KNEvents;
+import com.github.ysbbbbbb.kaleidoscopecookery.util.event.IKCEvent;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
 import net.minecraft.world.effect.MobEffectCategory;
@@ -14,8 +14,12 @@ import java.util.List;
 
 public class StarBlessingEffectEvents {
     public static void register() {
-        KNEvents.MODIFY_LIVING_DAMAGE.register(StarBlessingEffectEvents::onLivingDamage);
-        KNEvents.MOB_EFFECT_ADDED.register(StarBlessingEffectEvents::onEffectAdded);
+        IKCEvent.CALLBACK.register(event -> {
+            if (event instanceof LivingDamageModifyEvent livingDamageModifyEvent)
+                onLivingDamage(livingDamageModifyEvent);
+            if (event instanceof MobEffectAddedEvent mobEffectAddedEvent)
+                onEffectAdded(mobEffectAddedEvent);
+        });
     }
 
     public static void onLivingDamage(LivingDamageModifyEvent event) {
@@ -25,19 +29,19 @@ public class StarBlessingEffectEvents {
     }
 
     public static void onEffectAdded(MobEffectAddedEvent event) {
-        if (!event.getEffectInstance().getEffect().is(KNEffects.STAR_BLESSING)) {
+        if (!event.effectInstance().getEffect().is(KNEffects.STAR_BLESSING)) {
             return;
         }
 
         List<Holder<MobEffect>> effectsToRemove = new ArrayList<>();
-        for (MobEffectInstance effect : event.getEntity().getActiveEffectsMap().values()) {
+        for (MobEffectInstance effect : event.entity().getActiveEffectsMap().values()) {
             if (effect.getEffect().value().getCategory() == MobEffectCategory.HARMFUL) {
                 effectsToRemove.add(effect.getEffect());
             }
         }
 
         for (Holder<MobEffect> effect : effectsToRemove) {
-            event.getEntity().removeEffect(effect);
+            event.entity().removeEffect(effect);
         }
     }
 }

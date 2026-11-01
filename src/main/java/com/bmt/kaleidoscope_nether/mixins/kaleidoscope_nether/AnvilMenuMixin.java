@@ -1,7 +1,6 @@
 package com.bmt.kaleidoscope_nether.mixins.kaleidoscope_nether;
 
 import com.bmt.kaleidoscope_nether.api.event.AnvilUpdateEvent;
-import com.bmt.kaleidoscope_nether.init.KNEvents;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Container;
@@ -17,12 +16,13 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 
+@SuppressWarnings("DiscouragedShift")
 @Mixin(AnvilMenu.class)
 public abstract class AnvilMenuMixin extends ItemCombinerMenu {
     @Unique
     private static final ItemCombinerMenuSlotDefinition KN$SLOT_DEFINITION = ItemCombinerMenuSlotDefinition.create()
-            .withSlot(0, 27, 47, stack -> true)
-            .withSlot(1, 76, 47, stack -> true)
+            .withSlot(0, 27, 47, _ -> true)
+            .withSlot(1, 76, 47, _ -> true)
             .withResultSlot(2, 134, 47)
             .build();
 
@@ -35,7 +35,7 @@ public abstract class AnvilMenuMixin extends ItemCombinerMenu {
     }
 
     @Inject(method = "createResult", at = @At(value = "INVOKE", target = "Lnet/minecraft/world/item/ItemStack;isEmpty()Z", ordinal = 0, shift = At.Shift.BEFORE), cancellable = true)
-    private void createResult(CallbackInfo ci, @Local ItemStack itemStack, @Local long j) {
+    private void createResult(CallbackInfo ci, @Local(name = "input") ItemStack itemStack, @Local(name = "tax") long j) {
         if (!itemStack.isEmpty()) {
             if (!onAnvilChange((AnvilMenu) (Object)this, itemStack, this.inputSlots.getItem(1), resultSlots, itemName, j, this.player)) {
                 ci.cancel();
@@ -46,7 +46,7 @@ public abstract class AnvilMenuMixin extends ItemCombinerMenu {
     @Unique
     private static boolean onAnvilChange(AnvilMenu container, ItemStack left, ItemStack right, Container outputSlot, String name, long baseCost, Player player) {
         AnvilUpdateEvent e = new AnvilUpdateEvent(left, right, name, baseCost, player);
-        KNEvents.UPDATE_ANVIL.invoker().onUpdate(e);
+        e.post();
         if (e.isCanceled()) {
             outputSlot.setItem(0, ItemStack.EMPTY);
             container.cost.set((int) Mth.clamp(0L, 0L, 2147483647L));

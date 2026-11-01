@@ -1,7 +1,7 @@
 package com.bmt.kaleidoscope_nether.event;
 
 import com.bmt.kaleidoscope_nether.api.event.EntityTickEvent;
-import com.bmt.kaleidoscope_nether.init.KNEvents;
+import com.github.ysbbbbbb.kaleidoscopecookery.util.event.IKCEvent;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.server.level.ServerLevel;
@@ -10,14 +10,16 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.phys.Vec3;
 
 import static com.bmt.kaleidoscope_nether.init.KNEnchantments.LAVA_WALKER;
 
 public class LavaWalkerEventHandler {
     public static void register() {
-        KNEvents.ENTITY_POST.register(LavaWalkerEventHandler::onLivingTick);
+        IKCEvent.CALLBACK.register(event -> {
+            if (event instanceof EntityTickEvent.Post entityTickEvent)
+                onLivingTick(entityTickEvent);
+        });
     }
 
     public static void onLivingTick(EntityTickEvent.Post event) {
