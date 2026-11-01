@@ -2,8 +2,8 @@ package com.bmt.kaleidoscope_nether.event;
 
 import com.bmt.kaleidoscope_nether.api.event.LivingIncomingDamageEvent;
 import com.bmt.kaleidoscope_nether.init.KNEffects;
-import com.bmt.kaleidoscope_nether.init.KNEvents;
 import com.bmt.kaleidoscope_nether.init.KNPotions;
+import com.github.ysbbbbbb.kaleidoscopecookery.util.event.IKCEvent;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.entity.projectile.arrow.AbstractArrow;
@@ -12,7 +12,10 @@ import net.minecraft.world.item.alchemy.PotionContents;
 
 public class ModEvents {
     public static void register() {
-        KNEvents.LIVING_INCOMING_DAMAGE.register(ModEvents::onLivingIncomingDamage);
+        IKCEvent.CALLBACK.register(event -> {
+            if (event instanceof LivingIncomingDamageEvent livingIncomingDamageEvent)
+                onLivingIncomingDamage(livingIncomingDamageEvent);
+        });
     }
 
     public static void onLivingIncomingDamage(LivingIncomingDamageEvent event) {

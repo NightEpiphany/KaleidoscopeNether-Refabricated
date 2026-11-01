@@ -2,12 +2,15 @@ package com.bmt.kaleidoscope_nether.event;
 
 import com.bmt.kaleidoscope_nether.api.event.LivingIncomingDamageEvent;
 import com.bmt.kaleidoscope_nether.init.KNEffects;
-import com.bmt.kaleidoscope_nether.init.KNEvents;
+import com.github.ysbbbbbb.kaleidoscopecookery.util.event.IKCEvent;
 import net.minecraft.tags.DamageTypeTags;
 
 public class DamageEventHandler {
     public static void register() {
-        KNEvents.LIVING_INCOMING_DAMAGE.register(DamageEventHandler::onLivingIncomingDamage);
+        IKCEvent.CALLBACK.register(event -> {
+            if (event instanceof LivingIncomingDamageEvent livingIncomingDamageEvent)
+                onLivingIncomingDamage(livingIncomingDamageEvent);
+        });
     }
 
     public static void onLivingIncomingDamage(LivingIncomingDamageEvent event) {

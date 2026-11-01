@@ -1,12 +1,11 @@
 package com.bmt.kaleidoscope_nether.api.event;
 
-import com.github.ysbbbbbb.kaleidoscopecookery.api.event.ActionEvent;
-import com.github.ysbbbbbb.kaleidoscopecookery.api.event.IActionCancelable;
+import com.github.ysbbbbbb.kaleidoscopecookery.util.event.CancellableKCEvent;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import org.jetbrains.annotations.Nullable;
 
-public class AnvilUpdateEvent extends ActionEvent implements IActionCancelable {
+public class AnvilUpdateEvent extends CancellableKCEvent {
     private final ItemStack left;
     private final ItemStack right;
     private final String name;
@@ -74,11 +73,5 @@ public class AnvilUpdateEvent extends ActionEvent implements IActionCancelable {
 
     public Player getPlayer() {
         return this.player;
-    }
-
-
-    @FunctionalInterface
-    public interface AnvilUpdateHandler {
-        void onUpdate(AnvilUpdateEvent var1);
     }
 }

@@ -1,7 +1,6 @@
 package com.bmt.kaleidoscope_nether.mixins.kaleidoscope_nether;
 
 import com.bmt.kaleidoscope_nether.api.event.AnvilUpdateEvent;
-import com.bmt.kaleidoscope_nether.init.KNEvents;
 import com.llamalad7.mixinextras.sugar.Local;
 import net.minecraft.util.Mth;
 import net.minecraft.world.Container;
@@ -46,7 +45,7 @@ public abstract class AnvilMenuMixin extends ItemCombinerMenu {
     @Unique
     private static boolean onAnvilChange(AnvilMenu container, ItemStack left, ItemStack right, Container outputSlot, String name, long baseCost, Player player) {
         AnvilUpdateEvent e = new AnvilUpdateEvent(left, right, name, baseCost, player);
-        KNEvents.UPDATE_ANVIL.invoker().onUpdate(e);
+        e.post();
         if (e.isCanceled()) {
             outputSlot.setItem(0, ItemStack.EMPTY);
             container.cost.set((int) Mth.clamp(0L, 0L, 2147483647L));
